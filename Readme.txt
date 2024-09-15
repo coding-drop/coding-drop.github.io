@@ -1,0 +1,1 @@
+https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-ghost/full_screen_preview/50836414?_ga=2.123448841.306581775.1726392621-1199782936.1726392621

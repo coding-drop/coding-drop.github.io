@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zento Tutorials</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="myStyles.css">
+    <link href="/plugins.min.css" type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <style>
+    /* dm-sans-regular - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: url(/zento/assets/fonts/dm-sans-v14-latin-regular.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* dm-sans-italic - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'DM Sans';
+        font-style: italic;
+        font-weight: 400;
+        src: url(/zento/assets/fonts/dm-sans-v14-latin-italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* dm-sans-700 - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        src: url(/zento/assets/fonts/dm-sans-v14-latin-700.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* dm-sans-700italic - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'DM Sans';
+        font-style: italic;
+        font-weight: 700;
+        src: url(/zento/assets/fonts/dm-sans-v14-latin-700italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* urbanist-500 - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 500;
+        src: url(/zento/assets/fonts/urbanist-v15-latin-500.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* urbanist-600 - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 600;
+        src: url(/zento/assets/fonts/urbanist-v15-latin-600.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* urbanist-700 - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 700;
+        src: url(/zento/assets/fonts/urbanist-v15-latin-700.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* urbanist-700italic - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Urbanist';
+        font-style: italic;
+        font-weight: 700;
+        src: url(/zento/assets/fonts/urbanist-v15-latin-700italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* urbanist-800 - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 800;
+        src: url(/zento/assets/fonts/urbanist-v15-latin-800.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    </style>
+    <style>
+        :root{
+                --epcl-background-color: #FAF8FF;
+                --epcl-boxes-background-color: #ffffff;
+                --epcl-border-color: #E9E8FF;
+                --epcl-boxes-border-color: #E9E8FF;
+                --epcl-secondary-color: #FF2AAC;
+        }
+                    .ctag-3-css .epcl-number,
+                    .ctag-3-css.epcl-button,
+                    .siblings .ctag-3-css,
+                    div.tags a.ctag-3-css:before,
+                    div.tags.fill-color a.ctag-3-css,
+                    .category-image.ctag-3-css,
+                    .epcl-post-carousel article.ctag-3-css{ background: #227dff !important; }
+                    .ctag-3-css.overlay-effect .image-container:before{ background: #227dff !important; }
+                    .ctag-code .epcl-number,
+                    .ctag-code.epcl-button,
+                    .siblings .ctag-code,
+                    div.tags a.ctag-code:before,
+                    div.tags.fill-color a.ctag-code,
+                    .category-image.ctag-code,
+                    .epcl-post-carousel article.ctag-code{ background: #ff2ed9 !important; }
+                    .ctag-code.overlay-effect .image-container:before{ background: #ff2ed9 !important; }
+                    .ctag-5-databases .epcl-number,
+                    .ctag-5-databases.epcl-button,
+                    .siblings .ctag-5-databases,
+                    div.tags a.ctag-5-databases:before,
+                    div.tags.fill-color a.ctag-5-databases,
+                    .category-image.ctag-5-databases,
+                    .epcl-post-carousel article.ctag-5-databases{ background: #5751ff !important; }
+                    .ctag-5-databases.overlay-effect .image-container:before{ background: #5751ff !important; }
+                    .ctag-6-deployment .epcl-number,
+                    .ctag-6-deployment.epcl-button,
+                    .siblings .ctag-6-deployment,
+                    div.tags a.ctag-6-deployment:before,
+                    div.tags.fill-color a.ctag-6-deployment,
+                    .category-image.ctag-6-deployment,
+                    .epcl-post-carousel article.ctag-6-deployment{ background: #2a2728 !important; }
+                    .ctag-6-deployment.overlay-effect .image-container:before{ background: #2a2728 !important; }
+                    .ctag-guides .epcl-number,
+                    .ctag-guides.epcl-button,
+                    .siblings .ctag-guides,
+                    div.tags a.ctag-guides:before,
+                    div.tags.fill-color a.ctag-guides,
+                    .category-image.ctag-guides,
+                    .epcl-post-carousel article.ctag-guides{ background: #3aa9fd !important; }
+                    .ctag-guides.overlay-effect .image-container:before{ background: #3aa9fd !important; }
+                    .ctag-2-html .epcl-number,
+                    .ctag-2-html.epcl-button,
+                    .siblings .ctag-2-html,
+                    div.tags a.ctag-2-html:before,
+                    div.tags.fill-color a.ctag-2-html,
+                    .category-image.ctag-2-html,
+                    .epcl-post-carousel article.ctag-2-html{ background: #ff8e51 !important; }
+                    .ctag-2-html.overlay-effect .image-container:before{ background: #ff8e51 !important; }
+                    .ctag-4-javascript .epcl-number,
+                    .ctag-4-javascript.epcl-button,
+                    .siblings .ctag-4-javascript,
+                    div.tags a.ctag-4-javascript:before,
+                    div.tags.fill-color a.ctag-4-javascript,
+                    .category-image.ctag-4-javascript,
+                    .epcl-post-carousel article.ctag-4-javascript{ background: #ffcb29 !important; }
+                    .ctag-4-javascript.overlay-effect .image-container:before{ background: #ffcb29 !important; }
+                    .ctag-sql .epcl-number,
+                    .ctag-sql.epcl-button,
+                    .siblings .ctag-sql,
+                    div.tags a.ctag-sql:before,
+                    div.tags.fill-color a.ctag-sql,
+                    .category-image.ctag-sql,
+                    .epcl-post-carousel article.ctag-sql{ background: #f95353 !important; }
+                    .ctag-sql.overlay-effect .image-container:before{ background: #f95353 !important; }
+                    .ctag-tech .epcl-number,
+                    .ctag-tech.epcl-button,
+                    .siblings .ctag-tech,
+                    div.tags a.ctag-tech:before,
+                    div.tags.fill-color a.ctag-tech,
+                    .category-image.ctag-tech,
+                    .epcl-post-carousel article.ctag-tech{ background: #4775ff !important; }
+                    .ctag-tech.overlay-effect .image-container:before{ background: #4775ff !important; }
+    </style>
+    <script>
+        var site_url = 'https://ghost.estudiopatagon.com/zento';
+        var theme_config = {
+            masonry: 'on', // If you don't need masonry style, just set to "off"
+            sticky_sidebar: 'on', // on / off
+            disqus_shortname: 'ghostexample', // You can create your own Disqus Comments here: https://disqus.com/admin/create/
+        };
+            theme_config.disqus_shortname = "ghostexample";
+    </script>
+    <meta name="description" content="A modern and Lightweight blog for Ghost, by EstudioPatagon">
+    <link rel="canonical" href="https://ghost.estudiopatagon.com/zento/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="next" href="https://ghost.estudiopatagon.com/zento/page/2/">
+    <meta property="og:site_name" content="Zento">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zento">
+    <meta property="og:description" content="A modern and Lightweight blog for Ghost, by EstudioPatagon">
+    <meta property="og:url" content="https://ghost.estudiopatagon.com/zento/">
+    <meta property="article:publisher" content="https://www.facebook.com/envato">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Zento">
+    <meta name="twitter:description" content="A modern and Lightweight blog for Ghost, by EstudioPatagon">
+    <meta name="twitter:url" content="https://ghost.estudiopatagon.com/zento/">
+    <meta name="twitter:site" content="@envato">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Zento",
+            "url": "https://ghost.estudiopatagon.com/zento/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://ghost.estudiopatagon.com/zento/content/images/2024/01/logo-zento.svg"
+            }
+        },
+        "url": "https://ghost.estudiopatagon.com/zento/",
+        "mainEntityOfPage": "https://ghost.estudiopatagon.com/zento/",
+        "description": "A modern and Lightweight blog for Ghost, by EstudioPatagon"
+        }
+    </script>
+    <meta name="generator" content="Ghost 5.75">
+    <link rel="alternate" type="application/rss+xml" title="Zento" href="https://ghost.estudiopatagon.com/zento/rss/">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.36/umd/portal.min.js" data-i18n="false" data-ghost="https://ghost.estudiopatagon.com/zento/" data-key="3418b12091e67d20ee9d637bf3" data-api="https://ghost.estudiopatagon.com/zento/ghost/api/content/" crossorigin="anonymous">
+    </script>
+    <style id="gh-members-styles">
+    .gh-post-upgrade-cta-content,
+    .gh-post-upgrade-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+        width: 100%;
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+    .gh-post-upgrade-cta-content {
+        border-radius: 8px;
+        padding: 40px 4vw;
+    }
+
+    .gh-post-upgrade-cta h2 {
+        color: #ffffff;
+        font-size: 28px;
+        letter-spacing: -0.2px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .gh-post-upgrade-cta p {
+        margin: 20px 0 0;
+        padding: 0;
+    }
+
+    .gh-post-upgrade-cta small {
+        font-size: 16px;
+        letter-spacing: -0.2px;
+    }
+
+    .gh-post-upgrade-cta a {
+        color: #ffffff;
+        cursor: pointer;
+        font-weight: 500;
+        box-shadow: none;
+        text-decoration: underline;
+    }
+
+    .gh-post-upgrade-cta a:hover {
+        color: #ffffff;
+        opacity: 0.8;
+        box-shadow: none;
+        text-decoration: underline;
+    }
+
+    .gh-post-upgrade-cta a.gh-btn {
+        display: block;
+        background: #ffffff;
+        text-decoration: none;
+        margin: 28px 0 0;
+        padding: 8px 18px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .gh-post-upgrade-cta a.gh-btn:hover {
+        opacity: 0.92;
+    }
+    </style>
+    <script async src="https://js.stripe.com/v3/"></script>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="3418b12091e67d20ee9d637bf3" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://ghost.estudiopatagon.com/zento/" crossorigin="anonymous"></script>
+    <link href="https://ghost.estudiopatagon.com/zento/webmentions/receive/" rel="webmention">
+    <script defer src="/cards.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/zento/public/cards.min.css?v=1b89f44b98">
+    <script defer src="/comment-counts.min.js?" data-ghost-comments-counts-api="https://ghost.estudiopatagon.com/zento/members/api/comments/counts/"></script>
+    <script defer src="/member-attribution.min.js"></script>
+    <style>
+        .widget_epcl_tag_list .toggle-icon{ vertical-align: middle; margin-top: -8px; }
+        :root{
+            --purchase-color: #ff0081;
+        }
+        .epcl-themes.epcl-purchase{
+            bottom: 92px;
+            background: #4f1cff;
+            font-size: 13px;
+        }
+        .epcl-themes.epcl-purchase:before, .epcl-themes.epcl-purchase:after{ display: none; }
+        .epcl-purchase{
+            
+            position: fixed;
+            z-index: 110;
+            bottom: 20px;
+            left: 20px;
+            text-align: center;
+            background: var(--purchase-color);
+            color: #fff;
+            padding: 15px 25px;
+            box-shadow: 0px 3px 5px -1px rgb(7 10 25 / 10%);
+            font: 18px 'Urbanist';
+            font-weight: 500;
+            border-radius: 30px;
+        }
+        .epcl-purchase:hover{
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .epcl-purchase:before, .epcl-purchase:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+        }
+        .epcl-purchase:before {
+        display: none;
+        top: -75%;
+        background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--purchase-color) 20%, transparent 30%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+        }
+        .epcl-purchase:after {
+        display: none;
+        bottom: -75%;
+        background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+        }
+        .epcl-purchase:before {
+        display: block;
+        animation: topBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+        }
+        .epcl-purchase:after {
+        display: block;
+        animation: bottomBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+        }
+        @keyframes delay-animation {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            50.01% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes topBubbles {
+            0% {
+                background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+            }
+            50% {
+                background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+            }
+            100% {
+                background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+        @keyframes bottomBubbles {
+            0% {
+                background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+            }
+            50% {
+                background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+            }
+            100% {
+                background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+    </style>
+    <style>
+        :root {--ghost-accent-color: #6A4EE9;}
+    </style>
+</head>
+<body class=" home-template" >
+    <img loading="eager" fetchpriority="high" src="/svg-icons.svg" alt="Social Icons" style="display:none;">
+    <!-- start: .mobile.main-nav -->
+    <nav class="mobile main-nav">
+        <div class="close">
+            <svg class="icon">
+                <use xlink:href="/svg-icons.svg"></use>
+            </svg>
+        </div>
+        <div class="logo" >
+            <a href="https://ghost.estudiopatagon.com/zento"><img src="https://ghost.estudiopatagon.com/zento/content/images/2024/01/logo-zento.svg" alt="Zento" width="170" height="60" decoding="async"></a>
+        </div>
+        <ul class="menu underline-effect">
+            <li class=" nav-home current-menu-item"><a href="https://ghost.estudiopatagon.com/zento/">Home</a></li>
+            <li class=" nav-style-guide"><a href="https://ghost.estudiopatagon.com/zento/style-guide/">Style Guide ✨</a></li>
+            <li class=" nav-explore-our-tags"><a href="https://ghost.estudiopatagon.com/zento/explore-our-tags/">Explore our Tags</a></li>
+            <li class=" nav-text-only-post"><a href="https://ghost.estudiopatagon.com/zento/text-only/">Text Only Post</a></li>
+            <li class=" nav-classic-post-image"><a href="https://ghost.estudiopatagon.com/zento/classic/">Classic Post (image)</a></li>
+            <li class=" nav-vertical-post"><a href="https://ghost.estudiopatagon.com/zento/vertical/">Vertical Post</a></li>
+            <li class=" nav-fullwidth-post"><a href="https://ghost.estudiopatagon.com/zento/fullwidth/">Fullwidth Post</a></li>
+            <li class=" nav-no-sidebar-post"><a href="https://ghost.estudiopatagon.com/zento/nosidebar/">No Sidebar Post</a></li>
+            <li class=" nav-home-demos"><a href="https://themes.estudiopatagon.com/selector/zento-ghost/">Home Demos 🚀</a></li>
+        </ul>
+    </nav>
+    <!-- end: .mobile.main-nav -->
+    <div class="menu-overlay"></div>
+
+	<!-- start: #wrapper -->
+	<div id="wrapper">
+        <!-- start: #header -->
+        <header id="header" class="minimalist enable-sticky">
+            <!-- start: .menu-wrapper -->
+            <div class="menu-wrapper">
+                <div class="grid-container">
+                    <div class="epcl-flex grid-wrapper">
+                        <div class="logo" ><a href="https://ghost.estudiopatagon.com/zento"><img src="https://ghost.estudiopatagon.com/zento/content/images/2024/01/logo-zento.svg" alt="Zento" width="170" height="60" decoding="async"></a></div>
+                        <div class="open-menu">
+                            <svg class="open icon ularge"><use xlink:href="/svg-icons.svg"></use></svg>
+                        </div>
+                        <div class="clear"></div>
+                    </div>		
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-- end: .menu-wrapper -->
+            <div class="clear"></div>
+        </header>
+        <!-- end: #header -->
+            
+        <main id="home" class="main">
+            <!-- start: .content-wrapper -->
+            <div class="content-wrapper"> 
+                <div class="sticky-container large-section np-bottom grid-container"> 
+                    <!-- start: #sidebar -->
+                    <aside id="sidebar" class="enable-sticky grid-30 tablet-grid-30 hide-on-tablet hide-on-mobile">
+                        <!-- start: .widget-tag-cloud -->
+                        <div class="widget widget_epcl_tag_list grid-33 tablet-grid-50 mobile-grid-100">
+                            <h3 class="widget-title title medium bordered"><svg class="decoration"><use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#title-decoration"></use></svg><span>Topics Index</span></h3>
+                            
+                                    <div class="clear"></div>
+                                    <div class="item item-1 open">
+                                        <h4 class="toggle-title underline-effect ctag ctag-1-fundamentals">
+                                            <span class="epcl-number">1</span> 
+                                            <a href="/zento/tag/1-fundamentals/" class=" title small" data-id="ctag-1-fundamentals">Fundamentals</a>                    
+                                        </h4>
+                                                <span class="toggle-icon"><svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path></svg></span>
+                                                <ul class="post-list">
+                                                        <li><span class="fw-semibold">1.</span> <a href="/zento/fullwidth/" data-id="fullwidth">Unveiling the Web Browser: Gateway to the World Wide Web</a></li>
+                                                        <li><span class="fw-semibold">2.</span> <a href="/zento/nosidebar/" data-id="nosidebar">HTTP, Web Browsers, and Web Servers</a></li>
+                                                        <li><span class="fw-semibold">3.</span> <a href="/zento/vertical/" data-id="vertical">Understanding how links works 🚀</a></li>
+                                                </ul>
+                                        </div>
+                                    <div class="clear"></div>
+                                    <div class="item item-2 ">
+                                        <h4 class="toggle-title underline-effect ctag ctag-2-html">
+                                            <span class="epcl-number">2</span> 
+                                            <a href="/zento/tag/2-html/" class=" title small" data-id="ctag-2-html">HTML</a>                    
+                                        </h4>
+                                                <span class="toggle-icon"><svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path></svg></span>
+                                                <ul class="post-list">
+                                                        <li><span class="fw-semibold">1.</span> <a href="/zento/introduction-to-html/" data-id="introduction-to-html">Introduction to HTML 📖</a></li>
+                                                        <li><span class="fw-semibold">2.</span> <a href="/zento/understanding-html-the-foundation-of-the-web/" data-id="understanding-html-the-foundation-of-the-web">Creating your first web page 🎉</a></li>
+                                                        <li><span class="fw-semibold">3.</span> <a href="/zento/html-text-tags-understanding-blocks-and-inlines/" data-id="html-text-tags-understanding-blocks-and-inlines">Text Tags: Blocks, headings and Inlines a quick start ✍</a></li>
+                                                        <li><span class="fw-semibold">4.</span> <a href="/zento/displaying-images-in-html-the-img-tag/" data-id="displaying-images-in-html-the-img-tag">Displaying Images in HTML: The img tag a masterclass</a></li>
+                                                        <li><span class="fw-semibold">5.</span> <a href="/zento/mastering-html-essentials-for-your-tech-blog/" data-id="mastering-html-essentials-for-your-tech-blog">Mastering HTML Essentials to start your Tech Blog 🔥</a></li>
+                                                </ul>
+                                        </div>
+                                    <div class="clear"></div>
+                                    <div class="item item-3 ">
+                                        <h4 class="toggle-title underline-effect ctag ctag-3-css">
+                                            <span class="epcl-number">3</span> 
+                                            <a href="/zento/tag/3-css/" class=" title small" data-id="ctag-3-css">CSS</a>                    
+                                        </h4>
+                                                <span class="toggle-icon"><svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path></svg></span>
+                                                <ul class="post-list">
+                                                        <li><span class="fw-semibold">1.</span> <a href="/zento/css-basics/" data-id="css-basics">Introduction to CSS 🚀</a></li>
+                                                        <li><span class="fw-semibold">2.</span> <a href="/zento/advanced-css-selectors-class-and-id/" data-id="advanced-css-selectors-class-and-id">CSS Selectors: Class and ID basic filtering for HTML elements</a></li>
+                                                        <li><span class="fw-semibold">3.</span> <a href="/zento/text-only/" data-id="text-only">Crafting Engaging CSS Animations step by step guide</a></li>
+                                                </ul>
+                                        </div>
+                                    <div class="clear"></div>
+                                    <div class="item item-4 ">
+                                        <h4 class="toggle-title underline-effect ctag ctag-4-javascript">
+                                            <span class="epcl-number">4</span> 
+                                            <a href="/zento/tag/4-javascript/" class=" title small" data-id="ctag-4-javascript">Javascript</a>                    
+                                        </h4>
+                                                <span class="toggle-icon"><svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path></svg></span>
+                                                <ul class="post-list">
+                                                        <li><span class="fw-semibold">1.</span> <a href="/zento/javascript-basics-literals-identifiers-and-variables/" data-id="javascript-basics-literals-identifiers-and-variables">JavaScript Basics: Literals, Identifiers, and Variables</a></li>
+                                                        <li><span class="fw-semibold">2.</span> <a href="/zento/classic/" data-id="classic">Unleashing the Power of JavaScript: multiple event techniques</a></li>
+                                                </ul>
+                                        </div>
+                                    <div class="clear"></div>
+                                    <div class="item item-5 ">
+                                        <h4 class="toggle-title underline-effect ctag ctag-5-databases">
+                                            <span class="epcl-number">5</span> 
+                                            <a href="/zento/tag/5-databases/" class=" title small" data-id="ctag-5-databases">Databases</a>                    
+                                        </h4>
+                                                <span class="toggle-icon"><svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path></svg></span>
+                                                <ul class="post-list">
+                                                        <li><span class="fw-semibold">1.</span> <a href="/zento/introduction-to-dbms-and-sql/" data-id="introduction-to-dbms-and-sql">Introduction to DBMS and SQL</a></li>
+                                                        <li><span class="fw-semibold">2.</span> <a href="/zento/how-to-insert-data-into-your-table/" data-id="how-to-insert-data-into-your-table">How to insert data into your Table, the correct way</a></li>
+                                                </ul>
+                                        </div>
+                                    <div class="clear"></div>
+                                    <div class="item item-6 ">
+                                        <h4 class="toggle-title underline-effect ctag ctag-6-deployment">
+                                            <span class="epcl-number">6</span> 
+                                            <a href="/zento/tag/6-deployment/" class=" title small" data-id="ctag-6-deployment">Deployment</a>                    
+                                        </h4>
+                                                <span class="toggle-icon"><svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path></svg></span>
+                                                <ul class="post-list">
+                                                        <li><span class="fw-semibold">1.</span> <a href="/zento/getting-started-with-netlify-deployment/" data-id="getting-started-with-netlify-deployment">Getting Started with Netlify Deployment</a></li>
+                                                        <li><span class="fw-semibold">2.</span> <a href="/zento/netlify-deploy-to-netlify/" data-id="netlify-deploy-to-netlify">Final steps to Deploy on Netlify</a></li>
+                                                </ul>
+                                        </div>
+                        </div>
+                        <!-- end: .widget-tag-cloud -->
+                    </aside>
+                    <!-- end: #sidebar -->
+                    <div class="center left-content grid-70">
+                        <!-- start: .articles -->
+                        <div class="articles classic">
+                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public ">
+                                <div class="post-format-image epcl-flex">
+                                    <div class="meta meta-data">
+                                        <div class="tags fill-color">
+                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css" data-id="ctag-3-css">CSS</a>
+                                        </div>
+                                        <time class="meta-info" datetime="2024-01-19">
+                                            <svg class="icon main-color small">
+                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                            </svg>
+                                            Jan 19, 2024
+                                        </time>            
+                                        <div class="min-read meta-info">
+                                            <a href="javascript:void(0)" class="author">                                        
+                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Jonathan Doe">                      
+                                                <span class="author-name">Jonathan Doe</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="info"> 
+                                        <header>        
+                                            <h2 class="main-title title underline-effect"><a href="posts/post2.html">Crafting Engaging CSS Animations step by step guide</a></h2>
+                                        </header>
+                                        <div class="post-excerpt">        
+                                            <p>In the realm of technology blogging, captivating your audience goes beyond just the written word. Incorporating eye-catching CSS animations can elevate your content and provide a dynamic...</p>   
+                                            <div class="clear"></div>              
+                                        </div>  
+                                        <footer class="bottom">
+                                            <div class="meta bottom epcl-flex">
+                                                <div class="tags">
+                                                    <a href="/zento/tag/code/" class="ctag ctag-code" data-id="ctag-code">Code</a>
+                                                    <a href="/zento/tag/guides/" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
+                                                    <a href="/zento/tag/tech/" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                </div>
+                                            </div>
+                                            <div class="meta inline hide-on-tablet hide-on-desktop">
+                                                <a href="javascript:void(0)" class="author">                                        
+                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Jonathan Doe">                      
+                                                    <span class="author-name">Jonathan Doe</span>
+                                                </a>
+                                                <div class="min-read meta-info">
+                                                    <svg class="icon main-color">
+                                                        <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#reading-icon"></use>
+                                                    </svg>
+                                                    2 min read
+                                                </div>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        <!-- end: .content-wrapper -->
+        </main>
+
+            
+        <div class="clear"></div>
+        <!-- start: .epcl-cta -->
+        <div class="epcl-cta bg-box no-border-radius">
+            <div class="grid-container epcl-flex">
+                <div class="left grid-50 tablet-grid-50 np-mobile">
+                    <h2 class="title ularge no-margin">Join to our community</h2>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <svg class="bg" width="284" height="453" viewBox="0 0 284 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="main-color" d="M100.795 7.49467C105.015 -1.99852 118.025 -2.47329 123.123 6.07068L123.86 7.49467L136.88 36.7886C148.263 62.3995 167.185 83.8837 191.069 98.4068L195.095 100.762L218.221 113.77C226.323 118.328 226.773 129.596 219.571 134.898L218.221 135.769L195.095 148.778C170.668 162.518 151.059 183.378 138.846 208.521L136.88 212.751L123.86 242.045C119.641 251.538 106.63 252.013 101.531 243.469L100.795 242.045L87.7754 212.751C76.3928 187.141 57.4695 165.656 33.5855 151.133L29.5593 148.778L6.43298 135.769C-1.66775 131.213 -2.1179 119.945 5.08284 114.641L6.43298 113.77L29.5593 100.762C53.9866 87.0215 73.5964 66.162 85.8089 41.0183L87.7754 36.7886L100.795 7.49467Z" fill="currentColor" />
+                <path class="secondary-color" d="M159.795 210.495C164.015 201.001 177.025 200.527 182.123 209.071L182.86 210.495L195.88 239.789C207.263 265.399 226.185 286.884 250.069 301.407L254.095 303.762L277.221 316.77C285.323 321.328 285.773 332.596 278.571 337.898L277.221 338.769L254.095 351.778C229.668 365.518 210.059 386.378 197.846 411.521L195.88 415.751L182.86 445.045C178.641 454.538 165.63 455.013 160.531 446.469L159.795 445.045L146.775 415.751C135.393 390.141 116.47 368.656 92.5855 354.133L88.5593 351.778L65.433 338.769C57.3322 334.213 56.8821 322.945 64.0828 317.641L65.433 316.77L88.5593 303.762C112.987 290.022 132.596 269.162 144.809 244.018L146.775 239.789L159.795 210.495Z" fill="currentColor"/>
+            </svg>
+            <svg class="bg2" width="284" height="453" viewBox="0 0 284 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="main-color" d="M100.795 445.045C105.015 454.538 118.025 455.013 123.123 446.469L123.86 445.045L136.88 415.751C148.263 390.14 167.185 368.656 191.069 354.133L195.095 351.777L218.221 338.77C226.323 334.212 226.773 322.944 219.571 317.642L218.221 316.77L195.095 303.762C170.668 290.022 151.059 269.162 138.846 244.018L136.88 239.788L123.86 210.494C119.641 201.002 106.63 200.527 101.531 209.071L100.795 210.494L87.7754 239.788C76.3928 265.399 57.4695 286.884 33.5855 301.406L29.5593 303.762L6.43298 316.77C-1.66775 321.327 -2.1179 332.595 5.08284 337.898L6.43298 338.77L29.5593 351.777C53.9866 365.518 73.5964 386.378 85.8089 411.521L87.7754 415.751L100.795 445.045Z" fill="currentColor"/>
+                <path class="secondary-color" d="M159.795 242.045C164.015 251.538 177.025 252.013 182.123 243.469L182.86 242.045L195.88 212.751C207.263 187.14 226.185 165.656 250.069 151.133L254.095 148.777L277.221 135.77C285.323 131.212 285.773 119.944 278.571 114.642L277.221 113.77L254.095 100.762C229.668 87.0217 210.059 66.1616 197.846 41.0181L195.88 36.7884L182.86 7.49449C178.641 -1.99834 165.63 -2.473 160.531 6.07056L159.795 7.49449L146.775 36.7884C135.393 62.399 116.47 83.8839 92.5855 98.4062L88.5593 100.762L65.433 113.77C57.3322 118.327 56.8821 129.595 64.0828 134.898L65.433 135.77L88.5593 148.777C112.987 162.518 132.596 183.378 144.809 208.521L146.775 212.751L159.795 242.045Z" fill="currentColor"/>
+            </svg>
+        </div>
+        <!-- end: .epcl-cta -->
+    </div>
+    <!-- end: #wrapper -->
+    <script defer src="/scripts.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="/prism-plugins.min.js"></script>
+</body>
+</html>
