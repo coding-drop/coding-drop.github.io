@@ -439,8 +439,8 @@
         :root {--ghost-accent-color: #6A4EE9;}
     </style>
 </head>
-<body class=" post-template tag-1-fundamentals tag-tech tag-hash-rating-1 tag-code" >
-    <img loading="eager" fetchpriority="high" src="/zento/assets/images/svg-icons.svg?v=1b89f44b98" alt="Social Icons" style="display:none;">
+<body class=" post-template tag-1-fundamentals tag-tech tag-hash-rating-1 tag-code">
+    <img src="../img/oop.jpg" style="display: none;" alt="">
     <!-- start: .mobile.main-nav -->
     <nav class="mobile main-nav">
         <div class="close"><svg class="icon"><use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#close-icon"></use></svg></div>
@@ -469,7 +469,7 @@
 	<div class="menu-wrapper">
 		<div class="grid-container">
             <div class="epcl-flex grid-wrapper">
-                <div class="logo" ><a href="#"><img src="../img/drop.png" alt="Coding Drop" width="50" height="60" decoding="async"></a></div>
+                <div class="logo" ><a href="../index.html"><img src="../img/drop.png" alt="Coding Drop" width="50" height="60" decoding="async"></a></div>
 
                 <div class="account underline-effect hide-on-mobile hide-on-tablet hide-on-desktop-sm">          
 
@@ -498,7 +498,142 @@
 
             <article class="main-article bg-box section post-access-public primary-tag-1-fundamentals post tag-1-fundamentals tag-tech tag-hash-rating-1 tag-code featured">
 
-                <h1>Post body</h1>
+                <h1 style="color: #333; text-align: center; padding-bottom: 20px;">Understanding Object-Oriented Programming (OOP) in .NET</h1>
+        <p>Object-Oriented Programming (OOP) is a programming style centered around objects and classes. It helps organize and manage code more effectively. In .NET, particularly in languages like C#, OOP principles are essential. Here’s a simple guide to key OOP concepts:</p>
+        
+        <h2 style="color: #444; margin-top: 20px;">1. Classes and Objects</h2>
+        <p><strong>Class:</strong> Think of a class as a blueprint. It defines the properties and behaviors that objects created from it will have.</p>
+        <p><strong>Object:</strong> An object is an instance of a class. It represents a specific example of a class, with its own unique values.</p>
+        <div style="background: #fafafa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0;">
+            <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>public class Car
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public int Year { get; set; }
+
+    public void StartEngine()
+    {
+        Console.WriteLine("Engine started.");
+    }
+}
+
+Car myCar = new Car();
+myCar.Make = "Toyota";
+myCar.Model = "Corolla";
+myCar.Year = 2020;
+myCar.StartEngine();</code></pre>
+        </div>
+        
+        <h2 style="color: #444; margin-top: 20px;">2. Encapsulation</h2>
+        <p>Encapsulation is about bundling data and methods that operate on the data within one class. It also involves hiding internal details and exposing only what is necessary.</p>
+        <div style="background: #fafafa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0;">
+            <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>public class Person
+{
+    private string name;
+
+    public string Name
+    {
+        get { return name; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+                name = value;
+        }
+    }
+}</code></pre>
+        </div>
+        
+        <h2 style="color: #444; margin-top: 20px;">3. Inheritance</h2>
+        <p>Inheritance allows one class to inherit the properties and methods of another class. This helps in reusing code and establishing a natural hierarchy between classes.</p>
+        <div style="background: #fafafa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0;">
+            <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+}
+
+public class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking...");
+    }
+}
+
+Dog myDog = new Dog();
+myDog.Eat(); // Inherited method
+myDog.Bark(); // Own method</code></pre>
+        </div>
+        
+        <h2 style="color: #444; margin-top: 20px;">4. Polymorphism</h2>
+        <p>Polymorphism allows for different classes to be treated through a common interface or base class. This can be achieved through method overriding and method overloading.</p>
+        <p><strong>Method Overriding:</strong> Redefining a method in a subclass that already exists in a superclass.</p>
+        <div style="background: #fafafa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0;">
+            <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>public class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Some generic sound");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Bark");
+    }
+}
+
+Animal myAnimal = new Dog();
+myAnimal.MakeSound(); // Outputs: Bark</code></pre>
+        </div>
+        <p><strong>Method Overloading:</strong> Creating multiple methods with the same name but different parameters in the same class.</p>
+        <div style="background: #fafafa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0;">
+            <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>public class MathOperations
+{
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    public double Add(double a, double b)
+    {
+        return a + b;
+    }
+}</code></pre>
+        </div>
+        
+        <h2 style="color: #444; margin-top: 20px;">5. Abstraction</h2>
+        <p>Abstraction involves hiding the complex implementation details and showing only the essential features of an object. This can be done using abstract classes and interfaces.</p>
+        <p><strong>Abstract Class:</strong> A class that cannot be instantiated directly and can contain abstract methods which must be implemented by derived classes.</p>
+        <div style="background: #fafafa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0;">
+            <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>public abstract class Shape
+{
+    public abstract double Area(); // Abstract method
+
+    public void Display()
+    {
+        Console.WriteLine("Displaying shape");
+    }
+}
+
+public class Circle : Shape
+{
+    public double Radius { get; set; }
+
+    public override double Area()
+    {
+        return Math.PI * Radius * Radius;
+    }
+}</code></pre>
+        </div>
+        
+                <footer style="text-align: center; padding: 10px; font-size: 0.8em; color: #666; background: #eee; margin-top: 20px;">
+                    <p>© 2024 Coding Drop. All rights reserved.</p>
+                </footer>
             </article>
 
             <div class="clear"></div>
