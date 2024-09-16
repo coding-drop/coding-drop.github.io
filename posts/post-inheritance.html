@@ -515,24 +515,24 @@
                 <p>Here’s a simple example to illustrate inheritance in .NET using C#:</p>
                 <div style="background: #fafafa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0;">
                     <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>public class Animal
-            {
-                public void Eat()
-                {
-                    Console.WriteLine("Animal is eating.");
-                }
-            }
-            
-            public class Dog : Animal
-            {
-                public void Bark()
-                {
-                    Console.WriteLine("Dog is barking.");
-                }
-            }
-            
-            Dog myDog = new Dog();
-            myDog.Eat(); // Method inherited from Animal class
-            myDog.Bark(); // Method defined in Dog class</code></pre>
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+public class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+Dog myDog = new Dog();
+myDog.Eat(); // Method inherited from Animal class
+myDog.Bark(); // Method defined in Dog class</code></pre>
                 </div>
                 <p>In this example, <code>Dog</code> inherits the <code>Eat</code> method from the <code>Animal</code> class. It also has its own method, <code>Bark</code>. This demonstrates how a derived class can reuse and extend functionality from its base class.</p>
             
@@ -544,23 +544,23 @@
                 <p>Sometimes, you may need to modify or extend the behavior of a method inherited from a base class. This is done using method overriding:</p>
                 <div style="background: #fafafa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0;">
                     <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>public class Animal
-            {
-                public virtual void MakeSound()
-                {
-                    Console.WriteLine("Animal makes a sound.");
-                }
-            }
-            
-            public class Dog : Animal
-            {
-                public override void MakeSound()
-                {
-                    Console.WriteLine("Dog barks.");
-                }
-            }
-            
-            Animal myAnimal = new Dog();
-            myAnimal.MakeSound(); // Outputs: Dog barks.</code></pre>
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Animal makes a sound.");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Dog barks.");
+    }
+}
+
+Animal myAnimal = new Dog();
+myAnimal.MakeSound(); // Outputs: Dog barks.</code></pre>
                 </div>
                 <p>In this example, the <code>MakeSound</code> method in the <code>Dog</code> class overrides the method in the <code>Animal</code> class. This allows <code>Dog</code> to provide its specific implementation of <code>MakeSound</code>.</p>
             
@@ -582,7 +582,7 @@
                     <article class="prev epcl-flex ctag-4-javascript post tag-4-javascript tag-code tag-2-html tag-hash-rating-3">
                         <div class="info">
                             <p>Previous Article</p>
-                            <h4 class="title usmall white fw-semibold">Understanding Inheritance in .NET: A Beginner’s Guide</h4>
+                            <h4 class="title usmall white fw-semibold">Understanding Object-Oriented Programming (OOP) in .NET</h4>
                         </div>
                         <span class="arrow"><svg class="icon large"><use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#left-arrow"></use></svg></span>
                         <a href="post-oop.html" class="full-link"></a>
