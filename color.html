@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Squares</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Hide overflow to prevent scrolling */
+            background-color: #f0f0f0;
+        }
+
+        #grid-container {
+            display: grid; /* Use CSS Grid */
+            grid-template-columns: repeat(auto-fill, 50px); /* Fill columns with 50px squares */
+            grid-auto-rows: 50px; /* Set row height */
+            gap: 0px; /* Space between squares */
+            height: 100%; /* Full height */
+        }
+
+        .square {
+            width: 50px; /* Fixed square width */
+            height: 50px; /* Fixed square height */
+            transition: background-color 0.5s ease; /* Animation for color change */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A1', '#33FFF3', '#FF8333', '#8333FF'];
+
+        $(document).ready(function() {
+            loadGrid();
+            setInterval(changeColors, 1000); // Change colors every second
+        });
+
+        function loadGrid() {
+            for (let i = 0; i < 10000; i++) { // Create 10,000 squares
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                $('#grid-container').append(`<div class="square" style="background-color: ${color};"></div>`);
+            }
+            console.log('Grid loaded');
+        }
+
+        function changeColors() {
+            $('.square').each(function() {
+                const newColor = colors[Math.floor(Math.random() * colors.length)];
+                $(this).css('background-color', newColor);
+            });
+            console.log('Colors changed');
+        }
+    </script>
+</head>
+<body>
+    <div id="grid-container"></div>
+</body>
+</html>
