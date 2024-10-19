@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+}
+
+#question-container {
+    background-color: #ffffff;
+}
+
+#result {
+    display: none;
+    border-radius: 5px;
+}
+
+#result.correct {
+    background-color: #28a745;
+}
+
+#result.wrong {
+    background-color: #dc3545;
+}
+
+button {
+    width: 100%;
+    transition: background-color 0.3s;
+}
