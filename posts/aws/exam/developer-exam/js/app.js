@@ -1599,6 +1599,906 @@ const questions = [
         question: "320. What is the main purpose of AWS Glue?",
         options: ["A) To extract, transform, and load data", "B) Monitors application performance", "C) Stores data", "D) Creates APIs"],
         answer: "A) To extract, transform, and load data"
+    },
+    {
+        question: "321. What is AWS CodeBuild used for?",
+        options: ["A) Continuous integration service", "B) Monitoring application performance", "C) Storing data", "D) Creating APIs"],
+        answer: "A) Continuous integration service"
+    },
+    {
+        question: "322. What does AWS CloudTrail provide?",
+        options: ["A) API call logging", "B) Data storage", "C) User authentication", "D) Application performance monitoring"],
+        answer: "A) API call logging"
+    },
+    {
+        question: "323. Which service is best suited for distributed applications?",
+        options: ["A) Amazon EKS", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon EKS"
+    },
+    {
+        question: "324. What does Amazon Aurora provide?",
+        options: ["A) Managed relational database", "B) NoSQL database", "C) Data warehousing", "D) API management"],
+        answer: "A) Managed relational database"
+    },
+    {
+        question: "325. Which AWS service helps with real-time analytics?",
+        options: ["A) Amazon Kinesis", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon Kinesis"
+    },
+    {
+        question: "326. What is the purpose of AWS Direct Connect?",
+        options: ["A) Dedicated network connection", "B) Monitoring application performance", "C) Storing data", "D) Creating APIs"],
+        answer: "A) Dedicated network connection"
+    },
+    {
+        question: "327. What does Amazon Inspector do?",
+        options: ["A) Security assessment service", "B) Data storage", "C) User authentication", "D) Application performance monitoring"],
+        answer: "A) Security assessment service"
+    },
+    {
+        question: "328. Which AWS service provides a data warehouse?",
+        options: ["A) Amazon Redshift", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon Redshift"
+    },
+    {
+        question: "329. What is the purpose of Amazon QuickSight?",
+        options: ["A) Business intelligence service", "B) Data storage", "C) User authentication", "D) Application performance monitoring"],
+        answer: "A) Business intelligence service"
+    },
+    {
+        question: "330. Which service can be used to create an API?",
+        options: ["A) Amazon API Gateway", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon API Gateway"
+    },
+    {
+        question: "331. What is AWS Lambda primarily used for?",
+        options: ["A) Running serverless applications", "B) Storing data", "C) User authentication", "D) API management"],
+        answer: "A) Running serverless applications"
+    },
+    {
+        question: "332. What does Amazon S3 provide?",
+        options: ["A) Object storage service", "B) Block storage service", "C) Relational database service", "D) API management"],
+        answer: "A) Object storage service"
+    },
+    {
+        question: "333. What is the purpose of AWS Budgets?",
+        options: ["A) Cost management", "B) Application performance monitoring", "C) Data storage", "D) User authentication"],
+        answer: "A) Cost management"
+    },
+    {
+        question: "334. Which service can be used to deploy Docker containers?",
+        options: ["A) Amazon ECS", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon ECS"
+    },
+    {
+        question: "335. What is the main function of AWS Elastic Beanstalk?",
+        options: ["A) Application deployment", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Application deployment"
+    },
+    {
+        question: "336. What does AWS X-Ray help with?",
+        options: ["A) Debugging applications", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Debugging applications"
+    },
+    {
+        question: "337. Which AWS service is designed for content delivery?",
+        options: ["A) Amazon CloudFront", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon CloudFront"
+    },
+    {
+        question: "338. What is Amazon ElastiCache used for?",
+        options: ["A) In-memory data store", "B) Data warehousing", "C) User authentication", "D) API management"],
+        answer: "A) In-memory data store"
+    },
+    {
+        question: "339. Which service provides automated backups for AWS resources?",
+        options: ["A) AWS Backup", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Backup"
+    },
+    {
+        question: "340. What is the main purpose of AWS Data Pipeline?",
+        options: ["A) Data workflow management", "B) Application performance monitoring", "C) User authentication", "D) API management"],
+        answer: "A) Data workflow management"
+    },
+    {
+        question: "341. Which AWS service helps in migrating databases?",
+        options: ["A) AWS Database Migration Service", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Database Migration Service"
+    },
+    {
+        question: "342. What does Amazon SNS do?",
+        options: ["A) Simple notification service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Simple notification service"
+    },
+    {
+        question: "343. Which service is used for monitoring AWS resources?",
+        options: ["A) Amazon CloudWatch", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon CloudWatch"
+    },
+    {
+        question: "344. What is AWS Glue primarily used for?",
+        options: ["A) Data integration", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Data integration"
+    },
+    {
+        question: "345. Which AWS service provides DDoS protection?",
+        options: ["A) AWS Shield", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Shield"
+    },
+    {
+        question: "346. What does Amazon CloudFormation do?",
+        options: ["A) Infrastructure as code", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Infrastructure as code"
+    },
+    {
+        question: "347. What is the main benefit of using AWS IAM?",
+        options: ["A) User access control", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) User access control"
+    },
+    {
+        question: "348. Which service is best for managing user identities?",
+        options: ["A) AWS IAM", "B) Amazon RDS", "C) AWS Lambda", "D) Amazon S3"],
+        answer: "A) AWS IAM"
+    },
+    {
+        question: "349. What is the purpose of Amazon Route 53?",
+        options: ["A) DNS management", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) DNS management"
+    },
+    {
+        question: "350. What does AWS KMS provide?",
+        options: ["A) Key management service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Key management service"
+    },
+    {
+        question: "351. Which service is used for building chatbots?",
+        options: ["A) Amazon Lex", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon Lex"
+    },
+    {
+        question: "352. What is the purpose of Amazon SageMaker?",
+        options: ["A) Machine learning model building", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Machine learning model building"
+    },
+    {
+        question: "353. What does AWS App Runner do?",
+        options: ["A) Runs containerized applications", "B) Monitors application performance", "C) Stores data", "D) Creates APIs"],
+        answer: "A) Runs containerized applications"
+    },
+    {
+        question: "354. Which AWS service helps in monitoring costs?",
+        options: ["A) AWS Cost Explorer", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Cost Explorer"
+    },
+    {
+        question: "355. What is Amazon S3 Glacier used for?",
+        options: ["A) Long-term data archiving", "B) Real-time data processing", "C) User authentication", "D) API management"],
+        answer: "A) Long-term data archiving"
+    },
+    {
+        question: "356. Which service can be used for data lakes?",
+        options: ["A) Amazon Lake Formation", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon Lake Formation"
+    },
+    {
+        question: "357. What is the main function of Amazon S3 Transfer Acceleration?",
+        options: ["A) Faster data uploads", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Faster data uploads"
+    },
+    {
+        question: "358. Which AWS service provides a managed file storage solution?",
+        options: ["A) Amazon EFS", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon EFS"
+    },
+    {
+        question: "359. What does AWS CodeDeploy do?",
+        options: ["A) Automates application deployments", "B) Monitors application performance", "C) Stores data", "D) Creates APIs"],
+        answer: "A) Automates application deployments"
+    },
+    {
+        question: "360. What is the purpose of Amazon RDS?",
+        options: ["A) Managed relational database service", "B) Object storage service", "C) User authentication", "D) API management"],
+        answer: "A) Managed relational database service"
+    },
+    {
+        question: "361. What does AWS DataSync do?",
+        options: ["A) Data transfer between on-premises and AWS", "B) Monitors application performance", "C) Stores data", "D) Creates APIs"],
+        answer: "A) Data transfer between on-premises and AWS"
+    },
+    {
+        question: "362. Which service helps in managing large-scale machine learning workflows?",
+        options: ["A) Amazon SageMaker", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon SageMaker"
+    },
+    {
+        question: "363. What is AWS Control Tower used for?",
+        options: ["A) Multi-account governance", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Multi-account governance"
+    },
+    {
+        question: "364. Which service is used to schedule AWS Lambda functions?",
+        options: ["A) Amazon EventBridge", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon EventBridge"
+    },
+    {
+        question: "365. What does Amazon S3 Object Lambda allow you to do?",
+        options: ["A) Modify object data when retrieved", "B) Store data", "C) User authentication", "D) API management"],
+        answer: "A) Modify object data when retrieved"
+    },
+    {
+        question: "366. What is the main benefit of using AWS Well-Architected Tool?",
+        options: ["A) Assess architectural best practices", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Assess architectural best practices"
+    },
+    {
+        question: "367. Which service provides a managed search solution?",
+        options: ["A) Amazon OpenSearch Service", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon OpenSearch Service"
+    },
+    {
+        question: "368. What is AWS Elastic Load Balancing used for?",
+        options: ["A) Distributing incoming traffic across multiple targets", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Distributing incoming traffic across multiple targets"
+    },
+    {
+        question: "369. What does Amazon Chime provide?",
+        options: ["A) Communication service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Communication service"
+    },
+    {
+        question: "370. Which service allows you to run machine learning inference at the edge?",
+        options: ["A) AWS Lambda@Edge", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Lambda@Edge"
+    },
+    {
+        question: "371. What is the main function of AWS CodePipeline?",
+        options: ["A) Continuous integration and delivery", "B) Monitors application performance", "C) Stores data", "D) Creates APIs"],
+        answer: "A) Continuous integration and delivery"
+    },
+    {
+        question: "372. What does Amazon RDS Multi-AZ provide?",
+        options: ["A) High availability", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) High availability"
+    },
+    {
+        question: "373. Which service helps with mobile application development?",
+        options: ["A) AWS Amplify", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Amplify"
+    },
+    {
+        question: "374. What is the main benefit of using Amazon CloudFront with S3?",
+        options: ["A) Faster content delivery", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Faster content delivery"
+    },
+    {
+        question: "375. What does AWS Step Functions allow you to create?",
+        options: ["A) Serverless workflows", "B) Monitors application performance", "C) Stores data", "D) Creates APIs"],
+        answer: "A) Serverless workflows"
+    },
+    {
+        question: "376. Which AWS service helps with compliance auditing?",
+        options: ["A) AWS Config", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Config"
+    },
+    {
+        question: "377. What is AWS Resource Access Manager used for?",
+        options: ["A) Sharing resources between accounts", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Sharing resources between accounts"
+    },
+    {
+        question: "378. Which service provides a way to execute code in response to events?",
+        options: ["A) AWS Lambda", "B) Amazon S3", "C) AWS CodeDeploy", "D) Amazon RDS"],
+        answer: "A) AWS Lambda"
+    },
+    {
+        question: "379. What does Amazon EBS provide?",
+        options: ["A) Block storage for EC2 instances", "B) Object storage service", "C) User authentication", "D) API management"],
+        answer: "A) Block storage for EC2 instances"
+    },
+    {
+        question: "380. What is the main function of AWS Secrets Manager?",
+        options: ["A) Manage sensitive information", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage sensitive information"
+    },
+    {
+        question: "381. What does AWS Service Catalog help with?",
+        options: ["A) Managing approved services", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Managing approved services"
+    },
+    {
+        question: "382. Which service is used to manage data across different AWS accounts?",
+        options: ["A) AWS Organizations", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Organizations"
+    },
+    {
+        question: "383. What is the purpose of AWS App Mesh?",
+        options: ["A) Service mesh for microservices", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Service mesh for microservices"
+    },
+    {
+        question: "384. Which service provides a way to analyze large data sets?",
+        options: ["A) Amazon EMR", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon EMR"
+    },
+    {
+        question: "385. What does AWS IoT Core do?",
+        options: ["A) Connects IoT devices to the cloud", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Connects IoT devices to the cloud"
+    },
+    {
+        question: "386. What is the purpose of AWS Snowball?",
+        options: ["A) Data transfer solution", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Data transfer solution"
+    },
+    {
+        question: "387. Which service provides a unified view of billing and cost management?",
+        options: ["A) AWS Billing Dashboard", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Billing Dashboard"
+    },
+    {
+        question: "388. What does Amazon Athena allow you to do?",
+        options: ["A) Query data in S3 using SQL", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Query data in S3 using SQL"
+    },
+    {
+        question: "389. What is AWS Auto Scaling used for?",
+        options: ["A) Automatically adjust resource capacity", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Automatically adjust resource capacity"
+    },
+    {
+        question: "390. What does Amazon QuickSight provide?",
+        options: ["A) Business intelligence service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Business intelligence service"
+    },
+    {
+        question: "391. What is the purpose of Amazon Inspector?",
+        options: ["A) Security assessment service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Security assessment service"
+    },
+    {
+        question: "392. Which service provides a fully managed NoSQL database?",
+        options: ["A) Amazon DynamoDB", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon DynamoDB"
+    },
+    {
+        question: "393. What does AWS WAF do?",
+        options: ["A) Protects web applications from common threats", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Protects web applications from common threats"
+    },
+    {
+        question: "394. What is the main benefit of using Amazon Route 53?",
+        options: ["A) DNS service with routing capabilities", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) DNS service with routing capabilities"
+    },
+    {
+        question: "395. What does Amazon Transcribe do?",
+        options: ["A) Automatic speech recognition", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Automatic speech recognition"
+    },
+    {
+        question: "396. Which service helps with content delivery?",
+        options: ["A) Amazon CloudFront", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon CloudFront"
+    },
+    {
+        question: "397. What is the main function of AWS Cost Explorer?",
+        options: ["A) Analyze spending patterns", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Analyze spending patterns"
+    },
+    {
+        question: "398. What does AWS Shield provide?",
+        options: ["A) DDoS protection", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) DDoS protection"
+    },
+    {
+        question: "399. Which service provides real-time monitoring of applications?",
+        options: ["A) Amazon CloudWatch", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon CloudWatch"
+    },
+    {
+        question: "400. What is the purpose of AWS Budgets?",
+        options: ["A) Manage spending and set budgets", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage spending and set budgets"
+    },
+    {
+        question: "401. Which AWS service allows you to automate the management of your cloud resources?",
+        options: ["A) AWS Systems Manager", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Systems Manager"
+    },
+    {
+        question: "402. What does AWS Global Accelerator do?",
+        options: ["A) Improve availability and performance of applications", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Improve availability and performance of applications"
+    },
+    {
+        question: "403. What is Amazon Connect used for?",
+        options: ["A) Cloud-based contact center", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Cloud-based contact center"
+    },
+    {
+        question: "404. Which service provides a way to automate security assessments?",
+        options: ["A) Amazon Inspector", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon Inspector"
+    },
+    {
+        question: "405. What does AWS Elastic Beanstalk do?",
+        options: ["A) Simplifies application deployment", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Simplifies application deployment"
+    },
+    {
+        question: "406. What is the purpose of Amazon Elastic File System (EFS)?",
+        options: ["A) Managed file storage", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Managed file storage"
+    },
+    {
+        question: "407. What does AWS App Runner do?",
+        options: ["A) Deploys web applications and APIs", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Deploys web applications and APIs"
+    },
+    {
+        question: "408. Which AWS service helps with data transfer acceleration?",
+        options: ["A) Amazon S3 Transfer Acceleration", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon S3 Transfer Acceleration"
+    },
+    {
+        question: "409. What is the main function of Amazon Kinesis?",
+        options: ["A) Real-time data streaming", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Real-time data streaming"
+    },
+    {
+        question: "410. What does AWS Batch do?",
+        options: ["A) Run batch computing workloads", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Run batch computing workloads"
+    },
+    {
+        question: "411. What is Amazon Cognito used for?",
+        options: ["A) User authentication and access control", "B) Data storage", "C) User management", "D) API management"],
+        answer: "A) User authentication and access control"
+    },
+    {
+        question: "412. What does AWS Config do?",
+        options: ["A) Tracks resource configurations", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Tracks resource configurations"
+    },
+    {
+        question: "413. Which service provides a way to build APIs?",
+        options: ["A) Amazon API Gateway", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon API Gateway"
+    },
+    {
+        question: "414. What is the purpose of AWS CloudTrail?",
+        options: ["A) Tracks user activity and API usage", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Tracks user activity and API usage"
+    },
+    {
+        question: "415. What does AWS Elemental MediaConvert do?",
+        options: ["A) Video transcoding service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Video transcoding service"
+    },
+    {
+        question: "416. Which service provides a fully managed machine learning platform?",
+        options: ["A) Amazon SageMaker", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon SageMaker"
+    },
+    {
+        question: "417. What is the main function of AWS Glue?",
+        options: ["A) Data integration service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Data integration service"
+    },
+    {
+        question: "418. What does AWS CloudFormation do?",
+        options: ["A) Automates resource provisioning", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Automates resource provisioning"
+    },
+    {
+        question: "419. Which service provides a fully managed relational database?",
+        options: ["A) Amazon RDS", "B) Amazon S3", "C) AWS Lambda", "D) Amazon DynamoDB"],
+        answer: "A) Amazon RDS"
+    },
+    {
+        question: "420. What does Amazon S3 Select do?",
+        options: ["A) Retrieve a subset of data from S3 objects", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Retrieve a subset of data from S3 objects"
+    },
+    {
+        question: "421. What is the purpose of AWS CodeDeploy?",
+        options: ["A) Automate application deployments", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Automate application deployments"
+    },
+    {
+        question: "422. Which service helps with application performance monitoring?",
+        options: ["A) Amazon CloudWatch", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon CloudWatch"
+    },
+    {
+        question: "423. What does Amazon Rekognition do?",
+        options: ["A) Image and video analysis", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Image and video analysis"
+    },
+    {
+        question: "424. What is AWS CodePipeline used for?",
+        options: ["A) Automate CI/CD workflows", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Automate CI/CD workflows"
+    },
+    {
+        question: "425. Which AWS service provides a way to manage containers?",
+        options: ["A) Amazon ECS", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon ECS"
+    },
+    {
+        question: "426. What is the main function of AWS Secrets Manager?",
+        options: ["A) Manage secrets and sensitive information", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage secrets and sensitive information"
+    },
+    {
+        question: "427. What does Amazon EMR do?",
+        options: ["A) Big data processing framework", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Big data processing framework"
+    },
+    {
+        question: "428. What is the purpose of AWS Step Functions?",
+        options: ["A) Coordinate microservices workflows", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Coordinate microservices workflows"
+    },
+    {
+        question: "429. Which service helps with managing DNS records?",
+        options: ["A) Amazon Route 53", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon Route 53"
+    },
+    {
+        question: "430. What does Amazon Polly do?",
+        options: ["A) Text-to-speech service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Text-to-speech service"
+    },
+    {
+        question: "431. What is AWS IoT Core used for?",
+        options: ["A) Connect IoT devices to the cloud", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Connect IoT devices to the cloud"
+    },
+    {
+        question: "432. Which service provides a managed service for machine learning?",
+        options: ["A) Amazon SageMaker", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon SageMaker"
+    },
+    {
+        question: "433. What is the main purpose of AWS Organizations?",
+        options: ["A) Manage multiple AWS accounts", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage multiple AWS accounts"
+    },
+    {
+        question: "434. What does AWS Lambda do?",
+        options: ["A) Run code without provisioning servers", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Run code without provisioning servers"
+    },
+    {
+        question: "435. Which service provides a way to manage and deploy serverless applications?",
+        options: ["A) AWS SAM", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS SAM"
+    },
+    {
+        question: "436. What does Amazon GuardDuty do?",
+        options: ["A) Threat detection service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Threat detection service"
+    },
+    {
+        question: "437. What is the purpose of Amazon FSx?",
+        options: ["A) Managed file systems", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Managed file systems"
+    },
+    {
+        question: "438. Which service provides a managed database for Apache Cassandra?",
+        options: ["A) Amazon Keyspaces", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon Keyspaces"
+    },
+    {
+        question: "439. What is the main function of AWS Elastic Load Balancing?",
+        options: ["A) Distribute incoming application traffic", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Distribute incoming application traffic"
+    },
+    {
+        question: "440. What does Amazon EFS do?",
+        options: ["A) Managed file storage for use with EC2", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Managed file storage for use with EC2"
+    },
+    {
+        question: "441. What is the purpose of AWS Resource Groups?",
+        options: ["A) Organize AWS resources", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Organize AWS resources"
+    },
+    {
+        question: "442. Which service provides a managed service for running MySQL databases?",
+        options: ["A) Amazon RDS", "B) Amazon S3", "C) AWS Lambda", "D) Amazon DynamoDB"],
+        answer: "A) Amazon RDS"
+    },
+    {
+        question: "443. What does AWS Budgets do?",
+        options: ["A) Manage and track AWS spending", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage and track AWS spending"
+    },
+    {
+        question: "444. What is the main purpose of Amazon AppSync?",
+        options: ["A) Build GraphQL APIs", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Build GraphQL APIs"
+    },
+    {
+        question: "445. What does Amazon Lex do?",
+        options: ["A) Build conversational interfaces", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Build conversational interfaces"
+    },
+    {
+        question: "446. What is the purpose of AWS Step Functions?",
+        options: ["A) Coordinate distributed applications", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Coordinate distributed applications"
+    },
+    {
+        question: "447. Which AWS service provides a fully managed Kubernetes service?",
+        options: ["A) Amazon EKS", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon EKS"
+    },
+    {
+        question: "448. What does Amazon Elastic Transcoder do?",
+        options: ["A) Media transcoding service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Media transcoding service"
+    },
+    {
+        question: "449. What is the purpose of AWS Batch?",
+        options: ["A) Run batch jobs in the cloud", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Run batch jobs in the cloud"
+    },
+    {
+        question: "450. Which service provides managed access to data in S3?",
+        options: ["A) Amazon S3 Select", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon S3 Select"
+    },
+    {
+        question: "451. What does AWS Glue do?",
+        options: ["A) ETL service for data integration", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) ETL service for data integration"
+    },
+    {
+        question: "452. What is the main purpose of Amazon Elastic Beanstalk?",
+        options: ["A) Deploy and manage applications", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Deploy and manage applications"
+    },
+    {
+        question: "453. What does Amazon QuickSight do?",
+        options: ["A) Business intelligence service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Business intelligence service"
+    },
+    {
+        question: "454. What is the purpose of Amazon WorkSpaces?",
+        options: ["A) Virtual desktop infrastructure", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Virtual desktop infrastructure"
+    },
+    {
+        question: "455. Which AWS service provides a scalable data lake?",
+        options: ["A) AWS Lake Formation", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) AWS Lake Formation"
+    },
+    {
+        question: "456. What does AWS Direct Connect do?",
+        options: ["A) Establish a dedicated network connection", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Establish a dedicated network connection"
+    },
+    {
+        question: "457. What is the main function of AWS AppConfig?",
+        options: ["A) Manage application configurations", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage application configurations"
+    },
+    {
+        question: "458. Which service helps with application performance monitoring?",
+        options: ["A) Amazon CloudWatch", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon CloudWatch"
+    },
+    {
+        question: "459. What does Amazon EBS do?",
+        options: ["A) Block storage for EC2 instances", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Block storage for EC2 instances"
+    },
+    {
+        question: "460. What is the purpose of AWS Shield?",
+        options: ["A) DDoS protection", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) DDoS protection"
+    },
+    {
+        question: "461. Which AWS service provides serverless functions?",
+        options: ["A) AWS Lambda", "B) Amazon S3", "C) Amazon RDS", "D) Amazon DynamoDB"],
+        answer: "A) AWS Lambda"
+    },
+    {
+        question: "462. What does AWS X-Ray do?",
+        options: ["A) Analyze and debug applications", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Analyze and debug applications"
+    },
+    {
+        question: "463. What is the main function of Amazon Cognito?",
+        options: ["A) User authentication and access control", "B) Data storage", "C) API management", "D) Machine learning"],
+        answer: "A) User authentication and access control"
+    },
+    {
+        question: "464. What does Amazon S3 Transfer Acceleration do?",
+        options: ["A) Speed up uploads to S3", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Speed up uploads to S3"
+    },
+    {
+        question: "465. What is the purpose of AWS CloudTrail?",
+        options: ["A) Track AWS account activity", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Track AWS account activity"
+    },
+    {
+        question: "466. What does AWS Key Management Service (KMS) do?",
+        options: ["A) Manage encryption keys", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage encryption keys"
+    },
+    {
+        question: "467. What is the main function of AWS Systems Manager?",
+        options: ["A) Manage infrastructure and applications", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage infrastructure and applications"
+    },
+    {
+        question: "468. Which AWS service helps with monitoring resource utilization?",
+        options: ["A) Amazon CloudWatch", "B) Amazon S3", "C) AWS Lambda", "D) Amazon RDS"],
+        answer: "A) Amazon CloudWatch"
+    },
+    {
+        question: "469. What does AWS Firewall Manager do?",
+        options: ["A) Manage firewall rules across accounts", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage firewall rules across accounts"
+    },
+    {
+        question: "470. What is the purpose of AWS WAF?",
+        options: ["A) Protect web applications from attacks", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Protect web applications from attacks"
+    },
+    {
+        question: "471. What does Amazon RDS do?",
+        options: ["A) Managed relational database service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Managed relational database service"
+    },
+    {
+        question: "472. What is the main function of Amazon Redshift?",
+        options: ["A) Data warehousing service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Data warehousing service"
+    },
+    {
+        question: "473. What does Amazon SageMaker do?",
+        options: ["A) Build and deploy machine learning models", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Build and deploy machine learning models"
+    },
+    {
+        question: "474. What is the purpose of AWS CloudFormation?",
+        options: ["A) Manage infrastructure as code", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage infrastructure as code"
+    },
+    {
+        question: "475. What does Amazon Elastic Container Service (ECS) do?",
+        options: ["A) Manage Docker containers", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage Docker containers"
+    },
+    {
+        question: "476. What is the main purpose of AWS CodeCommit?",
+        options: ["A) Managed source control service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Managed source control service"
+    },
+    {
+        question: "477. What does AWS Lambda do?",
+        options: ["A) Run code without provisioning servers", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Run code without provisioning servers"
+    },
+    {
+        question: "478. What is the purpose of AWS CloudFront?",
+        options: ["A) Content delivery network service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Content delivery network service"
+    },
+    {
+        question: "479. What does AWS CodeBuild do?",
+        options: ["A) Compile source code", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Compile source code"
+    },
+    {
+        question: "480. What is the main function of AWS CodeStar?",
+        options: ["A) Simplify development and deployment workflows", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Simplify development and deployment workflows"
+    },
+    {
+        question: "481. What does AWS Glue do?",
+        options: ["A) ETL service for data integration", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) ETL service for data integration"
+    },
+    {
+        question: "482. What is the purpose of AWS CloudTrail?",
+        options: ["A) Track AWS account activity", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Track AWS account activity"
+    },
+    {
+        question: "483. What does AWS App Mesh do?",
+        options: ["A) Manage service-to-service communication", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage service-to-service communication"
+    },
+    {
+        question: "484. What is the main function of AWS Service Catalog?",
+        options: ["A) Manage catalogs of IT services", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Manage catalogs of IT services"
+    },
+    {
+        question: "485. What does AWS Batch do?",
+        options: ["A) Run batch computing workloads", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Run batch computing workloads"
+    },
+    {
+        question: "486. What is the purpose of AWS Elastic Beanstalk?",
+        options: ["A) Deploy applications automatically", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Deploy applications automatically"
+    },
+    {
+        question: "487. What does AWS OpsWorks do?",
+        options: ["A) Configuration management service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Configuration management service"
+    },
+    {
+        question: "488. What is the main function of AWS Global Accelerator?",
+        options: ["A) Improve availability and performance of applications", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Improve availability and performance of applications"
+    },
+    {
+        question: "489. What does Amazon Inspector do?",
+        options: ["A) Automated security assessment service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Automated security assessment service"
+    },
+    {
+        question: "490. What is the purpose of AWS Trusted Advisor?",
+        options: ["A) Provide recommendations for AWS best practices", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Provide recommendations for AWS best practices"
+    },
+    {
+        question: "491. What does Amazon CloudWatch do?",
+        options: ["A) Monitoring AWS resources and applications", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Monitoring AWS resources and applications"
+    },
+    {
+        question: "492. What is the main function of Amazon VPC?",
+        options: ["A) Isolate resources in a virtual network", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Isolate resources in a virtual network"
+    },
+    {
+        question: "493. What does AWS Elastic Load Balancing do?",
+        options: ["A) Distribute incoming application traffic", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Distribute incoming application traffic"
+    },
+    {
+        question: "494. What is the purpose of AWS Storage Gateway?",
+        options: ["A) Hybrid cloud storage service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Hybrid cloud storage service"
+    },
+    {
+        question: "495. What does AWS Config do?",
+        options: ["A) Monitor and record AWS resource configurations", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Monitor and record AWS resource configurations"
+    },
+    {
+        question: "496. What is the main function of AWS Fargate?",
+        options: ["A) Run containers without managing servers", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Run containers without managing servers"
+    },
+    {
+        question: "497. What does Amazon S3 do?",
+        options: ["A) Object storage service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Object storage service"
+    },
+    {
+        question: "498. What is the purpose of Amazon EFS?",
+        options: ["A) Elastic file storage service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Elastic file storage service"
+    },
+    {
+        question: "499. What does Amazon RDS Multi-AZ do?",
+        options: ["A) High availability for RDS instances", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) High availability for RDS instances"
+    },
+    {
+        question: "500. What is the main function of Amazon DynamoDB?",
+        options: ["A) Managed NoSQL database service", "B) Data storage", "C) User authentication", "D) API management"],
+        answer: "A) Managed NoSQL database service"
     }
 ]
 
