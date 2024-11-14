@@ -7,25 +7,37 @@
     <title>মুয়াজ সালেহীন সিরাত</title>
     <!-- Bootstrap CSS Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts (Lora, Noto Sans Bengali) -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Noto Sans Bengali', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
-            line-height: 1.6;
         }
 
         .header {
-            background-color: #00695c;
+            background-color: #00796b;
             color: white;
-            padding: 30px 0;
+            padding: 40px 0;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .header h1 {
+            font-family: 'Lora', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
         }
 
         .container {
-            max-width: 960px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -33,8 +45,8 @@
         .section-title {
             font-size: 2rem;
             font-weight: bold;
-            margin-top: 20px;
-            color: #00695c;
+            margin-top: 30px;
+            color: #00796b;
         }
 
         .section-content {
@@ -44,25 +56,73 @@
         }
 
         .highlight {
-            background-color: #d3f2e0;
-            padding: 5px;
-            border-radius: 5px;
+            background-color: #e0f7fa;
+            padding: 6px;
+            border-radius: 6px;
+            font-weight: bold;
         }
 
         .quote {
             font-style: italic;
-            color: #00695c;
+            color: #00796b;
             margin-top: 20px;
+            font-size: 1.3rem;
         }
 
         .footer {
-            background-color: #00695c;
+            background-color: #00796b;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
+            padding: 15px;
+            position: relative;
             width: 100%;
             bottom: 0;
+            border-top: 4px solid #004d40;
+        }
+
+        .card {
+            border: 2px solid #00796b;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            color: #00796b;
+            font-size: 1.5rem;
+        }
+
+        .card-body {
+            font-size: 1.1rem;
+        }
+
+        .quote {
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .highlight {
+            color: #004d40;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 767px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .quote {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -72,14 +132,26 @@
     <!-- Header Section -->
     <div class="header">
         <h1>মুয়াজ সালেহীন সিরাত</h1>
-        <p>ইসলামে একটি নামের ব্যাখ্যা</p>
+        <p>ইসলামে একটি নামের ব্যাখ্যা এবং পূর্ণাঙ্গ অর্থ</p>
     </div>
 
     <!-- Main Content -->
     <div class="container">
+        <!-- Full Name Meaning Section -->
+        <div class="section-title">নামের পূর্ণাঙ্গ অর্থ</div>
+        <div class="section-content card">
+            <p><strong>মুয়াজ সালেহীন সিরাত</strong> নামটি তিনটি গুরুত্বপূর্ণ আরবি শব্দের সমন্বয়ে গঠিত:</p>
+            <ul>
+                <li><strong>মুয়াজ (Mu'az)</strong>: <span class="highlight" data-bs-toggle="tooltip" title="আল্লাহর আশ্রয়ে থাকা">"আল্লাহর আশ্রয়ে থাকা"</span> বা <span class="highlight" data-bs-toggle="tooltip" title="আল্লাহর সুরক্ষা লাভ করা">"আল্লাহর সুরক্ষা লাভ করা"</span>।</li>
+                <li><strong>সালেহীন (Salehin)</strong>: <span class="highlight" data-bs-toggle="tooltip" title="পুণ্যবান, সৎ বা ন্যায়পরায়ণ">"পুণ্যবান", "সৎ" বা "ন্যায়পরায়ণ"</span>।</li>
+                <li><strong>সিরাত (Sirat)</strong>: <span class="highlight" data-bs-toggle="tooltip" title="সঠিক পথ বা আল্লাহর নির্দেশিত পথ">"সঠিক পথ" বা "আল্লাহর নির্দেশিত পথ"</span>।</li>
+            </ul>
+            <p>"যিনি সুরক্ষিত, সৎ ও ধার্মিক মানুষের পথ অনুসরণ করেন" বা "যে ব্যক্তি সৎ ও ধার্মিক পথ অনুসরণ করে আল্লাহর আশ্রয়ে নিরাপদ থাকে"।</p>
+        </div>
+
         <!-- Mu'az Section -->
         <div class="section-title">১. মুয়াজ (Mu'az)</div>
-        <div class="section-content">
+        <div class="section-content card">
             <p>**মুয়াজ** একটি গুরুত্বপূর্ণ আরবি নাম, যার মানে হলো **"আল্লাহর আশ্রয়ে থাকা"** বা **"আল্লাহর সুরক্ষা লাভ করা"**। এই নামটি ইসলামের ইতিহাসের মধ্যে **মুয়াজ ইবনে জাবাল** (رضي الله عنه)-এর স্মৃতি মনে করিয়ে দেয়, যিনি ছিলেন একজন প্রখ্যাত সাহাবী এবং ইসলামের জ্ঞানী শিক্ষক।</p>
             <p>**মুয়াজ ইবনে জাবাল** ছিলেন **রাসূলুল্লাহ (সা.)**-এর অত্যন্ত শ্রদ্ধেয় সাহাবী। রাসূল (সা.) তাকে **ইয়েমেন** এর গভর্নর হিসেবে নিয়োগ দিয়েছিলেন, এবং তিনি ইসলামের শিক্ষা সেখানকার জনগণের মধ্যে প্রচার করেছিলেন।</p>
             <p>একদিন, রাসূল (সা.) তাকে প্রশ্ন করেছিলেন: **"তুমি ইয়েমেনে গিয়ে কিভাবে মানুষকে ইসলাম শিক্ষা দেবে?"** তখন মুয়াজ বলেছিলেন, **"আমি তাদের আল্লাহর তাওহীদ, নবুওয়ত এবং ইসলামের মূল বিশ্বাসগুলো শিখাবো, তারপর তাদের নামায, রোজা, হজ, জাকাতসহ অন্যান্য ফরজ কাজের বিষয়ে গাইড করবো।"**</p>
@@ -89,22 +161,20 @@
 
         <!-- Salehin Section -->
         <div class="section-title">২. সালেহীন (Salehin)</div>
-        <div class="section-content">
+        <div class="section-content card">
             <p>**সালেহীন** (صالحين) শব্দটি **সালেহ** (صالح) থেকে এসেছে, যার মানে হলো **"পুণ্যবান"**, **"সৎ"** বা **"ন্যায়পরায়ণ"**। এই নামটি ইসলামের ইতিহাসে সেই সব ব্যক্তিত্বের স্মৃতি মনে করিয়ে দেয় যারা ধর্মীয় নীতি অনুসরণ করেছেন এবং সৎকর্মে প্রতিশ্রুতিবদ্ধ ছিলেন।</p>
             <p>**সালেহীন** শব্দটি কুরআন ও হাদীসে বারবার উল্লেখিত হয়েছে, যেখানে আল্লাহ বলেছেন:  
-            <span class="highlight">"إِنَّ الصَّالِحِينَ لَهُمْ جَزَاءٌ حَسَنٌ" (সুরা আল-ইনফিতার, ৩৪)</span>  
+            <span class="highlight" data-bs-toggle="tooltip" title="সুরা আল-ইনফিতার, ৩৪">"إِنَّ الصَّالِحِينَ لَهُمْ جَزَاءٌ حَسَنٌ"</span>  
             অর্থ: "নিঃসন্দেহে পুণ্যবানদের জন্য রয়েছে শ্রেষ্ঠ পুরস্কার।"</p>
             <p>ইসলামের প্রাথমিক যুগের **খুলফায়ে রাশেদিন** (হযরত আবু বকর, উমর, উসমান, আলী رضي الله عنهم) এবং অন্য পুণ্যবান সাহাবীরা ছিলেন প্রকৃত **সালেহীন**—যারা আল্লাহর পথ অনুসরণ করতেন এবং মানবতার কল্যাণে কাজ করতেন।</p>
-            <p>**সালেহীন** মানে শুধুমাত্র সৎ জীবনযাপন নয়, বরং একজন মুসলিমের পরিশুদ্ধ মন এবং আধ্যাত্মিক উন্নতি অর্জনের চেষ্টার প্রতীক।</p>
         </div>
 
         <!-- Sirat Section -->
         <div class="section-title">৩. সিরাত (Sirat)</div>
-        <div class="section-content">
+        <div class="section-content card">
             <p>**সিরাত** (صراط) শব্দটি **"পথ"** বা **"রাস্তা"** বোঝায়, তবে ইসলামী পরিভাষায় এটি আধ্যাত্মিক এবং নৈতিক পথের প্রতীক। **সিরাত** শব্দটি আল্লাহর নির্দেশিত সঠিক পথের প্রতীক হিসেবে ব্যবহৃত হয়, যা একজন মুসলিম পরকালীন সফলতার দিকে পরিচালিত হতে অনুসরণ করেন।</p>
             <p>**সিরাত** বলতে সেই পথ বুঝানো হয়, যা একজন মুসলিম আল্লাহর সন্তুষ্টি এবং পরকালীন সফলতা অর্জন করার জন্য অনুসরণ করেন। এটি কুরআনে **"সিরাত আল-হক"** বা **"সত্য পথ"** হিসেবে উল্লেখিত।</p>
             <p>এই সোজা পথ অনুসরণ করা একজন মুসলিমের জীবনের প্রধান লক্ষ্য হওয়া উচিত। আল্লাহর পক্ষ থেকে প্রদত্ত নির্দেশনা, ইসলামের নৈতিক মূল্যবোধ, এবং রাসূল (সা.)-এর সুন্নাহ অনুসরণ করাই এই পথের মূল দিক।</p>
-            <p>ইসলামে **সিরাত** শব্দটি আরও একটি গুরুত্ব বহন করে, যা পরকালিক বিচার-প্রক্রিয়ার সময় **পুল সারাত** (সেতু) এর সাথে সম্পর্কিত। এটি এমন একটি সেতু যা জান্নাতে প্রবেশের পূর্বে পার করতে হয়, এবং এটি **সৎপথ** বা **সিরাত** অনুসরণের পরীক্ষার প্রতীক।</p>
         </div>
 
         <!-- Quote Section -->
@@ -112,14 +182,22 @@
             <p><strong>"সৎপথ অনুসরণ করা এবং আল্লাহর আদেশ মেনে চলা, জীবনের লক্ষ্য হওয়া উচিত।"</strong></p>
         </div>
     </div>
-    <br><br><br>
+
     <!-- Footer Section -->
-    <div class="footer mt-4">
+    <div class="footer">
         <p>&copy; 2024 ইসলামী শিক্ষা | সকল অধিকার সংরক্ষিত</p>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Initialize Bootstrap Tooltips -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
 </body>
 
 </html>
