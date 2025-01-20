@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Understanding Idempotent APIs in .NET: A Beginner’s Guideks 🚀</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <link rel="stylesheet" href="../mystyles.css">
+    <style>
+    </style>
+    <link href="../../plugins.min.css" type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'">
+
+
+
+
+    <style>
+        /* dm-sans-regular - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-regular.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* dm-sans-italic - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'DM Sans';
+            font-style: italic;
+            font-weight: 400;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* dm-sans-700 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-700.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* dm-sans-700italic - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'DM Sans';
+            font-style: italic;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-700italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* urbanist-500 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 500;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-500.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* urbanist-600 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 600;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-600.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* urbanist-700 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-700.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* urbanist-700italic - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: italic;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-700italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* urbanist-800 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 800;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-800.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+    </style>
+    <style>
+        :root{
+                --epcl-background-color: #FAF8FF;
+                --epcl-boxes-background-color: #ffffff;
+                --epcl-border-color: #E9E8FF;
+                --epcl-boxes-border-color: #E9E8FF;
+                --epcl-secondary-color: #FF2AAC;
+        }
+        .ctag-3-css .epcl-number,
+        .ctag-3-css.epcl-button,
+        .siblings .ctag-3-css,
+        div.tags a.ctag-3-css:before,
+        div.tags.fill-color a.ctag-3-css,
+        .category-image.ctag-3-css,
+        .epcl-post-carousel article.ctag-3-css{ background: #227dff !important; }
+        .ctag-3-css.overlay-effect .image-container:before{ background: #227dff !important; }
+        .ctag-code .epcl-number,
+        .ctag-code.epcl-button,
+        .siblings .ctag-code,
+        div.tags a.ctag-code:before,
+        div.tags.fill-color a.ctag-code,
+        .category-image.ctag-code,
+        .epcl-post-carousel article.ctag-code{ background: #ff2ed9 !important; }
+        .ctag-code.overlay-effect .image-container:before{ background: #ff2ed9 !important; }
+        .ctag-5-databases .epcl-number,
+        .ctag-5-databases.epcl-button,
+        .siblings .ctag-5-databases,
+        div.tags a.ctag-5-databases:before,
+        div.tags.fill-color a.ctag-5-databases,
+        .category-image.ctag-5-databases,
+        .epcl-post-carousel article.ctag-5-databases{ background: #5751ff !important; }
+        .ctag-5-databases.overlay-effect .image-container:before{ background: #5751ff !important; }
+        .ctag-6-deployment .epcl-number,
+        .ctag-6-deployment.epcl-button,
+        .siblings .ctag-6-deployment,
+        div.tags a.ctag-6-deployment:before,
+        div.tags.fill-color a.ctag-6-deployment,
+        .category-image.ctag-6-deployment,
+        .epcl-post-carousel article.ctag-6-deployment{ background: #2a2728 !important; }
+        .ctag-6-deployment.overlay-effect .image-container:before{ background: #2a2728 !important; }
+        .ctag-guides .epcl-number,
+        .ctag-guides.epcl-button,
+        .siblings .ctag-guides,
+        div.tags a.ctag-guides:before,
+        div.tags.fill-color a.ctag-guides,
+        .category-image.ctag-guides,
+        .epcl-post-carousel article.ctag-guides{ background: #3aa9fd !important; }
+        .ctag-guides.overlay-effect .image-container:before{ background: #3aa9fd !important; }
+        .ctag-2-html .epcl-number,
+        .ctag-2-html.epcl-button,
+        .siblings .ctag-2-html,
+        div.tags a.ctag-2-html:before,
+        div.tags.fill-color a.ctag-2-html,
+        .category-image.ctag-2-html,
+        .epcl-post-carousel article.ctag-2-html{ background: #ff8e51 !important; }
+        .ctag-2-html.overlay-effect .image-container:before{ background: #ff8e51 !important; }
+        .ctag-4-javascript .epcl-number,
+        .ctag-4-javascript.epcl-button,
+        .siblings .ctag-4-javascript,
+        div.tags a.ctag-4-javascript:before,
+        div.tags.fill-color a.ctag-4-javascript,
+        .category-image.ctag-4-javascript,
+        .epcl-post-carousel article.ctag-4-javascript{ background: #ffcb29 !important; }
+        .ctag-4-javascript.overlay-effect .image-container:before{ background: #ffcb29 !important; }
+        .ctag-sql .epcl-number,
+        .ctag-sql.epcl-button,
+        .siblings .ctag-sql,
+        div.tags a.ctag-sql:before,
+        div.tags.fill-color a.ctag-sql,
+        .category-image.ctag-sql,
+        .epcl-post-carousel article.ctag-sql{ background: #f95353 !important; }
+        .ctag-sql.overlay-effect .image-container:before{ background: #f95353 !important; }
+        .ctag-tech .epcl-number,
+        .ctag-tech.epcl-button,
+        .siblings .ctag-tech,
+        div.tags a.ctag-tech:before,
+        div.tags.fill-color a.ctag-tech,
+        .category-image.ctag-tech,
+        .epcl-post-carousel article.ctag-tech{ background: #4775ff !important; }
+        .ctag-tech.overlay-effect .image-container:before{ background: #4775ff !important; }
+    </style>
+
+    <script>
+        // Theme Config, check the documentation before edit this file
+        var site_url = 'https://ghost.estudiopatagon.com/zento';
+        var theme_config = {
+            masonry: 'on', // If you don't need masonry style, just set to "off"
+            sticky_sidebar: 'on', // on / off
+            disqus_shortname: 'ghostexample', // You can create your own Disqus Comments here: https://disqus.com/admin/create/
+        };
+        theme_config.disqus_shortname = "ghostexample";
+    </script>
+    <meta name="description" content="When building web applications, ensuring that your APIs behave predictably is key to offering a smooth user experience. One important concept that helps achieve this is idempotency. But what exactly is idempotency, and how can you implement it in your APIs? This post breaks down the concept and shows you how to create idempotent APIs using .NET....">
+    <link rel="canonical" href="https://coding-drop.github.io/posts/basics/idempotant-api.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://coding-drop.github.io/vertical/amp/">
+    <meta property="og:site_name" content="Coding Drop">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Understanding Idempotent APIs in .NET: A Beginner’s Guide 🚀">
+    <meta property="og:description" content="When building web applications, ensuring that your APIs behave predictably is key to offering a smooth user experience. One important concept that helps achieve this is idempotency. But what exactly is idempotency, and how can you implement it in your APIs? This post breaks down the concept and shows you how to create idempotent APIs using .NET....">
+    <meta property="og:url" content="https://coding-drop.github.io/posts/basics/idempotant-api.html">
+    <meta property="og:image" content="https://coding-drop.github.io/img/idempotant-api.jpg">
+    <meta property="article:published_time" content="2024-09-16T20:40:54.000Z">
+    <meta property="article:modified_time" content="2024-09-16T00:15:45.000Z">
+    <meta property="article:tag" content="OOP">
+    <meta property="article:tag" content="Tech">
+    <meta property="article:tag" content="Code">
+    <meta property="article:publisher" content="https://www.facebook.com/">
+    <meta property="article:author" content="https://www.facebook.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Understanding Idempotent APIs in .NET: A Beginner’s Guide 🚀">
+    <meta name="twitter:description" content="When building web applications, ensuring that your APIs behave predictably is key to offering a smooth user experience. One important concept that helps achieve this is idempotency. But what exactly is idempotency, and how can you implement it in your APIs? This post breaks down the concept and shows you how to create idempotent APIs using .NET....">
+    <meta name="twitter:url" content="https://coding-drop.github.io/posts/basics/idempotant-api.html">
+    <meta name="twitter:image" content="https://coding-drop.github.io/img/idempotant-api.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Admin">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="OOP, Tech, Code">
+    <meta name="twitter:site" content="@envato">
+    <meta name="twitter:creator" content="@envato">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="938">
+    <!-- <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Zento",
+                "url": "https://coding-drop.github.io/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://coding-drop.github.io/content/images/2024/01/logo-zento.svg"
+                }
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Jonathan Doe",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://coding-drop.github.io/content/images/2024/02/a-hiker-in-the-style-of-vibrant-illustrations-florianne-becker-light-violet-and-orange-deconstructed-tailoring-fauvismcore-minimal-1-65c0389ba903a-4.webp",
+                    "width": 1024,
+                    "height": 1024
+                },
+                "url": "https://coding-drop.github.io/author/jonathan-doe/",
+                "sameAs": [
+                    "https://estudiopatagon.com",
+                    "https://www.facebook.com/envato",
+                    "https://twitter.com/envato"
+                ]
+            },
+            "headline": "Understanding Idempotent APIs in .NET: A Beginner’s Guideks 🚀",
+            "url": "https://coding-drop.github.io/vertical/",
+            "datePublished": "2024-01-18T20:40:54.000Z",
+            "dateModified": "2024-03-11T00:15:45.000Z",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://coding-drop.github.io/content/images/2024/02/lorenzo-herrera-VFiQvZPlm2k-unsplash-1.jpg",
+                "width": 1200,
+                "height": 938
+            },
+            "keywords": "Fundamentals, Tech, Code",
+            "description": "When building web applications, ensuring that your APIs behave predictably is key to offering a smooth user experience. One important concept that helps achieve this is idempotency. But what exactly is idempotency, and how can you implement it in your APIs? This post breaks down the concept and shows you how to create idempotent APIs using .NET....",
+            "mainEntityOfPage": "https://coding-drop.github.io/vertical/"
+        }
+    </script> -->
+    <meta name="generator" content="Ghost 5.75">
+    <link rel="alternate" type="application/rss+xml" title="Zento" href="https://coding-drop.github.io/rss/">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.36/umd/portal.min.js" data-i18n="false" data-ghost="https://coding-drop.github.io/" data-key="3418b12091e67d20ee9d637bf3" data-api="https://coding-drop.github.io/ghost/api/content/" crossorigin="anonymous"></script>
+    <style id="gh-members-styles">
+    .gh-post-upgrade-cta-content,
+        .gh-post-upgrade-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            width: 100%;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .gh-post-upgrade-cta-content {
+            border-radius: 8px;
+            padding: 40px 4vw;
+        }
+
+        .gh-post-upgrade-cta h2 {
+            color: #ffffff;
+            font-size: 28px;
+            letter-spacing: -0.2px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gh-post-upgrade-cta p {
+            margin: 20px 0 0;
+            padding: 0;
+        }
+
+        .gh-post-upgrade-cta small {
+            font-size: 16px;
+            letter-spacing: -0.2px;
+        }
+
+        .gh-post-upgrade-cta a {
+            color: #ffffff;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+
+        .gh-post-upgrade-cta a:hover {
+            color: #ffffff;
+            opacity: 0.8;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+
+        .gh-post-upgrade-cta a.gh-btn {
+            display: block;
+            background: #ffffff;
+            text-decoration: none;
+            margin: 28px 0 0;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .gh-post-upgrade-cta a.gh-btn:hover {
+            opacity: 0.92;
+        }
+    </style>
+    <script async src="https://js.stripe.com/v3/"></script>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="3418b12091e67d20ee9d637bf3" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://coding-drop.github.io/" crossorigin="anonymous"></script>
+    <link href="https://coding-drop.github.io/webmentions/receive/" rel="webmention">
+    <script defer src="../../cards.min.js"></script>
+    <link rel="stylesheet" type="text/css" href=",,/cards.min.css">
+    <script defer src="../../comment-counts.min.js" data-ghost-comments-counts-api="https://coding-drop.github.io/members/api/comments/counts/"></script>
+    <script defer src="..c/member-attribution.min.js"></script>
+    <style>
+        .widget_epcl_tag_list .toggle-icon{ vertical-align: middle; margin-top: -8px; }
+        :root{
+            --purchase-color: #ff0081;
+        }
+        .epcl-themes.epcl-purchase{
+            bottom: 92px;
+            background: #4f1cff;
+            font-size: 13px;
+        }
+        .epcl-themes.epcl-purchase:before, .epcl-themes.epcl-purchase:after{ display: none; }
+        .epcl-purchase{
+            
+            position: fixed;
+            z-index: 110;
+            bottom: 20px;
+            left: 20px;
+            text-align: center;
+            background: var(--purchase-color);
+            color: #fff;
+            padding: 15px 25px;
+            box-shadow: 0px 3px 5px -1px rgb(7 10 25 / 10%);
+            font: 18px 'Urbanist';
+            font-weight: 500;
+            border-radius: 30px;
+        }
+        .epcl-purchase:hover{
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .epcl-purchase:before, .epcl-purchase:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+        }
+        .epcl-purchase:before {
+        display: none;
+        top: -75%;
+        background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--purchase-color) 20%, transparent 30%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+        }
+        .epcl-purchase:after {
+        display: none;
+        bottom: -75%;
+        background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+        }
+        .epcl-purchase:before {
+        display: block;
+        animation: topBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+        }
+        .epcl-purchase:after {
+        display: block;
+        animation: bottomBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+        }
+        @keyframes delay-animation {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            50.01% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes topBubbles {
+            0% {
+                background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+            }
+            50% {
+                background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+            }
+            100% {
+                background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+        @keyframes bottomBubbles {
+            0% {
+                background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+            }
+            50% {
+                background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+            }
+            100% {
+                background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+    </style>
+    <style>
+        :root {--ghost-accent-color: #6A4EE9;}
+    </style>
+</head>
+<body class=" post-template tag-1-fundamentals tag-tech tag-hash-rating-1 tag-code">
+    <!-- start: .mobile.main-nav -->
+    <nav class="mobile main-nav">
+        <div class="close"><svg class="icon"><use xlink:href="../zento/assets/images/svg-icons.svg?v=1b89f44b98#close-icon"></use></svg></div>
+            <div class="logo" >
+                <a href="https://ghost.estudiopatagon.com/zento"><img src="https://coding-drop.github.io/content/images/2024/01/logo-zento.svg" alt="Zento" width="170" height="60" decoding="async"></a>
+            </div>
+            <ul class="menu underline-effect">
+                <li class=" nav-home"><a href="https://coding-drop.github.io/">Home</a></li>
+                <li class=" nav-style-guide"><a href="https://coding-drop.github.io/style-guide/">Style Guide ✨</a></li>
+                <li class=" nav-explore-our-tags"><a href="https://coding-drop.github.io/explore-our-tags/">Explore our Tags</a></li>
+                <li class=" nav-text-only-post"><a href="https://coding-drop.github.io/text-only/">Text Only Post</a></li>
+                <li class=" nav-classic-post-image"><a href="https://coding-drop.github.io/classic/">Classic Post (image)</a></li>
+                <li class=" nav-vertical-post current-menu-item"><a href="https://coding-drop.github.io/vertical/">Vertical Post</a></li>
+                <li class=" nav-fullwidth-post"><a href="https://coding-drop.github.io/fullwidth/">Fullwidth Post</a></li>
+                <li class=" nav-no-sidebar-post"><a href="https://coding-drop.github.io/nosidebar/">No Sidebar Post</a></li>
+                <li class=" nav-home-demos"><a href="https://themes.estudiopatagon.com/selector/zento-ghost/">Home Demos 🚀</a></li>
+        </ul>
+    </nav>
+    <!-- end: .mobile.main-nav -->
+    <div class="menu-overlay"></div>
+	<!-- start: #wrapper -->
+	<div id="wrapper">
+		<!-- start: #header -->
+<header id="header" class="minimalist enable-sticky">
+	<!-- start: .menu-wrapper -->
+	<div class="menu-wrapper">
+		<div class="grid-container">
+            <div class="epcl-flex grid-wrapper">
+                <div class="logo" ><a href="../../index.html"><img src="../../img/CodingDrop.png" alt="Coding Drop" width="90%" decoding="async"></a></div>
+
+                <div class="account underline-effect hide-on-mobile hide-on-tablet hide-on-desktop-sm">          
+
+                <div class="open-menu">
+                    <svg class="open icon ularge"><use xlink:href="../zento/assets/images/svg-icons.svg?v=1b89f44b98#menu-icon"></use></svg>
+                </div>
+                <div class="clear"></div>
+            </div>		
+            
+            <div class="clear"></div>
+        </div>
+	</div>
+	<!-- end: .menu-wrapper -->
+	<div class="clear"></div>
+</header>
+<!-- end: #header -->
+        
+
+
+<!-- start: #single -->
+<main id="single" class="main grid-container classic epcl-vertical">
+    <!-- start: .center -->
+    <div class="center content">
+        <!-- start: .content -->
+        <div class="left-content grid-70 np-mobile" style="padding: 0; width: 100%;">
+
+            <article class="main-article bg-box section post-access-public primary-tag-1-fundamentals post tag-1-fundamentals tag-tech tag-hash-rating-1 tag-code featured">
+
+                <h1 style="color: #333; text-align: center; padding-bottom: 20px;">Understanding Idempotent APIs in .NET: A Beginner’s Guide</h1>
+                <p>When building web applications, ensuring that your APIs behave predictably is key to offering a smooth user experience. One important concept that helps achieve this is <strong>idempotency</strong>. But what exactly is idempotency, and how can you implement it in your APIs? This post breaks down the concept and shows you how to create idempotent APIs using .NET.</p>
+            
+                <h2 style="color: #444; margin-top: 20px;">1. What is Idempotency?</h2>
+                <p><strong>Idempotency</strong> refers to the ability of an operation to be repeated multiple times without changing the result beyond the initial request. For example, a request to delete a resource can safely be retried without causing errors or affecting the system in an unintended way.</p>
+                
+                <h2 style="color: #444; margin-top: 20px;">2. Why is Idempotency Important?</h2>
+                <ul>
+                    <li><strong>Safe Retries:</strong> In case of network failures or timeouts, retrying an API call won’t cause unintended side effects like duplicate data or multiple payments.</li>
+                    <li><strong>Predictable Behavior:</strong> Idempotent APIs ensure consistent behavior across multiple requests, improving the reliability of your application.</li>
+                    <li><strong>Error Recovery:</strong> With idempotent operations, you can safely recover from errors without having to worry about negative consequences, like duplicating resources or corrupting data.</li>
+                </ul>
+            
+                <h2 style="color: #444; margin-top: 20px;">3. How to Achieve Idempotency in a POST Request</h2>
+                <p>By default, the HTTP <strong>POST</strong> method is used to create new resources, which means it is not idempotent. However, we can make a POST request idempotent by ensuring that repeating the same request won’t create duplicate resources.</p>
+                <p>Here’s how we can implement idempotency for a user creation API in .NET using a unique identifier (such as an email) to check if the user already exists before creating a new one.</p>
+            
+                <h2 style="color: #444; margin-top: 20px;">4. Example of an Idempotent POST API in .NET</h2>
+                <p>Let’s take a look at how we can create an idempotent POST request for user creation in .NET Core.</p>
+                <div style="background: #fafafa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>public class User
+            {
+                public int Id { get; set; }
+                public string Email { get; set; }
+                public string Name { get; set; }
+            }
+            
+            [ApiController]
+            [Route("api/[controller]")]
+            public class UsersController : ControllerBase
+            {
+                private readonly IUserService _userService;
+            
+                public UsersController(IUserService userService)
+                {
+                    _userService = userService;
+                }
+            
+                [HttpPost]
+                public IActionResult CreateUser([FromBody] CreateUserRequest request)
+                {
+                    var existingUser = _userService.GetUserByEmail(request.Email);
+                    if (existingUser != null)
+                    {
+                        return Ok(existingUser); // Return existing user if it already exists
+                    }
+            
+                    var newUser = _userService.CreateUser(request); // Create new user
+                    return CreatedAtAction(nameof(GetUserById), new { id = newUser.Id }, newUser);
+                }
+            
+                [HttpGet("{id}")]
+                public IActionResult GetUserById(int id)
+                {
+                    var user = _userService.GetUserById(id);
+                    if (user == null)
+                    {
+                        return NotFound();
+                    }
+            
+                    return Ok(user);
+                }
+            }
+            </code></pre>
+                </div>
+                <p>In this example, the <code>CreateUser</code> method first checks if a user with the given email already exists. If a user is found, it returns the existing user data instead of creating a new one, ensuring that repeated requests do not result in duplicate users.</p>
+            
+                <h2 style="color: #444; margin-top: 20px;">5. How It Works: Checking for Existing Resources</h2>
+                <p>In our example, the <strong>GetUserByEmail</strong> method is used to check whether a user already exists in the system before proceeding with the creation. This ensures that even if the same <strong>POST</strong> request is made multiple times, it will either return the existing resource or create the resource once.</p>
+            
+                <h2 style="color: #444; margin-top: 20px;">6. Key Considerations for Idempotent APIs</h2>
+                <ul>
+                    <li><strong>Handling Duplicate Requests:</strong> Ensure that your API checks for existing resources based on a unique identifier (like email or user ID) to prevent creating duplicates.</li>
+                    <li><strong>Method Safety:</strong> For operations that modify data, consider making them idempotent by adding checks or using PUT instead of POST where applicable.</li>
+                    <li><strong>Response Codes:</strong> Returning the correct HTTP status codes (like <code>200 OK</code> for an existing resource and <code>201 Created</code> for a new one) is important to maintain clear communication with the client.</li>
+                </ul>
+            
+                <h2 style="color: #444; margin-top: 20px;">7. Testing and Best Practices</h2>
+                <p>To test the idempotency of your API, you can use tools like <strong>Postman</strong> or <strong>Swagger UI</strong>. Here’s what will happen:</p>
+                <ul>
+                    <li>The first time you send a <strong>POST</strong> request to create a user with a specific email, a new user will be created.</li>
+                    <li>If you send the same <strong>POST</strong> request again with the same email, the API will return the existing user without creating a duplicate.</li>
+                </ul>
+                <p>By following these best practices and applying idempotency, you ensure that your APIs are safe to retry and maintain consistent behavior across requests.</p>
+            
+                <h2 style="color: #444; margin-top: 20px;">8. Conclusion</h2>
+                <p>Idempotency is a key concept in building reliable and fault-tolerant APIs. By making your API operations idempotent, you can prevent issues like duplicate resources, multiple payments, and inconsistent states in your system. In this post, we demonstrated how to implement idempotency in .NET with a simple example, ensuring that even repeated requests won’t cause any side effects.</p>
+                <p>Remember, idempotency is not limited to POST requests—it applies to various HTTP methods, including GET, PUT, and DELETE. Implementing idempotent behavior across your API makes it more robust and user-friendly. Happy coding!</p>
+            
+            </article>
+            
+            
+
+            <div class="clear"></div>
+
+            <section class="siblings epcl-flex" id="epcl-other-stories">
+                    <article class="prev epcl-flex ctag-4-javascript post tag-4-javascript tag-code tag-2-html tag-hash-rating-3">
+                        <div class="info">
+                            <p>Previous Article</p>
+                            <h4 class="title usmall white fw-semibold">Understanding Object-Oriented Programming (OOP) in .NET</h4>
+                        </div>
+                        <span class="arrow"><svg class="icon large"><use xlink:href="../zento/assets/images/svg-icons.svg?v=1b89f44b98#left-arrow"></use></svg></span>
+                        <a href="post-oop.html" class="full-link"></a>
+                    </article>
+                
+                <div class="separator hide-on-mobile"></div>
+                    <article class="next epcl-flex ctag-3-css post tag-3-css tag-code tag-hash-rating-3 tag-guides tag-tech no-image">
+                        <div class="info">
+                            <p>Next Article</p>
+                            <h4 class="title usmall white fw-semibold">Understanding Idempotent APIs in .NET: A Beginner’s Guide</h4>
+                        </div>
+                        <span class="arrow"><svg class="icon large"><use xlink:href="../zento/assets/images/svg-icons.svg?v=1b89f44b98#right-arrow"></use></svg></span>
+                        <a href="post-inheritance.html" class="full-link"></a>
+                    </article>
+                <div class="clear"></div>                              
+            </section>
+               
+            <section class="related bg-box section ctag-1-fundamentals" id="epcl-related-stories">
+                
+                <div class="category-info epcl-flex">                       
+                    <div class="overlay-effect ctag-1-fundamentals">
+                            <span href="../../index.html" class="image-container category-image ctag-1-fundamentals"><img src="../../img/code.png"></span>
+                        <h3 class="title usmall fw-normal">More in this <b>Category</b> <span class="title large">OOP</span></h3>  
+                        <a href="../../index.html" class="full-link"><span class="screen-reader-text">Fundamentals</span></a>    
+                    </div>
+                    <!-- <a href="https://coding-drop.github.io/tag/1-fundamentals/" class="epcl-button ctag ctag-1-fundamentals hide-on-mobile">View All Articles</a>    -->
+                    <div class="clear"></div>                                                                       
+                </div>
+
+                <div class="clear"></div>
+                
+                <div class="article-list">                        
+                        <article class="item post featured">
+                            <div class="epcl-number black">1</div>
+                            <div class="info">
+                                <h4 class="title small underline-effect no-margin"><a href="post-oop.html">Understanding Object-Oriented Programming (OOP) in .NET 🚀</a></h4>
+                            </div>
+                        </article>
+                        <div class="clear"></div>
+                        <article class="item post">
+                            <div class="epcl-number black">2</div>
+                            <div class="info">
+                                <h4 class="title small underline-effect no-margin"><a href="post-inheritance.html">Understanding Idempotent APIs in .NET: A Beginner’s Guide</a></h4>
+                            </div>
+                        </article>
+                        <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <a href="https://coding-drop.github.io/" class="epcl-button ctag ctag-1-fundamentals hide-on-tablet hide-on-desktop">View All Articles</a>    
+
+            </section>
+            <div class="clear"></div>
+            
+                <!-- start: #comments -->
+                <div id="comments" class="medium-section np-bottom">
+                        
+        
+                </div>
+                <!-- end: #comments -->    
+
+        </div>
+        <!-- end: .content -->           
+
+        <!-- <div class="clear"></div> -->
+
+    </div>
+    <!-- end: .center -->
+
+</main>
+<!-- end: #single -->
+
+
+
+		
+<div class="clear"></div>
+<!-- start: .epcl-cta -->
+<div class="epcl-cta bg-box no-border-radius">
+    <div class="grid-container epcl-flex">
+        <div class="left grid-50 tablet-grid-50 np-mobile">
+            <h2 class="title ularge no-margin">Join to our community</h2>
+        </div>
+        <!-- <div class="right grid-50 tablet-grid-50 textcenter np-mobile">
+            <p>Try it for free for <b>7 days</b>, cancel at <b>anytime.</b></p>
+            <a href="https://coding-drop.github.io/membership" class="epcl-button black large">See our plans</a>
+        </div> -->
+    </div>
+    <div class="clear"></div>
+    <svg class="bg" width="284" height="453" viewBox="0 0 284 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="main-color" d="M100.795 7.49467C105.015 -1.99852 118.025 -2.47329 123.123 6.07068L123.86 7.49467L136.88 36.7886C148.263 62.3995 167.185 83.8837 191.069 98.4068L195.095 100.762L218.221 113.77C226.323 118.328 226.773 129.596 219.571 134.898L218.221 135.769L195.095 148.778C170.668 162.518 151.059 183.378 138.846 208.521L136.88 212.751L123.86 242.045C119.641 251.538 106.63 252.013 101.531 243.469L100.795 242.045L87.7754 212.751C76.3928 187.141 57.4695 165.656 33.5855 151.133L29.5593 148.778L6.43298 135.769C-1.66775 131.213 -2.1179 119.945 5.08284 114.641L6.43298 113.77L29.5593 100.762C53.9866 87.0215 73.5964 66.162 85.8089 41.0183L87.7754 36.7886L100.795 7.49467Z" fill="currentColor" />
+        <path class="secondary-color" d="M159.795 210.495C164.015 201.001 177.025 200.527 182.123 209.071L182.86 210.495L195.88 239.789C207.263 265.399 226.185 286.884 250.069 301.407L254.095 303.762L277.221 316.77C285.323 321.328 285.773 332.596 278.571 337.898L277.221 338.769L254.095 351.778C229.668 365.518 210.059 386.378 197.846 411.521L195.88 415.751L182.86 445.045C178.641 454.538 165.63 455.013 160.531 446.469L159.795 445.045L146.775 415.751C135.393 390.141 116.47 368.656 92.5855 354.133L88.5593 351.778L65.433 338.769C57.3322 334.213 56.8821 322.945 64.0828 317.641L65.433 316.77L88.5593 303.762C112.987 290.022 132.596 269.162 144.809 244.018L146.775 239.789L159.795 210.495Z" fill="currentColor"../>
+    </svg>
+    <svg class="bg2" width="284" height="453" viewBox="0 0 284 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="main-color" d="M100.795 445.045C105.015 454.538 118.025 455.013 123.123 446.469L123.86 445.045L136.88 415.751C148.263 390.14 167.185 368.656 191.069 354.133L195.095 351.777L218.221 338.77C226.323 334.212 226.773 322.944 219.571 317.642L218.221 316.77L195.095 303.762C170.668 290.022 151.059 269.162 138.846 244.018L136.88 239.788L123.86 210.494C119.641 201.002 106.63 200.527 101.531 209.071L100.795 210.494L87.7754 239.788C76.3928 265.399 57.4695 286.884 33.5855 301.406L29.5593 303.762L6.43298 316.77C-1.66775 321.327 -2.1179 332.595 5.08284 337.898L6.43298 338.77L29.5593 351.777C53.9866 365.518 73.5964 386.378 85.8089 411.521L87.7754 415.751L100.795 445.045Z" fill="currentColor"../>
+        <path class="secondary-color" d="M159.795 242.045C164.015 251.538 177.025 252.013 182.123 243.469L182.86 242.045L195.88 212.751C207.263 187.14 226.185 165.656 250.069 151.133L254.095 148.777L277.221 135.77C285.323 131.212 285.773 119.944 278.571 114.642L277.221 113.77L254.095 100.762C229.668 87.0217 210.059 66.1616 197.846 41.0181L195.88 36.7884L182.86 7.49449C178.641 -1.99834 165.63 -2.473 160.531 6.07056L159.795 7.49449L146.775 36.7884C135.393 62.399 116.47 83.8839 92.5855 98.4062L88.5593 100.762L65.433 113.77C57.3322 118.327 56.8821 129.595 64.0828 134.898L65.433 135.77L88.5593 148.777C112.987 162.518 132.596 183.378 144.809 208.521L146.775 212.751L159.795 242.045Z" fill="currentColor"../>
+    </svg>
+</div>
+<!-- end: .epcl-cta -->
+    </div>
+    <!-- end: #wrapper -->
+
+
+    <script defer src="../../scripts.min.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="../../prism-plugins.min.js"></script>
+
+
+</body>
+</html>
