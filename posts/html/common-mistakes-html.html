@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Common HTML Mistakes to Avoid and How to Fix Them 🚀</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <link rel="stylesheet" href="../mystyles.css">
+    <style>
+    </style>
+    <link href="../../plugins.min.css" type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'">
+
+
+
+
+    <style>
+        /* dm-sans-regular - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-regular.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* dm-sans-italic - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'DM Sans';
+            font-style: italic;
+            font-weight: 400;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* dm-sans-700 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-700.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* dm-sans-700italic - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'DM Sans';
+            font-style: italic;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-700italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* urbanist-500 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 500;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-500.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* urbanist-600 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 600;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-600.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* urbanist-700 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-700.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* urbanist-700italic - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: italic;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-700italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* urbanist-800 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 800;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-800.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+    </style>
+    <style>
+        :root{
+                --epcl-background-color: #FAF8FF;
+                --epcl-boxes-background-color: #ffffff;
+                --epcl-border-color: #E9E8FF;
+                --epcl-boxes-border-color: #E9E8FF;
+                --epcl-secondary-color: #FF2AAC;
+        }
+        .ctag-3-css .epcl-number,
+        .ctag-3-css.epcl-button,
+        .siblings .ctag-3-css,
+        div.tags a.ctag-3-css:before,
+        div.tags.fill-color a.ctag-3-css,
+        .category-image.ctag-3-css,
+        .epcl-post-carousel article.ctag-3-css{ background: #227dff !important; }
+        .ctag-3-css.overlay-effect .image-container:before{ background: #227dff !important; }
+        .ctag-code .epcl-number,
+        .ctag-code.epcl-button,
+        .siblings .ctag-code,
+        div.tags a.ctag-code:before,
+        div.tags.fill-color a.ctag-code,
+        .category-image.ctag-code,
+        .epcl-post-carousel article.ctag-code{ background: #ff2ed9 !important; }
+        .ctag-code.overlay-effect .image-container:before{ background: #ff2ed9 !important; }
+        .ctag-5-databases .epcl-number,
+        .ctag-5-databases.epcl-button,
+        .siblings .ctag-5-databases,
+        div.tags a.ctag-5-databases:before,
+        div.tags.fill-color a.ctag-5-databases,
+        .category-image.ctag-5-databases,
+        .epcl-post-carousel article.ctag-5-databases{ background: #5751ff !important; }
+        .ctag-5-databases.overlay-effect .image-container:before{ background: #5751ff !important; }
+        .ctag-6-deployment .epcl-number,
+        .ctag-6-deployment.epcl-button,
+        .siblings .ctag-6-deployment,
+        div.tags a.ctag-6-deployment:before,
+        div.tags.fill-color a.ctag-6-deployment,
+        .category-image.ctag-6-deployment,
+        .epcl-post-carousel article.ctag-6-deployment{ background: #2a2728 !important; }
+        .ctag-6-deployment.overlay-effect .image-container:before{ background: #2a2728 !important; }
+        .ctag-guides .epcl-number,
+        .ctag-guides.epcl-button,
+        .siblings .ctag-guides,
+        div.tags a.ctag-guides:before,
+        div.tags.fill-color a.ctag-guides,
+        .category-image.ctag-guides,
+        .epcl-post-carousel article.ctag-guides{ background: #3aa9fd !important; }
+        .ctag-guides.overlay-effect .image-container:before{ background: #3aa9fd !important; }
+        .ctag-2-html .epcl-number,
+        .ctag-2-html.epcl-button,
+        .siblings .ctag-2-html,
+        div.tags a.ctag-2-html:before,
+        div.tags.fill-color a.ctag-2-html,
+        .category-image.ctag-2-html,
+        .epcl-post-carousel article.ctag-2-html{ background: #ff8e51 !important; }
+        .ctag-2-html.overlay-effect .image-container:before{ background: #ff8e51 !important; }
+        .ctag-4-javascript .epcl-number,
+        .ctag-4-javascript.epcl-button,
+        .siblings .ctag-4-javascript,
+        div.tags a.ctag-4-javascript:before,
+        div.tags.fill-color a.ctag-4-javascript,
+        .category-image.ctag-4-javascript,
+        .epcl-post-carousel article.ctag-4-javascript{ background: #ffcb29 !important; }
+        .ctag-4-javascript.overlay-effect .image-container:before{ background: #ffcb29 !important; }
+        .ctag-sql .epcl-number,
+        .ctag-sql.epcl-button,
+        .siblings .ctag-sql,
+        div.tags a.ctag-sql:before,
+        div.tags.fill-color a.ctag-sql,
+        .category-image.ctag-sql,
+        .epcl-post-carousel article.ctag-sql{ background: #f95353 !important; }
+        .ctag-sql.overlay-effect .image-container:before{ background: #f95353 !important; }
+        .ctag-tech .epcl-number,
+        .ctag-tech.epcl-button,
+        .siblings .ctag-tech,
+        div.tags a.ctag-tech:before,
+        div.tags.fill-color a.ctag-tech,
+        .category-image.ctag-tech,
+        .epcl-post-carousel article.ctag-tech{ background: #4775ff !important; }
+        .ctag-tech.overlay-effect .image-container:before{ background: #4775ff !important; }
+    </style>
+
+    <script>
+        // Theme Config, check the documentation before edit this file
+        var site_url = 'https://ghost.estudiopatagon.com/zento';
+        var theme_config = {
+            masonry: 'on', // If you don't need masonry style, just set to "off"
+            sticky_sidebar: 'on', // on / off
+            disqus_shortname: 'ghostexample', // You can create your own Disqus Comments here: https://disqus.com/admin/create/
+        };
+        theme_config.disqus_shortname = "ghostexample";
+    </script>
+    <meta name="description" content="HTML is the backbone of web development, and making sure it's well-structured and error-free is crucial for both SEO and user experience. In this post, we’ll go through some of the most common HTML mistakes, why they matter, and how to fix them....">
+    <link rel="canonical" href="https://coding-drop.github.io/posts/html/common-mistakes-html.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://coding-drop.github.io/vertical/amp/">
+    <meta property="og:site_name" content="Coding Drop">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Common HTML Mistakes to Avoid and How to Fix Them 🚀">
+    <meta property="og:description" content="HTML is the backbone of web development, and making sure it's well-structured and error-free is crucial for both SEO and user experience. In this post, we’ll go through some of the most common HTML mistakes, why they matter, and how to fix them....">
+    <meta property="og:url" content="https://coding-drop.github.io/posts/html/common-mistakes-html.html">
+    <meta property="og:image" content="https://coding-drop.github.io/img/html.png">
+    <meta property="article:published_time" content="2024-09-16T20:40:54.000Z">
+    <meta property="article:modified_time" content="2024-09-16T00:15:45.000Z">
+    <meta property="article:tag" content="HTML">
+    <meta property="article:tag" content="Tech">
+    <meta property="article:tag" content="Code">
+    <meta property="article:publisher" content="https://www.facebook.com/">
+    <meta property="article:author" content="https://www.facebook.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Common HTML Mistakes to Avoid and How to Fix Them 🚀">
+    <meta name="twitter:description" content="HTML is the backbone of web development, and making sure it's well-structured and error-free is crucial for both SEO and user experience. In this post, we’ll go through some of the most common HTML mistakes, why they matter, and how to fix them....">
+    <meta name="twitter:url" content="https://coding-drop.github.io/posts/html/common-mistakes-html.html">
+    <meta name="twitter:image" content="https://coding-drop.github.io/img/html.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Admin">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="HTML, Tech, Code">
+    <meta name="twitter:site" content="@envato">
+    <meta name="twitter:creator" content="@envato">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="938">
+    
+    
+    <meta name="generator" content="Ghost 5.75">
+    <link rel="alternate" type="application/rss+xml" title="Zento" href="https://coding-drop.github.io/rss/">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.36/umd/portal.min.js" data-i18n="false" data-ghost="https://coding-drop.github.io/" data-key="3418b12091e67d20ee9d637bf3" data-api="https://coding-drop.github.io/ghost/api/content/" crossorigin="anonymous"></script>
+    <style id="gh-members-styles">
+    .gh-post-upgrade-cta-content,
+        .gh-post-upgrade-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            width: 100%;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .gh-post-upgrade-cta-content {
+            border-radius: 8px;
+            padding: 40px 4vw;
+        }
+
+        .gh-post-upgrade-cta h2 {
+            color: #ffffff;
+            font-size: 28px;
+            letter-spacing: -0.2px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gh-post-upgrade-cta p {
+            margin: 20px 0 0;
+            padding: 0;
+        }
+
+        .gh-post-upgrade-cta small {
+            font-size: 16px;
+            letter-spacing: -0.2px;
+        }
+
+        .gh-post-upgrade-cta a {
+            color: #ffffff;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+
+        .gh-post-upgrade-cta a:hover {
+            color: #ffffff;
+            opacity: 0.8;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+
+        .gh-post-upgrade-cta a.gh-btn {
+            display: block;
+            background: #ffffff;
+            text-decoration: none;
+            margin: 28px 0 0;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .gh-post-upgrade-cta a.gh-btn:hover {
+            opacity: 0.92;
+        }
+    </style>
+    <script async src="https://js.stripe.com/v3/"></script>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="3418b12091e67d20ee9d637bf3" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://coding-drop.github.io/" crossorigin="anonymous"></script>
+    <link href="https://coding-drop.github.io/webmentions/receive/" rel="webmention">
+    <script defer src="../../cards.min.js"></script>
+    <link rel="stylesheet" type="text/css" href=",,/cards.min.css">
+    <script defer src="../../comment-counts.min.js" data-ghost-comments-counts-api="https://coding-drop.github.io/members/api/comments/counts/"></script>
+    <script defer src="..c/member-attribution.min.js"></script>
+    <style>
+        .widget_epcl_tag_list .toggle-icon{ vertical-align: middle; margin-top: -8px; }
+        :root{
+            --purchase-color: #ff0081;
+        }
+        .epcl-themes.epcl-purchase{
+            bottom: 92px;
+            background: #4f1cff;
+            font-size: 13px;
+        }
+        .epcl-themes.epcl-purchase:before, .epcl-themes.epcl-purchase:after{ display: none; }
+        .epcl-purchase{
+            
+            position: fixed;
+            z-index: 110;
+            bottom: 20px;
+            left: 20px;
+            text-align: center;
+            background: var(--purchase-color);
+            color: #fff;
+            padding: 15px 25px;
+            box-shadow: 0px 3px 5px -1px rgb(7 10 25 / 10%);
+            font: 18px 'Urbanist';
+            font-weight: 500;
+            border-radius: 30px;
+        }
+        .epcl-purchase:hover{
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .epcl-purchase:before, .epcl-purchase:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+        }
+        .epcl-purchase:before {
+        display: none;
+        top: -75%;
+        background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--purchase-color) 20%, transparent 30%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+        }
+        .epcl-purchase:after {
+        display: none;
+        bottom: -75%;
+        background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+        }
+        .epcl-purchase:before {
+        display: block;
+        animation: topBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+        }
+        .epcl-purchase:after {
+        display: block;
+        animation: bottomBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+        }
+        @keyframes delay-animation {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            50.01% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes topBubbles {
+            0% {
+                background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+            }
+            50% {
+                background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+            }
+            100% {
+                background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+        @keyframes bottomBubbles {
+            0% {
+                background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+            }
+            50% {
+                background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+            }
+            100% {
+                background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+    </style>
+    <style>
+        :root {--ghost-accent-color: #6A4EE9;}
+    </style>
+</head>
+<body class=" post-template tag-1-fundamentals tag-tech tag-hash-rating-1 tag-code">
+    <!-- start: .mobile.main-nav -->
+    <nav class="mobile main-nav">
+        <div class="close"><svg class="icon"><use xlink:href="../zento/assets/images/svg-icons.svg?v=1b89f44b98#close-icon"></use></svg></div>
+            <div class="logo" >
+                <a href="https://ghost.estudiopatagon.com/zento"><img src="https://coding-drop.github.io/content/images/2024/01/logo-zento.svg" alt="Zento" width="170" height="60" decoding="async"></a>
+            </div>
+            <ul class="menu underline-effect">
+                <li class=" nav-home"><a href="https://coding-drop.github.io/">Home</a></li>
+                <li class=" nav-style-guide"><a href="https://coding-drop.github.io/style-guide/">Style Guide ✨</a></li>
+                <li class=" nav-explore-our-tags"><a href="https://coding-drop.github.io/explore-our-tags/">Explore our Tags</a></li>
+                <li class=" nav-text-only-post"><a href="https://coding-drop.github.io/text-only/">Text Only Post</a></li>
+                <li class=" nav-classic-post-image"><a href="https://coding-drop.github.io/classic/">Classic Post (image)</a></li>
+                <li class=" nav-vertical-post current-menu-item"><a href="https://coding-drop.github.io/vertical/">Vertical Post</a></li>
+                <li class=" nav-fullwidth-post"><a href="https://coding-drop.github.io/fullwidth/">Fullwidth Post</a></li>
+                <li class=" nav-no-sidebar-post"><a href="https://coding-drop.github.io/nosidebar/">No Sidebar Post</a></li>
+                <li class=" nav-home-demos"><a href="https://themes.estudiopatagon.com/selector/zento-ghost/">Home Demos 🚀</a></li>
+        </ul>
+    </nav>
+    <!-- end: .mobile.main-nav -->
+    <div class="menu-overlay"></div>
+	<!-- start: #wrapper -->
+	<div id="wrapper">
+		<!-- start: #header -->
+<header id="header" class="minimalist enable-sticky">
+	<!-- start: .menu-wrapper -->
+	<div class="menu-wrapper">
+		<div class="grid-container">
+            <div class="epcl-flex grid-wrapper">
+                <div class="logo" ><a href="../../index.html"><img src="../../img/CodingDrop.png" alt="Coding Drop" width="90%" decoding="async"></a></div>
+
+                <div class="account underline-effect hide-on-mobile hide-on-tablet hide-on-desktop-sm">          
+
+                <div class="open-menu">
+                    <svg class="open icon ularge"><use xlink:href="../zento/assets/images/svg-icons.svg?v=1b89f44b98#menu-icon"></use></svg>
+                </div>
+                <div class="clear"></div>
+            </div>		
+            
+            <div class="clear"></div>
+        </div>
+	</div>
+	<!-- end: .menu-wrapper -->
+	<div class="clear"></div>
+</header>
+<!-- end: #header -->
+        
+
+
+<!-- start: #single -->
+<main id="single" class="main grid-container classic epcl-vertical">
+    <!-- start: .center -->
+    <div class="center content">
+        <!-- start: .content -->
+        <div class="left-content grid-70 np-mobile" style="padding: 0; width: 100%;">
+
+            <article class="main-article bg-box section post-access-public primary-tag-1-fundamentals post tag-1-fundamentals tag-tech tag-hash-rating-1 tag-code featured">
+                <h1 style="color: #333; text-align: center; padding-bottom: 20px;">Common HTML Mistakes to Avoid and How to Fix Them</h1>
+                <p>HTML is the backbone of web development, and making sure it's well-structured and error-free is crucial for both SEO and user experience. In this post, we’ll go through some of the most common HTML mistakes, why they matter, and how to fix them.</p>
+            
+                <h2 style="color: #444; margin-top: 20px;">1. Missing Alt Attribute in Image Tags</h2>
+                <p><strong>Issue:</strong> Many developers forget to include the <code>alt</code> attribute when adding images to a page. This can negatively affect accessibility and SEO.</p>
+                <p><strong>Fix:</strong> Always include a descriptive <code>alt</code> text for images. This ensures screen readers can describe the image to visually impaired users and helps search engines understand the content of your images.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;img src="logo.png"&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;img src="logo.png" alt="Company logo"&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">2. Unclosed HTML Tags</h2>
+                <p><strong>Issue:</strong> Forgetting to close HTML tags is a common mistake, and it can lead to unpredictable page layouts and broken functionality.</p>
+                <p><strong>Fix:</strong> Always ensure that every HTML tag has a corresponding closing tag. Modern HTML validators can help catch this issue.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;div&gt;Some content</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;div&gt;Some content&lt;/div&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">3. Using Inline Styles Instead of External Stylesheets</h2>
+                <p><strong>Issue:</strong> Using inline styles within HTML tags makes the code harder to maintain, and it can affect performance, especially on larger sites.</p>
+                <p><strong>Fix:</strong> Use external stylesheets for styling. This makes your code cleaner, easier to maintain, and improves performance by allowing browsers to cache styles.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;div style="color: red;"&gt;Text&lt;/div&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">4. Using Deprecated Tags and Attributes</h2>
+                <p><strong>Issue:</strong> Using outdated tags or attributes like <code>&lt;font&gt;</code> or <code>&lt;center&gt;</code> that are no longer supported in HTML5.</p>
+                <p><strong>Fix:</strong> Always use modern, semantic tags like <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;header&gt;</code> for layout and structure.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;font color="red"&gt;Text&lt;/font&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;article&gt;Content goes here&lt;/article&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">5. Not Using Semantic HTML Elements</h2>
+                <p><strong>Issue:</strong> Using <code>&lt;div&gt;</code> tags for everything without considering semantic HTML elements.</p>
+                <p><strong>Fix:</strong> Use semantic tags to enhance accessibility, SEO, and maintainability. For instance, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code> are better than generic <code>&lt;div&gt;</code> tags.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;div&gt;Header content&lt;/div&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;header&gt;Header content&lt;/header&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">6. Forgetting to Use the Doctype Declaration</h2>
+                <p><strong>Issue:</strong> Not including the <code>&lt;!DOCTYPE html&gt;</code> declaration at the beginning of an HTML document can result in rendering issues, as the browser will switch to "quirks mode."</p>
+                <p><strong>Fix:</strong> Always include <code>&lt;!DOCTYPE html&gt;</code> at the top of your HTML document to ensure your page is rendered correctly.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;html&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;!DOCTYPE html&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">7. Incorrect Nesting of Tags</h2>
+                <p><strong>Issue:</strong> HTML elements must be properly nested to ensure correct display and functionality. For example, placing block-level elements inside inline elements can cause issues.</p>
+                <p><strong>Fix:</strong> Always ensure that your tags are properly nested. For example, avoid putting a <code>&lt;div&gt;</code> inside a <code>&lt;span&gt;</code> tag.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;span&gt;&lt;div&gt;Text&lt;/div&gt;&lt;/span&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;div&gt;Text&lt;/div&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">8. Using Non-Semantic Elements for Layout</h2>
+                <p><strong>Issue:</strong> Using <code>&lt;table&gt;</code> for page layout instead of modern layout techniques like CSS Grid or Flexbox.</p>
+                <p><strong>Fix:</strong> Use <code>&lt;table&gt;</code> only for displaying tabular data. For layout, rely on CSS Grid or Flexbox.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Content&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;div style="display: grid;"&gt;Content&lt;/div&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">9. Using Deprecated HTML Attributes</h2>
+                <p><strong>Issue:</strong> Attributes like <code>align</code>, <code>border</code>, and <code>bgcolor</code> are deprecated in HTML5.</p>
+                <p><strong>Fix:</strong> Use CSS for styling instead of these deprecated attributes.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;table border="1"&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;table style="border: 1px solid black;"&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">10. Failing to Add <code>meta</code> Tags for Mobile Optimization</h2>
+                <p><strong>Issue:</strong> Not adding a <code>meta</code> tag for viewport settings results in poor mobile responsiveness.</p>
+                <p><strong>Fix:</strong> Always include the following <code>meta</code> tag in your <code>&lt;head&gt;</code> for better mobile optimization:</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;meta&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+                </div>
+                <h2 style="color: #444; margin-top: 20px;">11. Incorrect Use of <code>&lt;br&gt;</code> Tags for Spacing</h2>
+                <p><strong>Issue:</strong> Using the <code>&lt;br&gt;</code> tag for layout purposes or spacing is a common mistake. This leads to poor maintainability and design issues.</p>
+                <p><strong>Fix:</strong> Use CSS for spacing, margins, and layout adjustments instead of relying on <code>&lt;br&gt;</code> tags.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;br&gt;&lt;br&gt;&lt;br&gt;Text</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;div style="margin-bottom: 20px;"&gt;Text&lt;/div&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">12. Overuse of Inline JavaScript</h2>
+                <p><strong>Issue:</strong> Embedding JavaScript code directly inside HTML elements, such as in the <code>&lt;body&gt;</code> or in event attributes like <code>onclick</code>, makes the code harder to maintain and less secure.</p>
+                <p><strong>Fix:</strong> Always place JavaScript in external files, linking them in the <code>&lt;head&gt;</code> or at the end of the <code>&lt;body&gt;</code> section for better performance and maintainability.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;button onclick="alert('Hello!')"&gt;Click me&lt;/button&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">13. Not Using <code>&lt;meta charset&gt;</code> Tag</h2>
+                <p><strong>Issue:</strong> Forgetting to include the <code>&lt;meta charset&gt;</code> tag can cause issues with character encoding, particularly with special characters and non-English text.</p>
+                <p><strong>Fix:</strong> Always add the <code>&lt;meta charset="UTF-8"&gt;</code> tag in the <code>&lt;head&gt;</code> section to ensure proper character encoding.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;html&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">14. Using Outdated or Unsupported Tags</h2>
+                <p><strong>Issue:</strong> Using tags like <code>&lt;marquee&gt;</code> or <code>&lt;blink&gt;</code>, which are no longer supported in modern browsers.</p>
+                <p><strong>Fix:</strong> Avoid these tags entirely and use CSS animations or transitions for modern effects.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;marquee&gt;Moving text&lt;/marquee&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;div style="animation: moveText 5s linear infinite"&gt;Moving text&lt;/div&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">15. Not Adding Favicon</h2>
+                <p><strong>Issue:</strong> Not adding a favicon to your site results in an empty tab icon, which can look unprofessional.</p>
+                <p><strong>Fix:</strong> Always add a <code>&lt;link&gt;</code> tag to include a favicon.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;html&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;link rel="icon" href="favicon.ico"&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">16. Using Non-Descriptive Link Text</h2>
+                <p><strong>Issue:</strong> Using vague text like "Click here" for links reduces accessibility and SEO performance.</p>
+                <p><strong>Fix:</strong> Use descriptive link text that explains the purpose of the link for both accessibility and search engine optimization.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;a href="about.html"&gt;Click here&lt;/a&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;a href="about.html"&gt;Learn more about our company&lt;/a&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">17. Incorrect Use of <code>&lt;table&gt;</code> for Layout</h2>
+                <p><strong>Issue:</strong> Using <code>&lt;table&gt;</code> tags for layout purposes instead of for displaying tabular data.</p>
+                <p><strong>Fix:</strong> Use CSS layout techniques like Flexbox or Grid for page layout and reserve <code>&lt;table&gt;</code> for actual data representation.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Content&lt;/td&gt;&lt;td&gt;Content&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;div style="display: flex;"&gt;Content&lt;/div&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">18. Missing <code>&lt;head&gt;</code> Elements</h2>
+                <p><strong>Issue:</strong> Missing necessary elements like the <code>&lt;title&gt;</code> tag and meta tags in the <code>&lt;head&gt;</code> section of your document.</p>
+                <p><strong>Fix:</strong> Ensure that your page has all essential elements in the <code>&lt;head&gt;</code> section for SEO and accessibility.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;html&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;head&gt;&lt;title&gt;Page Title&lt;/title&gt;&lt;/head&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">19. Overloading Your Website with Unoptimized Images</h2>
+                <p><strong>Issue:</strong> Uploading large images without optimizing them for web use can slow down your site.</p>
+                <p><strong>Fix:</strong> Always optimize images using compression tools and proper formats (such as <code>.jpg</code>, <code>.png</code>, or <code>.webp</code>) before uploading them to your website.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;img src="large-image.jpg"&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;img src="optimized-image.jpg" width="600"&gt;</code></pre>
+                </div>
+            
+                <h2 style="color: #444; margin-top: 20px;">20. Not Testing Your HTML for Accessibility</h2>
+                <p><strong>Issue:</strong> Ignoring accessibility features can lead to a website that’s difficult to navigate for users with disabilities.</p>
+                <p><strong>Fix:</strong> Always use semantic HTML, include <code>alt</code> attributes for images, and ensure keyboard navigation is possible. Testing your website with accessibility tools can help improve the experience for all users.</p>
+            
+                <h3 style="color: #444;">Incorrect Format:</h3>
+                <div style="background: #fafafa; border-left: 4px solid #FF6347; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;img src="image.jpg"&gt;</code></pre>
+                </div>
+                <p><strong>Correct Format:</strong></p>
+                <div style="background: #fafafa; border-left: 4px solid #32CD32; padding: 10px; margin: 10px 0;">
+                    <pre style="background: #f4f4f4; border: 1px solid #ddd; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;img src="image.jpg" alt="Description of image"&gt;</code></pre>
+                </div>
+            
+            </article>
+            
+            
+            
+
+            <div class="clear"></div>
+
+            <section class="siblings epcl-flex" id="epcl-other-stories">
+                    <article class="prev epcl-flex ctag-4-javascript post tag-4-javascript tag-code tag-2-html tag-hash-rating-3">
+                        <div class="info">
+                            <p>Previous Article</p>
+                            <h4 class="title usmall white fw-semibold">Understanding Object-Oriented Programming (HTML) in .NET</h4>
+                        </div>
+                        <span class="arrow"><svg class="icon large"><use xlink:href="../zento/assets/images/svg-icons.svg?v=1b89f44b98#left-arrow"></use></svg></span>
+                        <a href="post-HTML.html" class="full-link"></a>
+                    </article>
+                
+                <div class="separator hide-on-mobile"></div>
+                    <article class="next epcl-flex ctag-3-css post tag-3-css tag-code tag-hash-rating-3 tag-guides tag-tech no-image">
+                        <div class="info">
+                            <p>Next Article</p>
+                            <h4 class="title usmall white fw-semibold">Common HTML Mistakes to Avoid and How to Fix Them</h4>
+                        </div>
+                        <span class="arrow"><svg class="icon large"><use xlink:href="../zento/assets/images/svg-icons.svg?v=1b89f44b98#right-arrow"></use></svg></span>
+                        <a href="post-inheritance.html" class="full-link"></a>
+                    </article>
+                <div class="clear"></div>                              
+            </section>
+               
+            <section class="related bg-box section ctag-1-fundamentals" id="epcl-related-stories">
+                
+                <div class="category-info epcl-flex">                       
+                    <div class="overlay-effect ctag-1-fundamentals">
+                            <span href="../../index.html" class="image-container category-image ctag-1-fundamentals"><img src="../../img/code.png"></span>
+                        <h3 class="title usmall fw-normal">More in this <b>Category</b> <span class="title large">HTML</span></h3>  
+                        <a href="../../index.html" class="full-link"><span class="screen-reader-text">Fundamentals</span></a>    
+                    </div>
+                    <!-- <a href="https://coding-drop.github.io/tag/1-fundamentals/" class="epcl-button ctag ctag-1-fundamentals hide-on-mobile">View All Articles</a>    -->
+                    <div class="clear"></div>                                                                       
+                </div>
+
+                <div class="clear"></div>
+                
+                <div class="article-list">                        
+                        <article class="item post featured">
+                            <div class="epcl-number black">1</div>
+                            <div class="info">
+                                <h4 class="title small underline-effect no-margin"><a href="post-HTML.html">Understanding Object-Oriented Programming (HTML) in .NET 🚀</a></h4>
+                            </div>
+                        </article>
+                        <div class="clear"></div>
+                        <article class="item post">
+                            <div class="epcl-number black">2</div>
+                            <div class="info">
+                                <h4 class="title small underline-effect no-margin"><a href="post-inheritance.html">Common HTML Mistakes to Avoid and How to Fix Them</a></h4>
+                            </div>
+                        </article>
+                        <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <a href="https://coding-drop.github.io/" class="epcl-button ctag ctag-1-fundamentals hide-on-tablet hide-on-desktop">View All Articles</a>    
+
+            </section>
+            <div class="clear"></div>
+            
+                <!-- start: #comments -->
+                <div id="comments" class="medium-section np-bottom">
+                        
+        
+                </div>
+                <!-- end: #comments -->    
+
+        </div>
+        <!-- end: .content -->           
+
+        <!-- <div class="clear"></div> -->
+
+    </div>
+    <!-- end: .center -->
+
+</main>
+<!-- end: #single -->
+
+
+
+		
+<div class="clear"></div>
+<!-- start: .epcl-cta -->
+<div class="epcl-cta bg-box no-border-radius">
+    <div class="grid-container epcl-flex">
+        <div class="left grid-50 tablet-grid-50 np-mobile">
+            <h2 class="title ularge no-margin">Join to our community</h2>
+        </div>
+        <!-- <div class="right grid-50 tablet-grid-50 textcenter np-mobile">
+            <p>Try it for free for <b>7 days</b>, cancel at <b>anytime.</b></p>
+            <a href="https://coding-drop.github.io/membership" class="epcl-button black large">See our plans</a>
+        </div> -->
+    </div>
+    <div class="clear"></div>
+    <svg class="bg" width="284" height="453" viewBox="0 0 284 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="main-color" d="M100.795 7.49467C105.015 -1.99852 118.025 -2.47329 123.123 6.07068L123.86 7.49467L136.88 36.7886C148.263 62.3995 167.185 83.8837 191.069 98.4068L195.095 100.762L218.221 113.77C226.323 118.328 226.773 129.596 219.571 134.898L218.221 135.769L195.095 148.778C170.668 162.518 151.059 183.378 138.846 208.521L136.88 212.751L123.86 242.045C119.641 251.538 106.63 252.013 101.531 243.469L100.795 242.045L87.7754 212.751C76.3928 187.141 57.4695 165.656 33.5855 151.133L29.5593 148.778L6.43298 135.769C-1.66775 131.213 -2.1179 119.945 5.08284 114.641L6.43298 113.77L29.5593 100.762C53.9866 87.0215 73.5964 66.162 85.8089 41.0183L87.7754 36.7886L100.795 7.49467Z" fill="currentColor" />
+        <path class="secondary-color" d="M159.795 210.495C164.015 201.001 177.025 200.527 182.123 209.071L182.86 210.495L195.88 239.789C207.263 265.399 226.185 286.884 250.069 301.407L254.095 303.762L277.221 316.77C285.323 321.328 285.773 332.596 278.571 337.898L277.221 338.769L254.095 351.778C229.668 365.518 210.059 386.378 197.846 411.521L195.88 415.751L182.86 445.045C178.641 454.538 165.63 455.013 160.531 446.469L159.795 445.045L146.775 415.751C135.393 390.141 116.47 368.656 92.5855 354.133L88.5593 351.778L65.433 338.769C57.3322 334.213 56.8821 322.945 64.0828 317.641L65.433 316.77L88.5593 303.762C112.987 290.022 132.596 269.162 144.809 244.018L146.775 239.789L159.795 210.495Z" fill="currentColor"../>
+    </svg>
+    <svg class="bg2" width="284" height="453" viewBox="0 0 284 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="main-color" d="M100.795 445.045C105.015 454.538 118.025 455.013 123.123 446.469L123.86 445.045L136.88 415.751C148.263 390.14 167.185 368.656 191.069 354.133L195.095 351.777L218.221 338.77C226.323 334.212 226.773 322.944 219.571 317.642L218.221 316.77L195.095 303.762C170.668 290.022 151.059 269.162 138.846 244.018L136.88 239.788L123.86 210.494C119.641 201.002 106.63 200.527 101.531 209.071L100.795 210.494L87.7754 239.788C76.3928 265.399 57.4695 286.884 33.5855 301.406L29.5593 303.762L6.43298 316.77C-1.66775 321.327 -2.1179 332.595 5.08284 337.898L6.43298 338.77L29.5593 351.777C53.9866 365.518 73.5964 386.378 85.8089 411.521L87.7754 415.751L100.795 445.045Z" fill="currentColor"../>
+        <path class="secondary-color" d="M159.795 242.045C164.015 251.538 177.025 252.013 182.123 243.469L182.86 242.045L195.88 212.751C207.263 187.14 226.185 165.656 250.069 151.133L254.095 148.777L277.221 135.77C285.323 131.212 285.773 119.944 278.571 114.642L277.221 113.77L254.095 100.762C229.668 87.0217 210.059 66.1616 197.846 41.0181L195.88 36.7884L182.86 7.49449C178.641 -1.99834 165.63 -2.473 160.531 6.07056L159.795 7.49449L146.775 36.7884C135.393 62.399 116.47 83.8839 92.5855 98.4062L88.5593 100.762L65.433 113.77C57.3322 118.327 56.8821 129.595 64.0828 134.898L65.433 135.77L88.5593 148.777C112.987 162.518 132.596 183.378 144.809 208.521L146.775 212.751L159.795 242.045Z" fill="currentColor"../>
+    </svg>
+</div>
+<!-- end: .epcl-cta -->
+    </div>
+    <!-- end: #wrapper -->
+
+
+    <script defer src="../../scripts.min.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="../../prism-plugins.min.js"></script>
+
+
+</body>
+</html>
