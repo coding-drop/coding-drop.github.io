@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fardeen's Age Countdown</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ3Qx5wL3c9wOxM3VsLpvDbrCzj7mZ6eCpTZlGQHT+U57CtsH/99okHR/8vi" crossorigin="anonymous">
+    <style>
+        /* Animated background */
+        body {
+            background: linear-gradient(45deg, #FF6F61, #D8BFD8, #00BFFF, #32CD32);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .countdown-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .countdown {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .countdown span {
+            color: #007bff;
+        }
+
+        .heading {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .birth-info {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <div class="heading">
+            <h2>Fardeen's Age Countdown</h2>
+            <p>Time since Fardeen's birth:</p>
+        </div>
+
+        <div class="countdown" id="countdown">
+            <p><span id="years">0</span> Years <span id="months">0</span> Months <span id="days">0</span> Days</p>
+            <p><span id="hours">0</span> Hours <span id="minutes">0</span> Minutes <span id="seconds">0</span> Seconds</p>
+        </div>
+
+        <div class="birth-info">
+            <p><strong>Born at:</strong> Ad-Din Hospital, Kushtia, Bangladesh</p>
+            <p><strong>Birth Date and Time:</strong> January 30, 2025, 8:15 PM</p>
+        </div>
+
+        <div class="image-container">
+            <p><strong>First Photo:</strong></p>
+            <!-- Replace the src with the actual path to Fardeen's photo -->
+            <img src="./../img/fardeen/fardeen_1.jpg" style="width: 100px;" alt="Fardeen's First Photo">
+        </div>
+    </div>
+
+    <script>
+        // Fardeen's birth date and time
+        const birthDate = new Date('2025-01-30T20:15:00');
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeDifference = now - birthDate;
+
+            // Total seconds
+            const totalSeconds = Math.floor(timeDifference / 1000);
+
+            // Calculate years, months, days, hours, minutes, seconds
+            const years = Math.floor(totalSeconds / (60 * 60 * 24 * 365.25));
+            const months = Math.floor((totalSeconds % (60 * 60 * 24 * 365.25)) / (60 * 60 * 24 * 30.44));
+            const days = Math.floor((totalSeconds % (60 * 60 * 24 * 30.44)) / (60 * 60 * 24));
+            const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
+            const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+            const seconds = totalSeconds % 60;
+
+            // Update the HTML elements
+            document.getElementById('years').textContent = years;
+            document.getElementById('months').textContent = months;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initial countdown update
+        updateCountdown();
+    </script>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb3z5dI7B4jgmv9lMKbZppuH2Ra5Kqg6jVRMgw7c2V0ryJ0qd" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0O3A3zUmFybv1I0Yt8xbt9thNUaHymFU4oFaA2u4FzRvm5a6" crossorigin="anonymous"></script>
+</body>
+</html>
