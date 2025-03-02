@@ -3,277 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Links</title>
+    <title>Resource List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-            font-family: 'Inter', Arial, sans-serif;
-            background: linear-gradient(135deg, #e3e6f3, #ffffff);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding: 20px;
+            background-color: #f4f7fc;
+            font-family: Arial, sans-serif;
         }
         .container {
-            max-width: 1200px;
-            width: 100%;
-            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
-        h1 {
+        .header-title {
             text-align: center;
-            color: #1f2937;
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .category {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-        .category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-        .category h2 {
-            color: #1e3a8a;
-            font-size: 2.5rem;
+            font-size: 28px;
+            font-weight: bold;
             margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #3b82f6;
+            color: #333;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+        .accordion-button {
+            font-weight: bold;
         }
-        li a {
-            display: block;
+        .list-group-item a {
             text-decoration: none;
-            color: #1f2937;
-            font-weight: 600;
-            padding: 20px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #f3f4f6, #ffffff);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            text-align: center;
+            color: #007bff;
+            font-weight: 500;
         }
-        li a:hover {
-            background: #2563eb;
-            color: #ffffff;
-            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
-            transform: translateY(-3px);
-        }
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-            color: #6b7280;
-            font-size: 1rem;
+        .list-group-item a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>My Personal Links</h1>
+        <div class="header-title">Resource List</div>
+        <div class="accordion" id="resourceAccordion">
 
-        <!-- General Links -->
-        <div class="category">
-            <h2>General</h2>
-            <ul>
-                <li><a href="https://ethereal.email/">Ethereal Email</a></li>
-                <li><a href="https://www.mailboxmap.com/">Mailbox Map</a></li>
-                <li><a href="http://app.thefacesoffacebook.com/">The Faces of Facebook</a></li>
-                <li><a href="http://you.regettingold.com/">You are getting old</a></li>
-                <li><a href="https://www.fireeye.com/cyber-map/threat-map.html">Cyber Threat Map</a></li>
-                <li><a href="https://www.webmd.com/diet/healthtool-food-calorie-counter">Calorie Counter</a></li>
-                <li><a href="https://krikienoid.github.io/flagwaver/">Flag Waver</a></li>
-                <li><a href="http://www.pixelthoughts.co/">Pixel Thoughts</a></li>
-                <li><a href="https://10minutemail.com/">10 Minute Mail</a></li>
-                <li><a href="https://www.fakemailgenerator.net/">Fake Mail Generator</a></li>
-                <li><a href="https://www.myfonts.com/WhatTheFont/">What the Font</a></li>
-                <li><a href="https://www.accountkiller.com/en">Account Killer</a></li>
-                <li><a href="http://www.fliptext.org/">Flip Text</a></li>
-                <li><a href="http://gifprint.com/">GIF Print</a></li>
-                <li><a href="http://earthquake.usgs.gov/earthquakes/map/">Earthquake Map</a></li>
-                <li><a href="http://www.google.com.bd/maps">Google Map</a></li>
-                <li><a href="http://www.touristguide24.com/">Tourist Guide</a></li>
-                <li><a href="http://adarbepari.com/">Adar Bepari</a></li>
-                <li><a href="http://mrdoob.com/projects/chromeexperiments/google-gravity/">Google Gravity</a></li>
-                <li><a href="http://elgoog.im/">elgoog</a></li>
-                <li><a href="http://images.google.com/">Google Image Search</a></li>
-                <li><a href="http://in-the-sky.org/satmap_worldmap.php">Satellite Map</a></li>
-                <li><a href="http://www.picresize.com/">Pic Resize</a></li>
-                <li><a href="https://www.ilovepdf.com/">I Love PDF</a></li>
-                <li><a href="https://excel.xartifex.com/">Xartifex (Excel Unlocker)</a></li>
-                <li><a href="http://listofrandomnames.com/">Name List</a></li>
-                <li><a href="https://www.fakenamegenerator.com/">Fake Name Generator</a></li>
-                <li><a href="https://www.zillow.com/">Fake Address Generator</a></li>
-                <li><a href="https://wordart.com/">Word Art (Text Image)</a></li>
-                <li><a href="http://zoomquilt.org/">Zoom Quilt</a></li>
-                <li><a href="http://bn.banglafact.com/">Bangla Fact</a></li>
-                <li><a href="http://www.ratatype.com/">Rata Type (Certificate)</a></li>
-                <li><a href="http://web.archive.org/">Web Archive</a></li>
-            </ul>
-        </div>
+            <!-- General Resources -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#generalResources" aria-expanded="true">
+                        General Resources
+                    </button>
+                </h2>
+                <div id="generalResources" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="https://ethereal.email/" target="_blank">Ethereal Email</a></li>
+                            <li class="list-group-item"><a href="https://www.mailboxmap.com/" target="_blank">Mailbox Map</a></li>
+                            <li class="list-group-item"><a href="http://app.thefacesoffacebook.com/" target="_blank">The Faces of Facebook</a></li>
+                            <li class="list-group-item"><a href="http://you.regettingold.com/" target="_blank">You are getting old</a></li>
+                            <li class="list-group-item"><a href="https://www.fireeye.com/cyber-map/threat-map.html" target="_blank">Cyber thread map</a></li>
+                            <li class="list-group-item"><a href="https://www.webmd.com/diet/healthtool-food-calorie-counter" target="_blank">Calorie Counter</a></li>
+                            <li class="list-group-item"><a href="https://krikienoid.github.io/flagwaver/" target="_blank">Flag Waver</a></li>
+                            <li class="list-group-item"><a href="http://www.pixelthoughts.co/" target="_blank">Pixels Thoughts</a></li>
+                            <li class="list-group-item"><a href="https://10minutemail.com/" target="_blank">10 Minute Mail</a></li>
+                            <li class="list-group-item"><a href="https://www.fakemailgenerator.net/" target="_blank">Fake Mail Generator</a></li>
+                            <li class="list-group-item"><a href="https://www.myfonts.com/WhatTheFont/" target="_blank">What the font</a></li>
+                            <li class="list-group-item"><a href="https://www.accountkiller.com/en" target="_blank">Account Killer</a></li>
+                            <li class="list-group-item"><a href="http://www.fliptext.org/" target="_blank">Flip Text</a></li>
+                            <li class="list-group-item"><a href="http://gifprint.com/" target="_blank">GIP Print</a></li>
+                            <li class="list-group-item"><a href="http://earthquake.usgs.gov/earthquakes/map/" target="_blank">Earthquake Map</a></li>
+                            <li class="list-group-item"><a href="http://www.google.com.bd/maps" target="_blank">Google Map</a></li>
+                            <li class="list-group-item"><a href="http://www.touristguide24.com/" target="_blank">Tourist Guide</a></li>
+                            <li class="list-group-item"><a href="http://adarbepari.com/" target="_blank">Adar Bepari</a></li>
+                            <li class="list-group-item"><a href="http://mrdoob.com/projects/chromeexperiments/google-gravity/" target="_blank">Google Gravity</a></li>
+                            <li class="list-group-item"><a href="http://elgoog.im/" target="_blank">elgoog</a></li>
+                            <li class="list-group-item"><a href="http://images.google.com/" target="_blank">Google Image Search</a></li>
+                            <li class="list-group-item"><a href="http://in-the-sky.org/satmap_worldmap.php" target="_blank">Satellite Map</a></li>
+                            <li class="list-group-item"><a href="http://www.picresize.com/" target="_blank">Pic Resize</a></li>
+                            <li class="list-group-item"><a href="https://www.ilovepdf.com/" target="_blank">I Love PDF</a></li>
+                            <li class="list-group-item"><a href="https://excel.xartifex.com/" target="_blank">Xartifex (Excel Unlocker)</a></li>
+                            <li class="list-group-item"><a href="http://listofrandomnames.com/" target="_blank">Name List</a></li>
+                            <li class="list-group-item"><a href="https://www.fakenamegenerator.com/" target="_blank">Fake Name Generator</a></li>
+                            <li class="list-group-item"><a href="https://www.zillow.com/" target="_blank">Fake Address Generator</a></li>
+                            <li class="list-group-item"><a href="https://wordart.com/" target="_blank">Word Art (Text Image)</a></li>
+                            <li class="list-group-item"><a href="http://zoomquilt.org/" target="_blank">Zoom Quilt</a></li>
+                            <li class="list-group-item"><a href="http://bn.banglafact.com/" target="_blank">Bangla Fact</a></li>
+                            <li class="list-group-item"><a href="http://www.ratatype.com/" target="_blank">Rata Type (Certificate)</a></li>
+                            <li class="list-group-item"><a href="http://web.archive.org/" target="_blank">Web Archive</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Information Links -->
-        <div class="category">
-            <h2>Information</h2>
-            <ul>
-                <li><a href="https://www.worldometers.info/">World Meters</a></li>
-                <li><a href="http://internet-map.net/">Internet Map</a></li>
-            </ul>
-        </div>
+            <!-- Informations -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#informations" aria-expanded="true">
+                        Informations
+                    </button>
+                </h2>
+                <div id="informations" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="https://www.worldometers.info/" target="_blank">World Meters</a></li>
+                            <li class="list-group-item"><a href="http://internet-map.net/" target="_blank">Internet Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Technical Links -->
-        <div class="category">
-            <h2>Technical</h2>
-            <ul>
-                <li><a href="http://en.key-test.ru/">Keyboard Tester Online</a></li>
-                <li><a href="http://www.hardreset.info/">Hard Reset (Phone)</a></li>
-                <li><a href="http://www.androidlost.com/">Android Lost</a></li>
-                <li><a href="http://filehippo.com/">File Hippo</a></li>
-                <li><a href="http://macvendors.com/">Find MAC Address</a></li>
-                <li><a href="http://myactivity.google.com/myactivity">My Activity</a></li>
-                <li><a href="http://www.youtubemultiplier.com/">Youtube Multi Player</a></li>
-            </ul>
-        </div>
+            <!-- Technical -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#technical" aria-expanded="true">
+                        Technical Resources
+                    </button>
+                </h2>
+                <div id="technical" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="http://en.key-test.ru/" target="_blank">Keyboard Tester Online</a></li>
+                            <li class="list-group-item"><a href="http://www.hardreset.info/" target="_blank">Hard Reset (Phone)</a></li>
+                            <li class="list-group-item"><a href="http://www.androidlost.com/" target="_blank">Android Lost</a></li>
+                            <li class="list-group-item"><a href="http://filehippo.com/" target="_blank">File Hippo</a></li>
+                            <li class="list-group-item"><a href="http://macvendors.com/" target="_blank">Find MAC Address</a></li>
+                            <li class="list-group-item"><a href="http://myactivity.google.com/myactivity" target="_blank">My Activity</a></li>
+                            <li class="list-group-item"><a href="http://www.youtubemultiplier.com/" target="_blank">Youtube Multi Player</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Government Websites -->
-        <div class="category">
-            <h2>Government Websites</h2>
-            <ul>
-                <li><a href="http://www.bangladeshpost.gov.bd/">Bangladesh Post</a></li>
-                <li><a href="http://www.educationboardresults.gov.bd/">Education Result Website</a></li>
-                <li><a href="http://eboardresults.com/app/">Education Result Website 2</a></li>
-                <li><a href="http://www.nctb.gov.bd/">NCTB Bangladesh</a></li>
-                <li><a href="http://en.oxforddictionaries.com/">Oxford Dictionary</a></li>
-            </ul>
-        </div>
+             <!-- Govt. Websites -->
+             <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#govtWebsites" aria-expanded="true">
+                        Govt. Websites
+                    </button>
+                </h2>
+                <div id="govtWebsites" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul class="list-group" id="govtWebsitesList">
+                            <li class="list-group-item"><a href="http://www.dgt.gov.bd/" target="_blank">Directorate General of Trade (Bangladesh)</a></li>
+                            <li class="list-group-item"><a href="http://www.mopa.gov.bd/" target="_blank">Ministry of Public Administration (Bangladesh)</a></li>
+                            <!-- Add more items as needed -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Education Links -->
-        <div class="category">
-            <h2>Education</h2>
-            <ul>
-                <li><a href="http://www.indiabix.com/">Indiabix</a></li>
-                <li><a href="http://sites.google.com/site/dhakauniversityemba/home">DU MBA Questions</a></li>
-                <li><a href="http://bdlaws.minlaw.gov.bd/bangla_all_sections.php?id=957">BD Songbidhan (Bangla)</a></li>
-                <li><a href="http://www.4icu.org/">University Ranking</a></li>
-                <li><a href="http://bani.com.bd/">Bani Chirontoni</a></li>
-                <li><a href="http://www.bdskills.com/">BD Skills</a></li>
-                <li><a href="http://advicebd.com/bn/">Advice BD</a></li>
-                <li><a href="http://www.bankrecruitmentguide.com/">Bank Recruitment Guide</a></li>
-                <li><a href="http://alquranbd.com/">Al Quran BD</a></li>
-            </ul>
-        </div>
-
-        <!-- News Links -->
-        <div class="category">
-            <h2>News</h2>
-            <ul>
-                <li><a href="https://www.prothomalo.com/">Prothom Alo</a></li>
-                <li><a href="https://www.kalerkantho.com/">Kaler Kantho</a></li>
-                <li><a href="https://dailynayadiganta.com/">Naya Diganta</a></li>
-                <li><a href="https://www.jugantor.com/">Jugantor</a></li>
-                <li><a href="https://bangla.dhakatribune.com/">Dhaka Tribune (Bangla)</a></li>
-                <li><a href="http://bangla.bdnews24.com/">bdnews24 (Bangla)</a></li>
-                <li><a href="http://www.somoyerkonthosor.com/">Somoyer Konthosor</a></li>
-                <li><a href="https://www.somoynews.tv/">Somoy News</a></li>
-                <li><a href="http://www.channel24bd.tv/">Channel 24</a></li>
-                <li><a href="https://www.channelionline.com/">Channel i Online</a></li>
-                <li><a href="https://www.nytimes.com/">New York Times</a></li>
-                <li><a href="https://www.hindustantimes.com/">Hindustan Times</a></li>
-                <li><a href="https://www.thedailystar.net/">The Daily Star</a></li>
-                <li><a href="http://www.newagebd.net/">New Age</a></li>
-                <li><a href="https://edition.cnn.com/">CNN</a></li>
-                <li><a href="https://www.aljazeera.com/">Al-Jazeera</a></li>
-                <li><a href="https://www.bbc.com/">BBC</a></li>
-                <li><a href="https://www.anandabazar.com/">Ananda Bazar</a></li>
-            </ul>
-        </div>
-
-        <!-- Designer Links -->
-        <div class="category">
-            <h2>Designer</h2>
-            <ul>
-                <li><a href="https://unsplash.com/">Unsplash</a></li>
-                <li><a href="http://icoconvert.com/">Icon Convert</a></li>
-                <li><a href="https://undraw.co">Un Draw</a></li>
-                <li><a href="https://drawkit.io">Draw It</a></li>
-                <li><a href="https://icons8.com/ouch">Icon 8</a></li>
-                <li><a href="https://lukaszadam.com/illustrations">Lukaszadam</a></li>
-                <li><a href="https://www.humaaans.com/">Humasans</a></li>
-                <li><a href="http://freepik.com/">Freepik</a></li>
-                <li><a href="http://iconfinder.com/">Icon Finder</a></li>
-                <li><a href="http://thenounproject.com/">The Noun Project</a></li>
-                <li><a href="https://www.flaticon.com/">Flat Icon</a></li>
-                <li><a href="https://www.pexels.com/">Pixels</a></li>
-                <li><a href="https://gumroad.com/">Gum Road</a></li>
-                <li><a href="https://www.pixeltrue.com/free-illustrations">Pixel True</a></li>
-                <li><a href="https://www.manypixels.co/">Many Pixels</a></li>
-                <li><a href="https://animate.style/">Animation Style Text</a></li>
-                <li><a href="https://koffiisen.github.io/Animate.js/">Animate Style Box</a></li>
-                <li><a href="https://github.com/VincentGarreau/particles.js/">Particles JS</a></li>
-                <li><a href="https://typeitjs.com/">Type IT JS</a></li>
-                <li><a href="https://github.com/nathanford/type.js">Type JS</a></li>
-                <li><a href="https://www.jqueryscript.net/">jQuery Plugins</a></li>
-                <li><a href="https://www.bestjquery.com/">Best jQuery</a></li>
-                <li><a href="http://imagehover.io/">Image Hover</a></li>
-                <li><a href="https://loading.io/">Loading</a></li>
-                <li><a href="https://kushagra.dev/lab/hint/">Tooltip</a></li>
-                <li><a href="https://scrollmagic.io/">Scroll Magic</a></li>
-                <li><a href="https://1linelayouts.glitch.me/">1 Line Layout</a></li>
-                <li><a href="https://animejs.com/documentation/#running">Anim JS</a></li>
-                <li><a href="https://scruffles.github.io/BootstrapModalPopover/">Modal Popover</a></li>
-                <li><a href="https://colorsinspo.com/">Colors Inspo</a></li>
-                <li><a href="https://color.hailpixel.com/">Hali Pixel</a></li>
-                <li><a href="https://htmlcolorcodes.com/color-chart/">HTML Color Codes</a></li>
-                <li><a href="https://webgradients.com/">Web Gradients</a></li>
-                <li><a href="https://cdnjs.com/">CDN JS</a></li>
-                <li><a href="https://www.unminify2.com/">Unminify JS, CSS, HTML</a></li>
-                <li><a href="https://getbootstrap.com/">Get Bootstrap</a></li>
-                <li><a href="http://mobiletest.me/">Mobile Responsive Test</a></li>
-                <li><a href="http://search.google.com/test/mobile-friendly">Mobile Friendly Test</a></li>
-                <li><a href="https://fonts.maateen.me/">Mateen Bangla Font</a></li>
-                <li><a href="https://icoconvert.com/">ICO Convert</a></li>
-                <li><a href="https://bootswatch.com/">Boots Watch</a></li>
-                <li><a href="http://getskeleton.com/#examples">Get Skeleton</a></li>
-                <li><a href="https://minicss.org/docs">Mini CSS</a></li>
-                <li><a href="https://jsonformatter.org/scss-to-css">SCSS to CSS</a></li>
-                <li><a href="http://minifycode.com/html-minifier/">HTML Minifier</a></li>
-                <li><a href="https://craig.is/making/rainbows">Rainbow Syntax Highlighter</a></li>
-            </ul>
-        </div>
-
-        <!-- Developer Links -->
-        <div class="category">
-            <h2>Developer</h2>
-            <ul>
-                <li><a href="https://rapidapi.com/collection/list-of-free-apis">Free APIs</a></li>
-            </ul>
-        </div>
-
-        <!-- Template Links -->
-        <div class="category">
-            <h2>Templates</h2>
-            <ul>
-                <li><a href="https://www.bootstrapdash.com/demo/victory/template/demo/vertical-default-light/index.html">Victory Admin</a></li>
-            </ul>
-        </div>
-
-        <div class="footer">
-            &copy; 2025 Mehedi Hasan. All rights reserved.
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("searchInput").addEventListener("keyup", function() {
+            let searchQuery = this.value.toLowerCase();
+            let found = false;
+
+            // Search in each section
+            const allItems = document.querySelectorAll(".list-group-item");
+
+            allItems.forEach(function(item) {
+                let text = item.textContent.toLowerCase();
+                if (text.indexOf(searchQuery) !== -1) {
+                    item.style.display = "";
+                    found = true;
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            // Show "No result" message if nothing is found
+            document.querySelector(".no-result").style.display = found ? "none" : "block";
+        });
+    </script>
 </body>
 </html>
