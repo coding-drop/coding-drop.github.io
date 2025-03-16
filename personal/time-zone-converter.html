@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Zone Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        input[type="datetime-local"],
+        select {
+            width: calc(100% - 22px);
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="datetime-local"]:focus,
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Time Zone Converter</h2>
+        <div class="form-group">
+            <label for="inputTime">Input Date and Time:</label>
+            <input type="datetime-local" id="inputTime">
+        </div>
+        <div class="form-group">
+            <label for="fromTimeZone">From Time Zone:</label>
+            <select id="fromTimeZone">
+                <option value="UTC">UTC</option>
+                <option value="America/Los_Angeles">California (PST)</option>
+                <option value="Asia/Dhaka" selected>Bangladesh (BDT)</option>
+                <option value="Asia/Dubai">Dubai (UAE)</option>
+                <option value="Asia/Riyadh">Saudi Arabia (AST)</option>
+                <option value="Asia/Singapore">Singapore (SGT)</option>
+                <option value="Asia/Kuala_Lumpur">Malaysia (MYT)</option>
+                <option value="Asia/Tokyo">Japan (JST)</option>
+                <option value="America/Toronto">Canada (EST)</option>
+                <option value="Asia/Gaza">Palestine (EET)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="toTimeZone">To Time Zone:</label>
+            <select id="toTimeZone">
+                <option value="UTC">UTC</option>
+                <option value="America/Los_Angeles" selected>California (PST)</option>
+                <option value="Asia/Dhaka">Bangladesh (BDT)</option>
+                <option value="Asia/Dubai">Dubai (UAE)</option>
+                <option value="Asia/Riyadh">Saudi Arabia (AST)</option>
+                <option value="Asia/Singapore">Singapore (SGT)</option>
+                <option value="Asia/Kuala_Lumpur">Malaysia (MYT)</option>
+                <option value="Asia/Tokyo">Japan (JST)</option>
+                <option value="America/Toronto">Canada (EST)</option>
+                <option value="Asia/Gaza">Palestine (EET)</option>
+            </select>
+        </div>
+        <button onclick="convertTime()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convertTime() {
+            const inputTime = document.getElementById('inputTime').value;
+            const fromTimeZone = document.getElementById('fromTimeZone').value;
+            const toTimeZone = document.getElementById('toTimeZone').value;
+            const resultDiv = document.getElementById('result');
+
+            if (!inputTime) {
+                resultDiv.textContent = "Please select a date and time.";
+                return;
+            }
+
+            const moment = window.moment;
+            if (!moment) {
+                resultDiv.textContent = "Moment.js is required. Please include it.";
+                return;
+            }
+
+            const convertedTime = moment.tz(inputTime, fromTimeZone).tz(toTimeZone).format('YYYY-MM-DD HH:mm:ss');
+            resultDiv.textContent = `Converted Time: ${convertedTime}`;
+        }
+
+        const momentScript = document.createElement('script');
+        momentScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js';
+        momentScript.onload = () => {
+            const momentTimezoneScript = document.createElement('script');
+            momentTimezoneScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-10-year-range.min.js';
+            document.head.appendChild(momentTimezoneScript);
+            //set current time
+            const now = moment().format('YYYY-MM-DDTHH:mm');
+            document.getElementById('inputTime').value = now;
+        };
+        document.head.appendChild(momentScript);
+    </script>
+</body>
+</html>
