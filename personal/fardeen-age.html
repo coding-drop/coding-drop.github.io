@@ -99,28 +99,49 @@
         const birthDate = new Date('2025-01-30T20:15:00');
 
         function updateCountdown() {
-            const now = new Date();
-            const timeDifference = now - birthDate;
+    const birthDate = new Date('2025-01-30T20:15:00');
+    const now = new Date();
 
-            // Total seconds
-            const totalSeconds = Math.floor(timeDifference / 1000);
+    // Initialize values
+    let years = now.getFullYear() - birthDate.getFullYear();
+    let months = now.getMonth() - birthDate.getMonth();
+    let days = now.getDate() - birthDate.getDate();
+    let hours = now.getHours() - birthDate.getHours();
+    let minutes = now.getMinutes() - birthDate.getMinutes();
+    let seconds = now.getSeconds() - birthDate.getSeconds();
 
-            // Calculate years, months, days, hours, minutes, seconds
-            const years = Math.floor(totalSeconds / (60 * 60 * 24 * 365.25));
-            const months = Math.floor((totalSeconds % (60 * 60 * 24 * 365.25)) / (60 * 60 * 24 * 30.44));
-            const days = Math.floor((totalSeconds % (60 * 60 * 24 * 30.44)) / (60 * 60 * 24));
-            const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
-            const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
-            const seconds = totalSeconds % 60;
+    // Correct for negatives by borrowing
+    if (seconds < 0) {
+        seconds += 60;
+        minutes--;
+    }
+    if (minutes < 0) {
+        minutes += 60;
+        hours--;
+    }
+    if (hours < 0) {
+        hours += 24;
+        days--;
+    }
+    if (days < 0) {
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+        days += prevMonth;
+        months--;
+    }
+    if (months < 0) {
+        months += 12;
+        years--;
+    }
 
-            // Update the HTML elements
-            document.getElementById('years').textContent = years;
-            document.getElementById('months').textContent = months;
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = hours;
-            document.getElementById('minutes').textContent = minutes;
-            document.getElementById('seconds').textContent = seconds;
-        }
+    // Update the DOM
+    document.getElementById('years').textContent = years;
+    document.getElementById('months').textContent = months;
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = hours;
+    document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
+}
+
 
         // Update the countdown every second
         setInterval(updateCountdown, 1000);
