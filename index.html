@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Coding Drop</title>
     <meta charset="utf-8" />
@@ -7,190 +8,269 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="img/drop.png">
-    <link rel="stylesheet" href="myStyles.css">
-    <link href="/plugins.min.css" type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <link rel="shortcut icon" href="img/drop.png" />
+    <link rel="stylesheet" href="myStyles.css" />
+    <link href="/plugins.min.css" type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'" />
     <style>
-    /* dm-sans-regular - latin */
-    @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 400;
-        src: url(/zento/assets/fonts/dm-sans-v14-latin-regular.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* dm-sans-italic - latin */
-    @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'DM Sans';
-        font-style: italic;
-        font-weight: 400;
-        src: url(/zento/assets/fonts/dm-sans-v14-latin-italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* dm-sans-700 - latin */
-    @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 700;
-        src: url(/zento/assets/fonts/dm-sans-v14-latin-700.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* dm-sans-700italic - latin */
-    @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'DM Sans';
-        font-style: italic;
-        font-weight: 700;
-        src: url(/zento/assets/fonts/dm-sans-v14-latin-700italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
+        /* dm-sans-regular - latin */
+        @font-face {
+            font-display: swap;
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: "DM Sans";
+            font-style: normal;
+            font-weight: 400;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-regular.woff2?v=1b89f44b98) format("woff2");
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
 
-    /* urbanist-500 - latin */
-    @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Urbanist';
-        font-style: normal;
-        font-weight: 500;
-        src: url(/zento/assets/fonts/urbanist-v15-latin-500.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* urbanist-600 - latin */
-    @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Urbanist';
-        font-style: normal;
-        font-weight: 600;
-        src: url(/zento/assets/fonts/urbanist-v15-latin-600.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* urbanist-700 - latin */
-    @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Urbanist';
-        font-style: normal;
-        font-weight: 700;
-        src: url(/zento/assets/fonts/urbanist-v15-latin-700.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* urbanist-700italic - latin */
-    @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Urbanist';
-        font-style: italic;
-        font-weight: 700;
-        src: url(/zento/assets/fonts/urbanist-v15-latin-700italic.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* urbanist-800 - latin */
-    @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Urbanist';
-        font-style: normal;
-        font-weight: 800;
-        src: url(/zento/assets/fonts/urbanist-v15-latin-800.woff2?v=1b89f44b98) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
+        /* dm-sans-italic - latin */
+        @font-face {
+            font-display: swap;
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: "DM Sans";
+            font-style: italic;
+            font-weight: 400;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-italic.woff2?v=1b89f44b98) format("woff2");
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* dm-sans-700 - latin */
+        @font-face {
+            font-display: swap;
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: "DM Sans";
+            font-style: normal;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-700.woff2?v=1b89f44b98) format("woff2");
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* dm-sans-700italic - latin */
+        @font-face {
+            font-display: swap;
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: "DM Sans";
+            font-style: italic;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/dm-sans-v14-latin-700italic.woff2?v=1b89f44b98) format("woff2");
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* urbanist-500 - latin */
+        @font-face {
+            font-display: swap;
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: "Urbanist";
+            font-style: normal;
+            font-weight: 500;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-500.woff2?v=1b89f44b98) format("woff2");
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* urbanist-600 - latin */
+        @font-face {
+            font-display: swap;
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: "Urbanist";
+            font-style: normal;
+            font-weight: 600;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-600.woff2?v=1b89f44b98) format("woff2");
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* urbanist-700 - latin */
+        @font-face {
+            font-display: swap;
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: "Urbanist";
+            font-style: normal;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-700.woff2?v=1b89f44b98) format("woff2");
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* urbanist-700italic - latin */
+        @font-face {
+            font-display: swap;
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: "Urbanist";
+            font-style: italic;
+            font-weight: 700;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-700italic.woff2?v=1b89f44b98) format("woff2");
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* urbanist-800 - latin */
+        @font-face {
+            font-display: swap;
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: "Urbanist";
+            font-style: normal;
+            font-weight: 800;
+            src: url(/zento/assets/fonts/urbanist-v15-latin-800.woff2?v=1b89f44b98) format("woff2");
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
     </style>
     <style>
-        :root{
-                --epcl-background-color: #FAF8FF;
-                --epcl-boxes-background-color: #ffffff;
-                --epcl-border-color: #E9E8FF;
-                --epcl-boxes-border-color: #E9E8FF;
-                --epcl-secondary-color: #FF2AAC;
+        :root {
+            --epcl-background-color: #faf8ff;
+            --epcl-boxes-background-color: #ffffff;
+            --epcl-border-color: #e9e8ff;
+            --epcl-boxes-border-color: #e9e8ff;
+            --epcl-secondary-color: #ff2aac;
         }
-                    .ctag-3-css .epcl-number,
-                    .ctag-3-css.epcl-button,
-                    .siblings .ctag-3-css,
-                    div.tags a.ctag-3-css:before,
-                    div.tags.fill-color a.ctag-3-css,
-                    .category-image.ctag-3-css,
-                    .epcl-post-carousel article.ctag-3-css{ background: #227dff !important; }
-                    .ctag-3-css.overlay-effect .image-container:before{ background: #227dff !important; }
-                    .ctag-code .epcl-number,
-                    .ctag-code.epcl-button,
-                    .siblings .ctag-code,
-                    div.tags a.ctag-code:before,
-                    div.tags.fill-color a.ctag-code,
-                    .category-image.ctag-code,
-                    .epcl-post-carousel article.ctag-code{ background: #ff2ed9 !important; }
-                    .ctag-code.overlay-effect .image-container:before{ background: #ff2ed9 !important; }
-                    .ctag-5-databases .epcl-number,
-                    .ctag-5-databases.epcl-button,
-                    .siblings .ctag-5-databases,
-                    div.tags a.ctag-5-databases:before,
-                    div.tags.fill-color a.ctag-5-databases,
-                    .category-image.ctag-5-databases,
-                    .epcl-post-carousel article.ctag-5-databases{ background: #5751ff !important; }
-                    .ctag-5-databases.overlay-effect .image-container:before{ background: #5751ff !important; }
-                    .ctag-6-deployment .epcl-number,
-                    .ctag-6-deployment.epcl-button,
-                    .siblings .ctag-6-deployment,
-                    div.tags a.ctag-6-deployment:before,
-                    div.tags.fill-color a.ctag-6-deployment,
-                    .category-image.ctag-6-deployment,
-                    .epcl-post-carousel article.ctag-6-deployment{ background: #2a2728 !important; }
-                    .ctag-6-deployment.overlay-effect .image-container:before{ background: #2a2728 !important; }
-                    .ctag-guides .epcl-number,
-                    .ctag-guides.epcl-button,
-                    .siblings .ctag-guides,
-                    div.tags a.ctag-guides:before,
-                    div.tags.fill-color a.ctag-guides,
-                    .category-image.ctag-guides,
-                    .epcl-post-carousel article.ctag-guides{ background: #3aa9fd !important; }
-                    .ctag-guides.overlay-effect .image-container:before{ background: #3aa9fd !important; }
-                    .ctag-2-html .epcl-number,
-                    .ctag-2-html.epcl-button,
-                    .siblings .ctag-2-html,
-                    div.tags a.ctag-2-html:before,
-                    div.tags.fill-color a.ctag-2-html,
-                    .category-image.ctag-2-html,
-                    .epcl-post-carousel article.ctag-2-html{ background: #ff8e51 !important; }
-                    .ctag-2-html.overlay-effect .image-container:before{ background: #ff8e51 !important; }
-                    .ctag-4-javascript .epcl-number,
-                    .ctag-4-javascript.epcl-button,
-                    .siblings .ctag-4-javascript,
-                    div.tags a.ctag-4-javascript:before,
-                    div.tags.fill-color a.ctag-4-javascript,
-                    .category-image.ctag-4-javascript,
-                    .epcl-post-carousel article.ctag-4-javascript{ background: #ffcb29 !important; }
-                    .ctag-4-javascript.overlay-effect .image-container:before{ background: #ffcb29 !important; }
-                    .ctag-sql .epcl-number,
-                    .ctag-sql.epcl-button,
-                    .siblings .ctag-sql,
-                    div.tags a.ctag-sql:before,
-                    div.tags.fill-color a.ctag-sql,
-                    .category-image.ctag-sql,
-                    .epcl-post-carousel article.ctag-sql{ background: #f95353 !important; }
-                    .ctag-sql.overlay-effect .image-container:before{ background: #f95353 !important; }
-                    .ctag-tech .epcl-number,
-                    .ctag-tech.epcl-button,
-                    .siblings .ctag-tech,
-                    div.tags a.ctag-tech:before,
-                    div.tags.fill-color a.ctag-tech,
-                    .category-image.ctag-tech,
-                    .epcl-post-carousel article.ctag-tech{ background: #4775ff !important; }
-                    .ctag-tech.overlay-effect .image-container:before{ background: #4775ff !important; }
+
+        .ctag-3-css .epcl-number,
+        .ctag-3-css.epcl-button,
+        .siblings .ctag-3-css,
+        div.tags a.ctag-3-css:before,
+        div.tags.fill-color a.ctag-3-css,
+        .category-image.ctag-3-css,
+        .epcl-post-carousel article.ctag-3-css {
+            background: #227dff !important;
+        }
+
+        .ctag-3-css.overlay-effect .image-container:before {
+            background: #227dff !important;
+        }
+
+        .ctag-code .epcl-number,
+        .ctag-code.epcl-button,
+        .siblings .ctag-code,
+        div.tags a.ctag-code:before,
+        div.tags.fill-color a.ctag-code,
+        .category-image.ctag-code,
+        .epcl-post-carousel article.ctag-code {
+            background: #ff2ed9 !important;
+        }
+
+        .ctag-code.overlay-effect .image-container:before {
+            background: #ff2ed9 !important;
+        }
+
+        .ctag-5-databases .epcl-number,
+        .ctag-5-databases.epcl-button,
+        .siblings .ctag-5-databases,
+        div.tags a.ctag-5-databases:before,
+        div.tags.fill-color a.ctag-5-databases,
+        .category-image.ctag-5-databases,
+        .epcl-post-carousel article.ctag-5-databases {
+            background: #5751ff !important;
+        }
+
+        .ctag-5-databases.overlay-effect .image-container:before {
+            background: #5751ff !important;
+        }
+
+        .ctag-6-deployment .epcl-number,
+        .ctag-6-deployment.epcl-button,
+        .siblings .ctag-6-deployment,
+        div.tags a.ctag-6-deployment:before,
+        div.tags.fill-color a.ctag-6-deployment,
+        .category-image.ctag-6-deployment,
+        .epcl-post-carousel article.ctag-6-deployment {
+            background: #2a2728 !important;
+        }
+
+        .ctag-6-deployment.overlay-effect .image-container:before {
+            background: #2a2728 !important;
+        }
+
+        .ctag-guides .epcl-number,
+        .ctag-guides.epcl-button,
+        .siblings .ctag-guides,
+        div.tags a.ctag-guides:before,
+        div.tags.fill-color a.ctag-guides,
+        .category-image.ctag-guides,
+        .epcl-post-carousel article.ctag-guides {
+            background: #3aa9fd !important;
+        }
+
+        .ctag-guides.overlay-effect .image-container:before {
+            background: #3aa9fd !important;
+        }
+
+        .ctag-2-html .epcl-number,
+        .ctag-2-html.epcl-button,
+        .siblings .ctag-2-html,
+        div.tags a.ctag-2-html:before,
+        div.tags.fill-color a.ctag-2-html,
+        .category-image.ctag-2-html,
+        .epcl-post-carousel article.ctag-2-html {
+            background: #ff8e51 !important;
+        }
+
+        .ctag-2-html.overlay-effect .image-container:before {
+            background: #ff8e51 !important;
+        }
+
+        .ctag-4-javascript .epcl-number,
+        .ctag-4-javascript.epcl-button,
+        .siblings .ctag-4-javascript,
+        div.tags a.ctag-4-javascript:before,
+        div.tags.fill-color a.ctag-4-javascript,
+        .category-image.ctag-4-javascript,
+        .epcl-post-carousel article.ctag-4-javascript {
+            background: #ffcb29 !important;
+        }
+
+        .ctag-4-javascript.overlay-effect .image-container:before {
+            background: #ffcb29 !important;
+        }
+
+        .ctag-sql .epcl-number,
+        .ctag-sql.epcl-button,
+        .siblings .ctag-sql,
+        div.tags a.ctag-sql:before,
+        div.tags.fill-color a.ctag-sql,
+        .category-image.ctag-sql,
+        .epcl-post-carousel article.ctag-sql {
+            background: #f95353 !important;
+        }
+
+        .ctag-sql.overlay-effect .image-container:before {
+            background: #f95353 !important;
+        }
+
+        .ctag-tech .epcl-number,
+        .ctag-tech.epcl-button,
+        .siblings .ctag-tech,
+        div.tags a.ctag-tech:before,
+        div.tags.fill-color a.ctag-tech,
+        .category-image.ctag-tech,
+        .epcl-post-carousel article.ctag-tech {
+            background: #4775ff !important;
+        }
+
+        .ctag-tech.overlay-effect .image-container:before {
+            background: #4775ff !important;
+        }
     </style>
     <script>
-        var site_url = 'https://ghost.estudiopatagon.com/zento';
+        var site_url = "https://ghost.estudiopatagon.com/zento";
         var theme_config = {
-            masonry: 'on', // If you don't need masonry style, just set to "off"
-            sticky_sidebar: 'on', // on / off
-            disqus_shortname: 'ghostexample', // You can create your own Disqus Comments here: https://disqus.com/admin/create/
+            masonry: "on", // If you don't need masonry style, just set to "off"
+            sticky_sidebar: "on", // on / off
+            disqus_shortname: "ghostexample", // You can create your own Disqus Comments here: https://disqus.com/admin/create/
         };
-            theme_config.disqus_shortname = "ghostexample";
+        theme_config.disqus_shortname = "ghostexample";
     </script>
-    <meta name="description" content="Coding is like a story. Not a puzzle.">
-    <link rel="canonical" href="https://coding-drop.github.io/">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <link rel="next" href="https://coding-drop.github.io/page/2/">
-    <meta property="og:site_name" content="Coding Drop">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Coding Drop">
-    <meta property="og:description" content="Coding is like a story. Not a puzzle.">
-    <meta property="og:url" content="https://coding-drop.github.io/">
-    <meta property="og:image" content="https://coding-drop.github.io/img/drop.png">
-    <meta property="article:publisher" content="https://www.facebook.com/envato">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Coding Drop">
-    <meta name="twitter:description" content="Coding is like a story. Not a puzzle.">
-    <meta name="twitter:url" content="https://coding-drop.github.io/">
-    <meta name="twitter:site" content="@envato">
+    <meta name="description" content="Coding is like a story. Not a puzzle." />
+    <link rel="canonical" href="https://coding-drop.github.io/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="next" href="https://coding-drop.github.io/page/2/" />
+    <meta property="og:site_name" content="Coding Drop" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Coding Drop" />
+    <meta property="og:description" content="Coding is like a story. Not a puzzle." />
+    <meta property="og:url" content="https://coding-drop.github.io/" />
+    <meta property="og:image" content="https://coding-drop.github.io/img/drop.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/envato" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Coding Drop" />
+    <meta name="twitter:description" content="Coding is like a story. Not a puzzle." />
+    <meta name="twitter:url" content="https://coding-drop.github.io/" />
+    <meta name="twitter:site" content="@envato" />
     <!-- <script type="application/ld+json">
         {
         "@context": "https://schema.org",
@@ -209,96 +289,110 @@
         "description": "A Coding Blog"
         }
     </script> -->
-    <meta name="generator" content="Ghost 5.75">
-    <link rel="alternate" type="application/rss+xml" title="Zento" href="https://coding-drop.github.io/rss/">
-    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.36/umd/portal.min.js" data-i18n="false" data-ghost="https://coding-drop.github.io/" data-key="3418b12091e67d20ee9d637bf3" data-api="https://coding-drop.github.io/ghost/api/content/" crossorigin="anonymous">
-    </script>
+    <meta name="generator" content="Ghost 5.75" />
+    <link rel="alternate" type="application/rss+xml" title="Zento" href="https://coding-drop.github.io/rss/" />
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.36/umd/portal.min.js" data-i18n="false"
+        data-ghost="https://coding-drop.github.io/" data-key="3418b12091e67d20ee9d637bf3"
+        data-api="https://coding-drop.github.io/ghost/api/content/" crossorigin="anonymous"></script>
     <style id="gh-members-styles">
-    .gh-post-upgrade-cta-content,
-    .gh-post-upgrade-cta {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        text-align: center;
-        width: 100%;
-        color: #ffffff;
-        font-size: 16px;
-    }
+        .gh-post-upgrade-cta-content,
+        .gh-post-upgrade-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            text-align: center;
+            width: 100%;
+            color: #ffffff;
+            font-size: 16px;
+        }
 
-    .gh-post-upgrade-cta-content {
-        border-radius: 8px;
-        padding: 40px 4vw;
-    }
+        .gh-post-upgrade-cta-content {
+            border-radius: 8px;
+            padding: 40px 4vw;
+        }
 
-    .gh-post-upgrade-cta h2 {
-        color: #ffffff;
-        font-size: 28px;
-        letter-spacing: -0.2px;
-        margin: 0;
-        padding: 0;
-    }
+        .gh-post-upgrade-cta h2 {
+            color: #ffffff;
+            font-size: 28px;
+            letter-spacing: -0.2px;
+            margin: 0;
+            padding: 0;
+        }
 
-    .gh-post-upgrade-cta p {
-        margin: 20px 0 0;
-        padding: 0;
-    }
+        .gh-post-upgrade-cta p {
+            margin: 20px 0 0;
+            padding: 0;
+        }
 
-    .gh-post-upgrade-cta small {
-        font-size: 16px;
-        letter-spacing: -0.2px;
-    }
+        .gh-post-upgrade-cta small {
+            font-size: 16px;
+            letter-spacing: -0.2px;
+        }
 
-    .gh-post-upgrade-cta a {
-        color: #ffffff;
-        cursor: pointer;
-        font-weight: 500;
-        box-shadow: none;
-        text-decoration: underline;
-    }
+        .gh-post-upgrade-cta a {
+            color: #ffffff;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: none;
+            text-decoration: underline;
+        }
 
-    .gh-post-upgrade-cta a:hover {
-        color: #ffffff;
-        opacity: 0.8;
-        box-shadow: none;
-        text-decoration: underline;
-    }
+        .gh-post-upgrade-cta a:hover {
+            color: #ffffff;
+            opacity: 0.8;
+            box-shadow: none;
+            text-decoration: underline;
+        }
 
-    .gh-post-upgrade-cta a.gh-btn {
-        display: block;
-        background: #ffffff;
-        text-decoration: none;
-        margin: 28px 0 0;
-        padding: 8px 18px;
-        border-radius: 4px;
-        font-size: 16px;
-        font-weight: 600;
-    }
+        .gh-post-upgrade-cta a.gh-btn {
+            display: block;
+            background: #ffffff;
+            text-decoration: none;
+            margin: 28px 0 0;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+        }
 
-    .gh-post-upgrade-cta a.gh-btn:hover {
-        opacity: 0.92;
-    }
+        .gh-post-upgrade-cta a.gh-btn:hover {
+            opacity: 0.92;
+        }
     </style>
     <script async src="https://js.stripe.com/v3/"></script>
-    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="3418b12091e67d20ee9d637bf3" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://coding-drop.github.io/" crossorigin="anonymous"></script>
-    <link href="https://coding-drop.github.io/webmentions/receive/" rel="webmention">
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js"
+        data-key="3418b12091e67d20ee9d637bf3" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css"
+        data-sodo-search="https://coding-drop.github.io/" crossorigin="anonymous"></script>
+    <link href="https://coding-drop.github.io/webmentions/receive/" rel="webmention" />
     <script defer src="/cards.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/zento/public/cards.min.css?v=1b89f44b98">
-    <script defer src="/comment-counts.min.js?" data-ghost-comments-counts-api="https://coding-drop.github.io/members/api/comments/counts/"></script>
+    <link rel="stylesheet" type="text/css" href="/zento/public/cards.min.css?v=1b89f44b98" />
+    <script defer src="/comment-counts.min.js?"
+        data-ghost-comments-counts-api="https://coding-drop.github.io/members/api/comments/counts/"></script>
     <script defer src="/member-attribution.min.js"></script>
     <style>
-        .widget_epcl_tag_list .toggle-icon{ vertical-align: middle; margin-top: -8px; }
-        :root{
+        .widget_epcl_tag_list .toggle-icon {
+            vertical-align: middle;
+            margin-top: -8px;
+        }
+
+        :root {
             --purchase-color: #ff0081;
         }
-        .epcl-themes.epcl-purchase{
+
+        .epcl-themes.epcl-purchase {
             bottom: 92px;
             background: #4f1cff;
             font-size: 13px;
         }
-        .epcl-themes.epcl-purchase:before, .epcl-themes.epcl-purchase:after{ display: none; }
-        .epcl-purchase{
-            
+
+        .epcl-themes.epcl-purchase:before,
+        .epcl-themes.epcl-purchase:after {
+            display: none;
+        }
+
+        .epcl-purchase {
             position: fixed;
             z-index: 110;
             bottom: 20px;
@@ -308,90 +402,147 @@
             color: #fff;
             padding: 15px 25px;
             box-shadow: 0px 3px 5px -1px rgb(7 10 25 / 10%);
-            font: 18px 'Urbanist';
+            font: 18px "Urbanist";
             font-weight: 500;
             border-radius: 30px;
         }
-        .epcl-purchase:hover{
+
+        .epcl-purchase:hover {
             color: #fff;
             transform: translateY(-2px);
         }
-        .epcl-purchase:before, .epcl-purchase:after {
-        position: absolute;
-        content: "";
-        display: block;
-        width: 140%;
-        height: 100%;
-        left: -20%;
-        z-index: -1000;
-        transition: all ease-in-out 0.5s;
-        background-repeat: no-repeat;
-        }
-        .epcl-purchase:before {
-        display: none;
-        top: -75%;
-        background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--purchase-color) 20%, transparent 30%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
-        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
-        }
+
+        .epcl-purchase:before,
         .epcl-purchase:after {
-        display: none;
-        bottom: -75%;
-        background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
-        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+            position: absolute;
+            content: "";
+            display: block;
+            width: 140%;
+            height: 100%;
+            left: -20%;
+            z-index: -1000;
+            transition: all ease-in-out 0.5s;
+            background-repeat: no-repeat;
         }
+
         .epcl-purchase:before {
-        display: block;
-        animation: topBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+            display: none;
+            top: -75%;
+            background-image: radial-gradient(circle,
+                    var(--purchase-color) 20%,
+                    transparent 20%),
+                radial-gradient(circle,
+                    transparent 20%,
+                    var(--purchase-color) 20%,
+                    transparent 30%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%),
+                radial-gradient(circle,
+                    transparent 10%,
+                    var(--purchase-color) 15%,
+                    transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+            background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%,
+                15% 15%, 10% 10%, 18% 18%;
         }
+
         .epcl-purchase:after {
-        display: block;
-        animation: bottomBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+            display: none;
+            bottom: -75%;
+            background-image: radial-gradient(circle,
+                    var(--purchase-color) 20%,
+                    transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%),
+                radial-gradient(circle,
+                    transparent 10%,
+                    var(--purchase-color) 15%,
+                    transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%),
+                radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+            background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%,
+                20% 20%;
         }
+
+        .epcl-purchase:before {
+            display: block;
+            animation: topBubbles ease-in-out 3s 4 forwards,
+                delay-animation linear 6s 4 forwards;
+        }
+
+        .epcl-purchase:after {
+            display: block;
+            animation: bottomBubbles ease-in-out 3s 4 forwards,
+                delay-animation linear 6s 4 forwards;
+        }
+
         @keyframes delay-animation {
             0% {
                 opacity: 0;
             }
+
             50% {
                 opacity: 0;
             }
+
             50.01% {
                 opacity: 1;
             }
+
             100% {
                 opacity: 1;
             }
         }
+
         @keyframes topBubbles {
             0% {
-                background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+                background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%,
+                    25% 90%, 40% 90%, 55% 90%, 70% 90%;
             }
+
             50% {
-                background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+                background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+                    50% 50%, 65% 20%, 90% 30%;
             }
+
             100% {
-                background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+                background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%,
+                    22% 40%, 50% 40%, 65% 10%, 90% 20%;
                 background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
             }
         }
+
         @keyframes bottomBubbles {
             0% {
-                background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+                background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+                    70% -10%, 70% 0%;
             }
+
             50% {
-                background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+                background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%,
+                    95% 60%, 105% 0%;
             }
+
             100% {
-                background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+                background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%,
+                    95% 70%, 110% 10%;
                 background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
             }
         }
     </style>
     <style>
-        :root {--ghost-accent-color: #6A4EE9;}
+        :root {
+            --ghost-accent-color: #6a4ee9;
+        }
     </style>
 </head>
-<body class=" home-template" >
-    <img loading="eager" fetchpriority="high" src="/svg-icons.svg" alt="Social Icons" style="display:none;">
+
+<body class="home-template">
+    <img loading="eager" fetchpriority="high" src="/svg-icons.svg" alt="Social Icons" style="display: none" />
     <!-- start: .mobile.main-nav -->
     <nav class="mobile main-nav">
         <div class="close">
@@ -399,38 +550,61 @@
                 <use xlink:href="/svg-icons.svg"></use>
             </svg>
         </div>
-        <div class="logo" >
-            <a href="#"><img src="img/CodingDrop.png" alt="Coding Drop" width="170" height="60" decoding="async"></a>
+        <div class="logo">
+            <a href="#"><img src="img/CodingDrop.png" alt="Coding Drop" width="170" height="60" decoding="async" /></a>
         </div>
         <ul class="menu underline-effect">
-            <li class=" nav-home current-menu-item"><a href="https://coding-drop.github.io/">Home</a></li>
-            <li class=" nav-style-guide"><a href="https://coding-drop.github.io/style-guide/">Style Guide ✨</a></li>
-            <li class=" nav-explore-our-tags"><a href="https://coding-drop.github.io/explore-our-tags/">Explore our Tags</a></li>
-            <li class=" nav-text-only-post"><a href="https://coding-drop.github.io/text-only/">Text Only Post</a></li>
-            <li class=" nav-classic-post-image"><a href="https://coding-drop.github.io/classic/">Classic Post (image)</a></li>
-            <li class=" nav-vertical-post"><a href="https://coding-drop.github.io/vertical/">Vertical Post</a></li>
-            <li class=" nav-fullwidth-post"><a href="https://coding-drop.github.io/fullwidth/">Fullwidth Post</a></li>
-            <li class=" nav-no-sidebar-post"><a href="https://coding-drop.github.io/nosidebar/">No Sidebar Post</a></li>
-            <li class=" nav-home-demos"><a href="https://themes.estudiopatagon.com/selector/zento-ghost/">Home Demos 🚀</a></li>
+            <li class="nav-home current-menu-item">
+                <a href="https://coding-drop.github.io/">Home</a>
+            </li>
+            <li class="nav-style-guide">
+                <a href="https://coding-drop.github.io/style-guide/">Style Guide ✨</a>
+            </li>
+            <li class="nav-explore-our-tags">
+                <a href="https://coding-drop.github.io/explore-our-tags/">Explore our Tags</a>
+            </li>
+            <li class="nav-text-only-post">
+                <a href="https://coding-drop.github.io/text-only/">Text Only Post</a>
+            </li>
+            <li class="nav-classic-post-image">
+                <a href="https://coding-drop.github.io/classic/">Classic Post (image)</a>
+            </li>
+            <li class="nav-vertical-post">
+                <a href="https://coding-drop.github.io/vertical/">Vertical Post</a>
+            </li>
+            <li class="nav-fullwidth-post">
+                <a href="https://coding-drop.github.io/fullwidth/">Fullwidth Post</a>
+            </li>
+            <li class="nav-no-sidebar-post">
+                <a href="https://coding-drop.github.io/nosidebar/">No Sidebar Post</a>
+            </li>
+            <li class="nav-home-demos">
+                <a href="https://themes.estudiopatagon.com/selector/zento-ghost/">Home Demos 🚀</a>
+            </li>
         </ul>
     </nav>
     <!-- end: .mobile.main-nav -->
     <div class="menu-overlay"></div>
 
-	<!-- start: #wrapper -->
-	<div id="wrapper">
+    <!-- start: #wrapper -->
+    <div id="wrapper">
         <!-- start: #header -->
         <header id="header" class="minimalist enable-sticky">
             <!-- start: .menu-wrapper -->
             <div class="menu-wrapper">
                 <div class="grid-container">
                     <div class="epcl-flex grid-wrapper">
-                        <div class="logo" ><a href="#"><img src="img/CodingDrop.png" alt="Coding Drop" width="90%" decoding="async"></a></div>
+                        <div class="logo">
+                            <a href="#"><img src="img/CodingDrop.png" alt="Coding Drop" width="90%"
+                                    decoding="async" /></a>
+                        </div>
                         <div class="open-menu">
-                            <svg class="open icon ularge"><use xlink:href="/svg-icons.svg"></use></svg>
+                            <svg class="open icon ularge">
+                                <use xlink:href="/svg-icons.svg"></use>
+                            </svg>
                         </div>
                         <div class="clear"></div>
-                    </div>		
+                    </div>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -438,198 +612,278 @@
             <div class="clear"></div>
         </header>
         <!-- end: #header -->
-            
+
         <main id="home" class="main">
             <!-- start: .content-wrapper -->
-            <div class="content-wrapper"> 
-                <div class="sticky-container large-section np-bottom grid-container"> 
+            <div class="content-wrapper">
+                <div class="sticky-container large-section np-bottom grid-container">
                     <!-- start: #sidebar -->
                     <aside id="sidebar" class="enable-sticky grid-30 tablet-grid-30 hide-on-tablet hide-on-mobile">
                         <!-- start: .widget-tag-cloud -->
                         <div class="widget widget_epcl_tag_list grid-33 tablet-grid-50 mobile-grid-100">
                             <h3 class="widget-title title medium bordered">
                                 <svg class="decoration">
-                                    <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#title-decoration"></use>
+                                    <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#title-decoration">
+                                    </use>
                                 </svg>
                                 <span>Topics Index</span>
                             </h3>
                             <div class="clear"></div>
-                            
+
                             <!-- Fundamentals Section -->
                             <div class="item item-1 open">
                                 <h4 class="toggle-title underline-effect ctag ctag-1-fundamentals">
-                                    <span class="epcl-number">1</span> 
-                                    <a href="javascript:void(0)" class="title small" data-id="ctag-1-fundamentals">Fundamentals</a>                    
+                                    <span class="epcl-number">1</span>
+                                    <a href="javascript:void(0)" class="title small"
+                                        data-id="ctag-1-fundamentals">Fundamentals</a>
                                 </h4>
                                 <span class="toggle-icon">
                                     <svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path>
+                                        <path
+                                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                            fill="currentColor"></path>
                                     </svg>
                                 </span>
-                                <ul class="post-list" style="display: block;">
-                                    <li><span class="fw-semibold">1.</span> <a href="posts/basics/idempotant-api.html">Understanding Idempotent APIs in .NET: A Beginner’s Guide</a></li>
+                                <ul class="post-list" style="display: block">
+                                    <li>
+                                        <span class="fw-semibold">1.</span>
+                                        <a href="posts/basics/idempotant-api.html">Understanding Idempotent APIs in
+                                            .NET: A Beginner’s
+                                            Guide</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="clear"></div>
-                        
+
                             <!-- HTML Section -->
                             <div class="item item-2 open">
                                 <h4 class="toggle-title underline-effect ctag ctag-2-html">
-                                    <span class="epcl-number">2</span> 
-                                    <a href="javascript:void(0)" class="title small" data-id="ctag-2-html">HTML</a>                    
+                                    <span class="epcl-number">2</span>
+                                    <a href="javascript:void(0)" class="title small" data-id="ctag-2-html">HTML</a>
                                 </h4>
                                 <span class="toggle-icon">
                                     <svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path>
+                                        <path
+                                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                            fill="currentColor"></path>
                                     </svg>
                                 </span>
-                                <ul class="post-list" style="display: block;">
-                                    <li><span class="fw-semibold">1.</span> <a href="posts/html/common-mistakes-html.html">Common HTML Mistakes to Avoid and How to Fix Them</a></li>
-                                    <li><span class="fw-semibold">1.</span> <a href="posts/html/htm-tags.html">A Comprehensive Guide to HTML Tags: Demonstrated in a Table</a></li>
+                                <ul class="post-list" style="display: block">
+                                    <li>
+                                        <span class="fw-semibold">1.</span>
+                                        <a href="posts/html/common-mistakes-html.html">Common HTML Mistakes to Avoid and
+                                            How to Fix Them</a>
+                                    </li>
+                                    <li>
+                                        <span class="fw-semibold">1.</span>
+                                        <a href="posts/html/htm-tags.html">A Comprehensive Guide to HTML Tags:
+                                            Demonstrated in a
+                                            Table</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="clear"></div>
-                        
+
                             <!-- OOP Section -->
                             <div class="item item-3 open">
                                 <h4 class="toggle-title underline-effect ctag ctag-3-oop">
-                                    <span class="epcl-number">3</span> 
-                                    <a href="javascript:void(0)" class="title small" data-id="ctag-3-oop">OOP</a>                    
+                                    <span class="epcl-number">3</span>
+                                    <a href="javascript:void(0)" class="title small" data-id="ctag-3-oop">OOP</a>
                                 </h4>
                                 <span class="toggle-icon">
                                     <svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path>
+                                        <path
+                                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                            fill="currentColor"></path>
                                     </svg>
                                 </span>
-                                <ul class="post-list" style="display: block;">
-                                    <li><span class="fw-semibold">1.</span> <a href="posts/post-oop.html">Understanding Object-Oriented Programming (OOP) in .NET</a></li>
+                                <ul class="post-list" style="display: block">
+                                    <li>
+                                        <span class="fw-semibold">1.</span>
+                                        <a href="posts/post-oop.html">Understanding Object-Oriented Programming (OOP) in
+                                            .NET</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="clear"></div>
-                        
+
                             <!-- AWS Section -->
                             <div class="item item-4 open">
                                 <h4 class="toggle-title underline-effect ctag ctag-4-aws">
-                                    <span class="epcl-number">4</span> 
-                                    <a href="javascript:void(0)" class="title small" data-id="ctag-4-aws">AWS</a>                    
+                                    <span class="epcl-number">4</span>
+                                    <a href="javascript:void(0)" class="title small" data-id="ctag-4-aws">AWS</a>
                                 </h4>
                                 <span class="toggle-icon">
                                     <svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path>
+                                        <path
+                                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                            fill="currentColor"></path>
                                     </svg>
                                 </span>
-                                <ul class="post-list" style="display: block;">
-                                    <li><span class="fw-semibold">1.</span> <a href="posts/aws/ec2.html">Understanding AWS EC2 (Elastic Compute Cloud)</a></li>
-                                    <li><span class="fw-semibold">2.</span> <a href="posts/aws/iam.html">Understanding AWS IAM Users</a></li>
+                                <ul class="post-list" style="display: block">
+                                    <li>
+                                        <span class="fw-semibold">1.</span>
+                                        <a href="posts/aws/ec2.html">Understanding AWS EC2 (Elastic Compute Cloud)</a>
+                                    </li>
+                                    <li>
+                                        <span class="fw-semibold">2.</span>
+                                        <a href="posts/aws/iam.html">Understanding AWS IAM Users</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="clear"></div>
-                        
+
                             <!-- Javascript Section -->
                             <div class="item item-5 open">
                                 <h4 class="toggle-title underline-effect ctag ctag-5-javascript">
-                                    <span class="epcl-number">5</span> 
-                                    <a href="javascript:void(0)" class="title small" data-id="ctag-5-javascript">Javascript</a>                    
+                                    <span class="epcl-number">5</span>
+                                    <a href="javascript:void(0)" class="title small"
+                                        data-id="ctag-5-javascript">Javascript</a>
                                 </h4>
                                 <span class="toggle-icon">
                                     <svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path>
+                                        <path
+                                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                            fill="currentColor"></path>
                                     </svg>
                                 </span>
-                                <ul class="post-list" style="display: block;">
-                                    <li><span class="fw-semibold">1.</span> <a href="posts/javascript/js-variables.html">Understanding JavaScript Variables and Data Types</a></li>
+                                <ul class="post-list" style="display: block">
+                                    <li>
+                                        <span class="fw-semibold">1.</span>
+                                        <a href="posts/javascript/js-variables.html">Understanding JavaScript Variables
+                                            and Data Types</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="clear"></div>
-                        
+
                             <!-- Database Section -->
                             <div class="item item-6">
                                 <h4 class="toggle-title underline-effect ctag ctag-6-database">
-                                    <span class="epcl-number">6</span> 
-                                    <a href="javascript:void(0)" class="title small" data-id="ctag-6-database">Database</a>                    
+                                    <span class="epcl-number">6</span>
+                                    <a href="javascript:void(0)" class="title small"
+                                        data-id="ctag-6-database">Database</a>
                                 </h4>
                                 <span class="toggle-icon">
                                     <svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path>
+                                        <path
+                                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                            fill="currentColor"></path>
                                     </svg>
                                 </span>
-                                <ul class="post-list" style="display: block;">
-                                    <li><span class="fw-semibold">1.</span> <a href="posts/database/sql-joins.html">SQL Server Joins: Types, Syntax, and Best Practices for Beginners
-                                    </a></li>
+                                <ul class="post-list" style="display: block">
+                                    <li>
+                                        <span class="fw-semibold">1.</span>
+                                        <a href="posts/database/sql-joins.html">SQL Server Joins: Types, Syntax, and
+                                            Best Practices for
+                                            Beginners
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="clear"></div>
-                        
+
                             <!-- Deployment Section -->
                             <div class="item item-7">
                                 <h4 class="toggle-title underline-effect ctag ctag-7-deployment">
-                                    <span class="epcl-number">7</span> 
-                                    <a href="javascript:void(0)" class="title small" data-id="ctag-7-deployment">Deployment</a>                    
+                                    <span class="epcl-number">7</span>
+                                    <a href="javascript:void(0)" class="title small"
+                                        data-id="ctag-7-deployment">Deployment</a>
                                 </h4>
                                 <span class="toggle-icon">
                                     <svg class="icon small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor"></path>
+                                        <path
+                                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                            fill="currentColor"></path>
                                     </svg>
                                 </span>
-                                <ul class="post-list" style="display: block;">
+                                <ul class="post-list" style="display: block">
                                     <!-- Add relevant Deployment titles if any -->
                                 </ul>
                             </div>
                             <div class="clear"></div>
                         </div>
-                        
+
                         <!-- end: .widget-tag-cloud -->
                     </aside>
                     <!-- end: #sidebar -->
                     <div class="center left-content grid-70">
                         <!-- start: .articles -->
 
-
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-javascript no-image post-access-public ">
+                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-javascript/" class="primary-tag ctag ctag-3-css" data-id="ctag-3-database">DATABASE</a>
+                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css"
+                                                data-id="ctag-3-css">C#</a>
                                         </div>
-                                        <time class="meta-info" datetime="2025-01-21">
+                                        <time class="meta-info" datetime="2025-06-15">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
-                                            Jan 25, 2025
-                                        </time>            
+                                            Jun 15, 2025
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
                                         </div>
                                     </div>
-                        
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/database/sql-joins.html">SQL Server Joins: Types, Syntax, and Best Practices for Beginners
-                                            </a></h2>
+
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/dotnet/csharp-class-vs-record.html">C# Class vs Record:
+                                                    What’s the Difference and When
+                                                    to Use Each</a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>When you work with SQL Server, you often need to combine data from different tables. This is where joins come in handy. Joins allow you to pull data from multiple tables in a single query based on common columns between them. In this blog post, we'll explore the different types of SQL Server joins and how they work, with examples to make it easy to understand.
-
-
-
-                                            </p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                In C#, both <code>class</code> and
+                                                <code>record</code> let you define types, but they
+                                                differ in behavior, especially regarding immutability
+                                                and equality. This post breaks down the practical
+                                                differences between the two, with examples to help you
+                                                decide which is best for your next .NET project.
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">DATABASE</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">C#</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -640,52 +894,83 @@
                             </article>
                         </div>
 
-
-
-
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-javascript no-image post-access-public ">
+                            <article
+                                class="default classic-large bg-box ctag ctag-3-javascript no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-javascript/" class="primary-tag ctag ctag-3-javascript" data-id="ctag-3-javascript">JAVASCRIPT</a>
+                                            <a href="/zento/tag/3-javascript/" class="primary-tag ctag ctag-3-css"
+                                                data-id="ctag-3-database">DATABASE</a>
                                         </div>
                                         <time class="meta-info" datetime="2025-01-21">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Jan 25, 2025
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
                                         </div>
                                     </div>
-                        
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/javascript/js-variables.html">Understanding JavaScript Variables and Data Types
-                                            </a></h2>
-                                        </header>
-                                        <div class="post-excerpt">        
-                                            <p>When you're starting to learn JavaScript, understanding variables and data types is essential. They are the foundation of any programming language, and JavaScript is no exception. In this post, we'll cover what JavaScript variables are, the different types of data JavaScript can handle, and how to use them effectively.
 
-                                            </p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/database/sql-joins.html">SQL Server Joins: Types, Syntax,
+                                                    and Best Practices
+                                                    for Beginners
+                                                </a>
+                                            </h2>
+                                        </header>
+                                        <div class="post-excerpt">
+                                            <p>
+                                                When you work with SQL Server, you often need to
+                                                combine data from different tables. This is where
+                                                joins come in handy. Joins allow you to pull data from
+                                                multiple tables in a single query based on common
+                                                columns between them. In this blog post, we'll explore
+                                                the different types of SQL Server joins and how they
+                                                work, with examples to make it easy to understand.
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">JAVASCRIPT</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">DATABASE</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -696,48 +981,83 @@
                             </article>
                         </div>
 
-
-
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-html no-image post-access-public ">
+                            <article
+                                class="default classic-large bg-box ctag ctag-3-javascript no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-html/" class="primary-tag ctag ctag-3-html" data-id="ctag-3-html">HTML</a>
+                                            <a href="/zento/tag/3-javascript/"
+                                                class="primary-tag ctag ctag-3-javascript"
+                                                data-id="ctag-3-javascript">JAVASCRIPT</a>
                                         </div>
                                         <time class="meta-info" datetime="2025-01-21">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Jan 25, 2025
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
                                         </div>
                                     </div>
-                        
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/html/htm-tags.html">A Comprehensive Guide to HTML Tags: Demonstrated in a Table</a></h2>
+
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/javascript/js-variables.html">Understanding JavaScript
+                                                    Variables and Data Types
+                                                </a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>HTML (HyperText Markup Language) is the foundation of web development, and understanding its various tags is essential for building well-structured webpages. In this blog, we’ll provide a detailed overview of the most commonly used HTML tags, organized in a table format for easy reference.</p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                When you're starting to learn JavaScript,
+                                                understanding variables and data types is essential.
+                                                They are the foundation of any programming language,
+                                                and JavaScript is no exception. In this post, we'll
+                                                cover what JavaScript variables are, the different
+                                                types of data JavaScript can handle, and how to use
+                                                them effectively.
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">HTML</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">JAVASCRIPT</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -748,51 +1068,80 @@
                             </article>
                         </div>
 
-
-
-
-
-
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-html no-image post-access-public ">
+                            <article class="default classic-large bg-box ctag ctag-3-html no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-html/" class="primary-tag ctag ctag-3-html" data-id="ctag-3-html">HTML</a>
+                                            <a href="/zento/tag/3-html/" class="primary-tag ctag ctag-3-html"
+                                                data-id="ctag-3-html">HTML</a>
                                         </div>
                                         <time class="meta-info" datetime="2025-01-21">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Jan 25, 2025
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
                                         </div>
                                     </div>
-                        
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/html/common-mistakes-html.html">Common HTML Mistakes to Avoid and How to Fix Them</a></h2>
+
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/html/htm-tags.html">A Comprehensive Guide to HTML Tags:
+                                                    Demonstrated in
+                                                    a Table</a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>HTML is the backbone of web development, and making sure it's well-structured and error-free is crucial for both SEO and user experience. In this post, we’ll go through some of the most common HTML mistakes, why they matter, and how to fix them.</p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                HTML (HyperText Markup Language) is the foundation of
+                                                web development, and understanding its various tags is
+                                                essential for building well-structured webpages. In
+                                                this blog, we’ll provide a detailed overview of the
+                                                most commonly used HTML tags, organized in a table
+                                                format for easy reference.
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">HTML</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">HTML</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -802,48 +1151,165 @@
                                 <div class="clear"></div>
                             </article>
                         </div>
-                        
-                        
+
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public ">
+                            <article class="default classic-large bg-box ctag ctag-3-html no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css" data-id="ctag-3-css">.NET</a>
+                                            <a href="/zento/tag/3-html/" class="primary-tag ctag ctag-3-html"
+                                                data-id="ctag-3-html">HTML</a>
                                         </div>
                                         <time class="meta-info" datetime="2025-01-21">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
+                                            </svg>
+                                            Jan 25, 2025
+                                        </time>
+                                        <div class="min-read meta-info">
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/html/common-mistakes-html.html">Common HTML Mistakes to
+                                                    Avoid and How to Fix
+                                                    Them</a>
+                                            </h2>
+                                        </header>
+                                        <div class="post-excerpt">
+                                            <p>
+                                                HTML is the backbone of web development, and making
+                                                sure it's well-structured and error-free is crucial
+                                                for both SEO and user experience. In this post, we’ll
+                                                go through some of the most common HTML mistakes, why
+                                                they matter, and how to fix them.
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <footer class="bottom">
+                                            <div class="meta bottom epcl-flex">
+                                                <div class="tags">
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">HTML</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
+                                                </div>
+                                            </div>
+                                            <div class="meta inline hide-on-tablet hide-on-desktop">
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
+                                                    <span class="author-name">Admin</span>
+                                                </a>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </article>
+                        </div>
+
+                        <div class="articles classic">
+                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public">
+                                <div class="post-format-image epcl-flex">
+                                    <div class="meta meta-data">
+                                        <div class="tags fill-color">
+                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css"
+                                                data-id="ctag-3-css">.NET</a>
+                                        </div>
+                                        <time class="meta-info" datetime="2025-01-21">
+                                            <svg class="icon main-color small">
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Jan 21, 2025
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
                                         </div>
                                     </div>
-                        
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/basics/idempotant-api.html">Understanding Idempotent APIs in .NET: A Beginner’s Guide</a></h2>
+
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/basics/idempotant-api.html">Understanding Idempotent APIs
+                                                    in .NET: A Beginner’s
+                                                    Guide</a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>When building web applications, ensuring that your APIs behave predictably is key to offering a smooth user experience. One important concept that helps achieve this is idempotency. But what exactly is idempotency, and how can you implement it in your APIs? This post breaks down the concept and shows you how to create idempotent APIs using .NET.</p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                When building web applications, ensuring that your
+                                                APIs behave predictably is key to offering a smooth
+                                                user experience. One important concept that helps
+                                                achieve this is idempotency. But what exactly is
+                                                idempotency, and how can you implement it in your
+                                                APIs? This post breaks down the concept and shows you
+                                                how to create idempotent APIs using .NET.
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">.NET</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">.NET</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -853,50 +1319,79 @@
                                 <div class="clear"></div>
                             </article>
                         </div>
-                        
-                        
-                        
+
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public ">
+                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css" data-id="ctag-3-css">AWS</a>
+                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css"
+                                                data-id="ctag-3-css">AWS</a>
                                         </div>
                                         <time class="meta-info" datetime="2024-10-15">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Oct 15, 2024
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
-                                            
                                         </div>
                                     </div>
 
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/aws/ec2.html">Understanding AWS EC2 (Elastic Compute Cloud)</a></h2>
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/aws/ec2.html">Understanding AWS EC2 (Elastic Compute
+                                                    Cloud)</a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>AWS EC2 (Elastic Compute Cloud) is a service that allows you to run virtual servers in the cloud. It provides flexible and scalable computing capacity. This guide introduces key concepts related to EC2, making it easier for beginners to understand...</p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                AWS EC2 (Elastic Compute Cloud) is a service that
+                                                allows you to run virtual servers in the cloud. It
+                                                provides flexible and scalable computing capacity.
+                                                This guide introduces key concepts related to EC2,
+                                                making it easier for beginners to understand...
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">AWS</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">AWS</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -907,49 +1402,78 @@
                             </article>
                         </div>
 
-
-
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public ">
+                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css" data-id="ctag-3-css">AWS</a>
+                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css"
+                                                data-id="ctag-3-css">AWS</a>
                                         </div>
                                         <time class="meta-info" datetime="2024-10-15">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Oct 15, 2024
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
-                                            
                                         </div>
                                     </div>
 
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/aws/iam.html">Understanding AWS IAM Users</a></h2>
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/aws/iam.html">Understanding AWS IAM Users</a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>AWS Identity and Access Management (IAM) is a service that helps you securely control access to AWS services and resources. It allows you to manage users, groups, roles, and permissions in a centralized manner. This guide covers key components of IAM related to users and access management...</p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                AWS Identity and Access Management (IAM) is a service
+                                                that helps you securely control access to AWS services
+                                                and resources. It allows you to manage users, groups,
+                                                roles, and permissions in a centralized manner. This
+                                                guide covers key components of IAM related to users
+                                                and access management...
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">AWS</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">AWS</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -959,49 +1483,81 @@
                                 <div class="clear"></div>
                             </article>
                         </div>
-                        
-                        
+
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public ">
+                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css" data-id="ctag-3-css">OOP</a>
+                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css"
+                                                data-id="ctag-3-css">OOP</a>
                                         </div>
                                         <time class="meta-info" datetime="2024-01-19">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Sep 16, 2024
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
-                                            
                                         </div>
                                     </div>
 
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/post-oop.html">Understanding Object-Oriented Programming (OOP) in .NET</a></h2>
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/post-oop.html">Understanding Object-Oriented Programming
+                                                    (OOP) in
+                                                    .NET</a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>Object-Oriented Programming (OOP) is a programming style centered around objects and classes. It helps organize and manage code more effectively. In .NET, particularly in languages like C#, OOP principles are essential. Here’s a simple guide to key OOP concepts:...</p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                Object-Oriented Programming (OOP) is a programming
+                                                style centered around objects and classes. It helps
+                                                organize and manage code more effectively. In .NET,
+                                                particularly in languages like C#, OOP principles are
+                                                essential. Here’s a simple guide to key OOP
+                                                concepts:...
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">Code</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">Code</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -1013,46 +1569,79 @@
                         </div>
 
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public ">
+                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css" data-id="ctag-3-css">OOP</a>
+                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css"
+                                                data-id="ctag-3-css">OOP</a>
                                         </div>
                                         <time class="meta-info" datetime="2024-01-19">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Sep 16, 2024
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
-                                            
                                         </div>
                                     </div>
 
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/post-inheritance.html">Understanding Inheritance in .NET: A Beginner’s Guide</a></h2>
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/post-inheritance.html">Understanding Inheritance in .NET:
+                                                    A Beginner’s
+                                                    Guide</a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>Inheritance is a fundamental concept in object-oriented programming (OOP) that allows one class to inherit the properties and methods of another class. In .NET, inheritance helps to create a natural hierarchy and promotes code reuse. Let’s break down this essential concept to help you get started...</p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                Inheritance is a fundamental concept in
+                                                object-oriented programming (OOP) that allows one
+                                                class to inherit the properties and methods of another
+                                                class. In .NET, inheritance helps to create a natural
+                                                hierarchy and promotes code reuse. Let’s break down
+                                                this essential concept to help you get started...
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">Code</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">Code</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -1064,46 +1653,79 @@
                         </div>
 
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public ">
+                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css" data-id="ctag-3-css">OOP</a>
+                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css"
+                                                data-id="ctag-3-css">OOP</a>
                                         </div>
                                         <time class="meta-info" datetime="2024-01-19">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Sep 17, 2024
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
-                                            
                                         </div>
                                     </div>
 
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/post-overloading-overriding.html">Understanding Method Overloading and Overriding in C#: A Beginner’s Guide</a></h2>
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/post-overloading-overriding.html">Understanding Method
+                                                    Overloading and Overriding in
+                                                    C#: A Beginner’s Guide</a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>Method overloading and method overriding are essential concepts in C# programming that help you write more flexible and efficient code. Understanding these concepts can significantly improve your coding skills. In this guide, we’ll break down these concepts with easy-to-understand examples...</p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                Method overloading and method overriding are essential
+                                                concepts in C# programming that help you write more
+                                                flexible and efficient code. Understanding these
+                                                concepts can significantly improve your coding skills.
+                                                In this guide, we’ll break down these concepts with
+                                                easy-to-understand examples...
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">Code</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">Code</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -1115,46 +1737,82 @@
                         </div>
 
                         <div class="articles classic">
-                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public ">
+                            <article class="default classic-large bg-box ctag ctag-3-css no-image post-access-public">
                                 <div class="post-format-image epcl-flex">
                                     <div class="meta meta-data">
                                         <div class="tags fill-color">
-                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css" data-id="ctag-3-css">OOP</a>
+                                            <a href="/zento/tag/3-css/" class="primary-tag ctag ctag-3-css"
+                                                data-id="ctag-3-css">OOP</a>
                                         </div>
                                         <time class="meta-info" datetime="2024-01-19">
                                             <svg class="icon main-color small">
-                                                <use xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon"></use>
+                                                <use
+                                                    xlink:href="/zento/assets/images/svg-icons.svg?v=1b89f44b98#calendar-icon">
+                                                </use>
                                             </svg>
                                             Sep 17, 2024
-                                        </time>            
+                                        </time>
                                         <div class="min-read meta-info">
-                                            <a href="javascript:void(0)" class="author" style="display: block; text-align: center; margin: 20px auto;">
-                                                <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan" style="display: block; margin: 0 auto; width: 50px; height: 50px; border-radius: 50%;">
-                                                <span class="author-name" style="display: block; margin-top: 10px; font-size: 16px; color: #333;">Admin</span>
+                                            <a href="javascript:void(0)" class="author" style="
+                            display: block;
+                            text-align: center;
+                            margin: 20px auto;
+                          ">
+                                                <img class="author-image cover" src="img/admin.png"
+                                                    alt="Image of: Mehedi Hasan" style="
+                              display: block;
+                              margin: 0 auto;
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                            " />
+                                                <span class="author-name" style="
+                              display: block;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #333;
+                            ">Admin</span>
                                             </a>
-                                            
                                         </div>
                                     </div>
 
-                                    <div class="info"> 
-                                        <header>        
-                                            <h2 class="main-title title underline-effect"><a href="posts/post-access-modifiers.html">Understanding Access Modifiers in C#: A Beginner’s Guide</a></h2>
+                                    <div class="info">
+                                        <header>
+                                            <h2 class="main-title title underline-effect">
+                                                <a href="posts/post-access-modifiers.html">Understanding Access
+                                                    Modifiers in C#: A Beginner’s
+                                                    Guide</a>
+                                            </h2>
                                         </header>
-                                        <div class="post-excerpt">        
-                                            <p>When you're starting out with C# programming, one of the foundational concepts you'll encounter is access modifiers. These are keywords that define the visibility and accessibility of classes, methods, properties, and other members in your code. Mastering access modifiers is crucial for writing secure and organized code. Let’s dive into what access modifiers are and how they work with simple examples to make these concepts easy to grasp...</p>   
-                                            <div class="clear"></div>              
-                                        </div>  
+                                        <div class="post-excerpt">
+                                            <p>
+                                                When you're starting out with C# programming, one of
+                                                the foundational concepts you'll encounter is access
+                                                modifiers. These are keywords that define the
+                                                visibility and accessibility of classes, methods,
+                                                properties, and other members in your code. Mastering
+                                                access modifiers is crucial for writing secure and
+                                                organized code. Let’s dive into what access modifiers
+                                                are and how they work with simple examples to make
+                                                these concepts easy to grasp...
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
                                         <footer class="bottom">
                                             <div class="meta bottom epcl-flex">
                                                 <div class="tags">
-                                                    <a href="javascript:void(0)" class="ctag ctag-code" data-id="ctag-code">Code</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-guides" data-id="ctag-guides">Guides</a>
-                                                    <a href="javascript:void(0)" class="ctag ctag-tech" data-id="ctag-tech">Tech</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-code"
+                                                        data-id="ctag-code">Code</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-guides"
+                                                        data-id="ctag-guides">Guides</a>
+                                                    <a href="javascript:void(0)" class="ctag ctag-tech"
+                                                        data-id="ctag-tech">Tech</a>
                                                 </div>
                                             </div>
                                             <div class="meta inline hide-on-tablet hide-on-desktop">
-                                                <a href="javascript:void(0)" class="author">                                        
-                                                    <img class="author-image cover" src="img/admin.png" alt="Image of: Mehedi Hasan">                      
+                                                <a href="javascript:void(0)" class="author">
+                                                    <img class="author-image cover" src="img/admin.png"
+                                                        alt="Image of: Mehedi Hasan" />
                                                     <span class="author-name">Admin</span>
                                                 </a>
                                             </div>
@@ -1164,16 +1822,12 @@
                                 <div class="clear"></div>
                             </article>
                         </div>
-
-
-
                     </div>
                 </div>
-            </div>  
-        <!-- end: .content-wrapper -->
+            </div>
+            <!-- end: .content-wrapper -->
         </main>
 
-            
         <div class="clear"></div>
         <!-- start: .epcl-cta -->
         <div class="epcl-cta bg-box no-border-radius">
@@ -1183,13 +1837,23 @@
                 </div>
             </div>
             <div class="clear"></div>
-            <svg class="bg" width="284" height="453" viewBox="0 0 284 453" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="main-color" d="M100.795 7.49467C105.015 -1.99852 118.025 -2.47329 123.123 6.07068L123.86 7.49467L136.88 36.7886C148.263 62.3995 167.185 83.8837 191.069 98.4068L195.095 100.762L218.221 113.77C226.323 118.328 226.773 129.596 219.571 134.898L218.221 135.769L195.095 148.778C170.668 162.518 151.059 183.378 138.846 208.521L136.88 212.751L123.86 242.045C119.641 251.538 106.63 252.013 101.531 243.469L100.795 242.045L87.7754 212.751C76.3928 187.141 57.4695 165.656 33.5855 151.133L29.5593 148.778L6.43298 135.769C-1.66775 131.213 -2.1179 119.945 5.08284 114.641L6.43298 113.77L29.5593 100.762C53.9866 87.0215 73.5964 66.162 85.8089 41.0183L87.7754 36.7886L100.795 7.49467Z" fill="currentColor" />
-                <path class="secondary-color" d="M159.795 210.495C164.015 201.001 177.025 200.527 182.123 209.071L182.86 210.495L195.88 239.789C207.263 265.399 226.185 286.884 250.069 301.407L254.095 303.762L277.221 316.77C285.323 321.328 285.773 332.596 278.571 337.898L277.221 338.769L254.095 351.778C229.668 365.518 210.059 386.378 197.846 411.521L195.88 415.751L182.86 445.045C178.641 454.538 165.63 455.013 160.531 446.469L159.795 445.045L146.775 415.751C135.393 390.141 116.47 368.656 92.5855 354.133L88.5593 351.778L65.433 338.769C57.3322 334.213 56.8821 322.945 64.0828 317.641L65.433 316.77L88.5593 303.762C112.987 290.022 132.596 269.162 144.809 244.018L146.775 239.789L159.795 210.495Z" fill="currentColor"/>
+            <svg class="bg" width="284" height="453" viewBox="0 0 284 453" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="main-color"
+                    d="M100.795 7.49467C105.015 -1.99852 118.025 -2.47329 123.123 6.07068L123.86 7.49467L136.88 36.7886C148.263 62.3995 167.185 83.8837 191.069 98.4068L195.095 100.762L218.221 113.77C226.323 118.328 226.773 129.596 219.571 134.898L218.221 135.769L195.095 148.778C170.668 162.518 151.059 183.378 138.846 208.521L136.88 212.751L123.86 242.045C119.641 251.538 106.63 252.013 101.531 243.469L100.795 242.045L87.7754 212.751C76.3928 187.141 57.4695 165.656 33.5855 151.133L29.5593 148.778L6.43298 135.769C-1.66775 131.213 -2.1179 119.945 5.08284 114.641L6.43298 113.77L29.5593 100.762C53.9866 87.0215 73.5964 66.162 85.8089 41.0183L87.7754 36.7886L100.795 7.49467Z"
+                    fill="currentColor" />
+                <path class="secondary-color"
+                    d="M159.795 210.495C164.015 201.001 177.025 200.527 182.123 209.071L182.86 210.495L195.88 239.789C207.263 265.399 226.185 286.884 250.069 301.407L254.095 303.762L277.221 316.77C285.323 321.328 285.773 332.596 278.571 337.898L277.221 338.769L254.095 351.778C229.668 365.518 210.059 386.378 197.846 411.521L195.88 415.751L182.86 445.045C178.641 454.538 165.63 455.013 160.531 446.469L159.795 445.045L146.775 415.751C135.393 390.141 116.47 368.656 92.5855 354.133L88.5593 351.778L65.433 338.769C57.3322 334.213 56.8821 322.945 64.0828 317.641L65.433 316.77L88.5593 303.762C112.987 290.022 132.596 269.162 144.809 244.018L146.775 239.789L159.795 210.495Z"
+                    fill="currentColor" />
             </svg>
-            <svg class="bg2" width="284" height="453" viewBox="0 0 284 453" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="main-color" d="M100.795 445.045C105.015 454.538 118.025 455.013 123.123 446.469L123.86 445.045L136.88 415.751C148.263 390.14 167.185 368.656 191.069 354.133L195.095 351.777L218.221 338.77C226.323 334.212 226.773 322.944 219.571 317.642L218.221 316.77L195.095 303.762C170.668 290.022 151.059 269.162 138.846 244.018L136.88 239.788L123.86 210.494C119.641 201.002 106.63 200.527 101.531 209.071L100.795 210.494L87.7754 239.788C76.3928 265.399 57.4695 286.884 33.5855 301.406L29.5593 303.762L6.43298 316.77C-1.66775 321.327 -2.1179 332.595 5.08284 337.898L6.43298 338.77L29.5593 351.777C53.9866 365.518 73.5964 386.378 85.8089 411.521L87.7754 415.751L100.795 445.045Z" fill="currentColor"/>
-                <path class="secondary-color" d="M159.795 242.045C164.015 251.538 177.025 252.013 182.123 243.469L182.86 242.045L195.88 212.751C207.263 187.14 226.185 165.656 250.069 151.133L254.095 148.777L277.221 135.77C285.323 131.212 285.773 119.944 278.571 114.642L277.221 113.77L254.095 100.762C229.668 87.0217 210.059 66.1616 197.846 41.0181L195.88 36.7884L182.86 7.49449C178.641 -1.99834 165.63 -2.473 160.531 6.07056L159.795 7.49449L146.775 36.7884C135.393 62.399 116.47 83.8839 92.5855 98.4062L88.5593 100.762L65.433 113.77C57.3322 118.327 56.8821 129.595 64.0828 134.898L65.433 135.77L88.5593 148.777C112.987 162.518 132.596 183.378 144.809 208.521L146.775 212.751L159.795 242.045Z" fill="currentColor"/>
+            <svg class="bg2" width="284" height="453" viewBox="0 0 284 453" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="main-color"
+                    d="M100.795 445.045C105.015 454.538 118.025 455.013 123.123 446.469L123.86 445.045L136.88 415.751C148.263 390.14 167.185 368.656 191.069 354.133L195.095 351.777L218.221 338.77C226.323 334.212 226.773 322.944 219.571 317.642L218.221 316.77L195.095 303.762C170.668 290.022 151.059 269.162 138.846 244.018L136.88 239.788L123.86 210.494C119.641 201.002 106.63 200.527 101.531 209.071L100.795 210.494L87.7754 239.788C76.3928 265.399 57.4695 286.884 33.5855 301.406L29.5593 303.762L6.43298 316.77C-1.66775 321.327 -2.1179 332.595 5.08284 337.898L6.43298 338.77L29.5593 351.777C53.9866 365.518 73.5964 386.378 85.8089 411.521L87.7754 415.751L100.795 445.045Z"
+                    fill="currentColor" />
+                <path class="secondary-color"
+                    d="M159.795 242.045C164.015 251.538 177.025 252.013 182.123 243.469L182.86 242.045L195.88 212.751C207.263 187.14 226.185 165.656 250.069 151.133L254.095 148.777L277.221 135.77C285.323 131.212 285.773 119.944 278.571 114.642L277.221 113.77L254.095 100.762C229.668 87.0217 210.059 66.1616 197.846 41.0181L195.88 36.7884L182.86 7.49449C178.641 -1.99834 165.63 -2.473 160.531 6.07056L159.795 7.49449L146.775 36.7884C135.393 62.399 116.47 83.8839 92.5855 98.4062L88.5593 100.762L65.433 113.77C57.3322 118.327 56.8821 129.595 64.0828 134.898L65.433 135.77L88.5593 148.777C112.987 162.518 132.596 183.378 144.809 208.521L146.775 212.751L159.795 242.045Z"
+                    fill="currentColor" />
             </svg>
         </div>
         <!-- end: .epcl-cta -->
@@ -1197,23 +1861,30 @@
     <!-- end: #wrapper -->
     <script defer src="/scripts.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script defer src="/prism-plugins.min.js"></script>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('aside a.title').click(function(){
-                if($(this).closest('.item').hasClass('open')){
-                    $(this).closest('.item').removeClass('open');
-                    $(this).closest('.item').find('ul.post-list').css('display', 'none');
+        $(document).ready(function () {
+            $("aside a.title").click(function () {
+                if ($(this).closest(".item").hasClass("open")) {
+                    $(this).closest(".item").removeClass("open");
+                    $(this)
+                        .closest(".item")
+                        .find("ul.post-list")
+                        .css("display", "none");
+                } else {
+                    $(this).closest(".item").addClass("open");
+                    $(this)
+                        .closest(".item")
+                        .find("ul.post-list")
+                        .css("display", "block");
                 }
-                else{
-                    $(this).closest('.item').addClass('open');
-                    $(this).closest('.item').find('ul.post-list').css('display', 'block');
-                }
-            })
-        })
+            });
+        });
     </script>
 </body>
+
 </html>

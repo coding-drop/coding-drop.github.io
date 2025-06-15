@@ -1,0 +1,433 @@
+:root {
+    --ghost-accent-color: #6A4EE9;
+}
+
+/* dm-sans-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/zento/assets/fonts/dm-sans-v14-latin-regular.woff2?v=1b89f44b98) format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/zento/assets/fonts/dm-sans-v14-latin-italic.woff2?v=1b89f44b98) format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/zento/assets/fonts/dm-sans-v14-latin-700.woff2?v=1b89f44b98) format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-700italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/zento/assets/fonts/dm-sans-v14-latin-700italic.woff2?v=1b89f44b98) format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* urbanist-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    src: url(/zento/assets/fonts/urbanist-v15-latin-500.woff2?v=1b89f44b98) format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* urbanist-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    src: url(/zento/assets/fonts/urbanist-v15-latin-600.woff2?v=1b89f44b98) format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* urbanist-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/zento/assets/fonts/urbanist-v15-latin-700.woff2?v=1b89f44b98) format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* urbanist-700italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Urbanist';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/zento/assets/fonts/urbanist-v15-latin-700italic.woff2?v=1b89f44b98) format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* urbanist-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 800;
+    src: url(/zento/assets/fonts/urbanist-v15-latin-800.woff2?v=1b89f44b98) format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+:root {
+    --epcl-background-color: #FAF8FF;
+    --epcl-boxes-background-color: #ffffff;
+    --epcl-border-color: #E9E8FF;
+    --epcl-boxes-border-color: #E9E8FF;
+    --epcl-secondary-color: #FF2AAC;
+}
+
+.ctag-3-css .epcl-number,
+.ctag-3-css.epcl-button,
+.siblings .ctag-3-css,
+div.tags a.ctag-3-css:before,
+div.tags.fill-color a.ctag-3-css,
+.category-image.ctag-3-css,
+.epcl-post-carousel article.ctag-3-css {
+    background: #227dff !important;
+}
+
+.ctag-3-css.overlay-effect .image-container:before {
+    background: #227dff !important;
+}
+
+.ctag-code .epcl-number,
+.ctag-code.epcl-button,
+.siblings .ctag-code,
+div.tags a.ctag-code:before,
+div.tags.fill-color a.ctag-code,
+.category-image.ctag-code,
+.epcl-post-carousel article.ctag-code {
+    background: #ff2ed9 !important;
+}
+
+.ctag-code.overlay-effect .image-container:before {
+    background: #ff2ed9 !important;
+}
+
+.ctag-5-databases .epcl-number,
+.ctag-5-databases.epcl-button,
+.siblings .ctag-5-databases,
+div.tags a.ctag-5-databases:before,
+div.tags.fill-color a.ctag-5-databases,
+.category-image.ctag-5-databases,
+.epcl-post-carousel article.ctag-5-databases {
+    background: #5751ff !important;
+}
+
+.ctag-5-databases.overlay-effect .image-container:before {
+    background: #5751ff !important;
+}
+
+.ctag-6-deployment .epcl-number,
+.ctag-6-deployment.epcl-button,
+.siblings .ctag-6-deployment,
+div.tags a.ctag-6-deployment:before,
+div.tags.fill-color a.ctag-6-deployment,
+.category-image.ctag-6-deployment,
+.epcl-post-carousel article.ctag-6-deployment {
+    background: #2a2728 !important;
+}
+
+.ctag-6-deployment.overlay-effect .image-container:before {
+    background: #2a2728 !important;
+}
+
+.ctag-guides .epcl-number,
+.ctag-guides.epcl-button,
+.siblings .ctag-guides,
+div.tags a.ctag-guides:before,
+div.tags.fill-color a.ctag-guides,
+.category-image.ctag-guides,
+.epcl-post-carousel article.ctag-guides {
+    background: #3aa9fd !important;
+}
+
+.ctag-guides.overlay-effect .image-container:before {
+    background: #3aa9fd !important;
+}
+
+.ctag-2-html .epcl-number,
+.ctag-2-html.epcl-button,
+.siblings .ctag-2-html,
+div.tags a.ctag-2-html:before,
+div.tags.fill-color a.ctag-2-html,
+.category-image.ctag-2-html,
+.epcl-post-carousel article.ctag-2-html {
+    background: #ff8e51 !important;
+}
+
+.ctag-2-html.overlay-effect .image-container:before {
+    background: #ff8e51 !important;
+}
+
+.ctag-4-javascript .epcl-number,
+.ctag-4-javascript.epcl-button,
+.siblings .ctag-4-javascript,
+div.tags a.ctag-4-javascript:before,
+div.tags.fill-color a.ctag-4-javascript,
+.category-image.ctag-4-javascript,
+.epcl-post-carousel article.ctag-4-javascript {
+    background: #ffcb29 !important;
+}
+
+.ctag-4-javascript.overlay-effect .image-container:before {
+    background: #ffcb29 !important;
+}
+
+.ctag-sql .epcl-number,
+.ctag-sql.epcl-button,
+.siblings .ctag-sql,
+div.tags a.ctag-sql:before,
+div.tags.fill-color a.ctag-sql,
+.category-image.ctag-sql,
+.epcl-post-carousel article.ctag-sql {
+    background: #f95353 !important;
+}
+
+.ctag-sql.overlay-effect .image-container:before {
+    background: #f95353 !important;
+}
+
+.ctag-tech .epcl-number,
+.ctag-tech.epcl-button,
+.siblings .ctag-tech,
+div.tags a.ctag-tech:before,
+div.tags.fill-color a.ctag-tech,
+.category-image.ctag-tech,
+.epcl-post-carousel article.ctag-tech {
+    background: #4775ff !important;
+}
+
+.ctag-tech.overlay-effect .image-container:before {
+    background: #4775ff !important;
+}
+
+
+.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}
+
+
+
+
+.widget_epcl_tag_list .toggle-icon {
+    vertical-align: middle;
+    margin-top: -8px;
+}
+
+:root {
+    --purchase-color: #ff0081;
+}
+
+.epcl-themes.epcl-purchase {
+    bottom: 92px;
+    background: #4f1cff;
+    font-size: 13px;
+}
+
+.epcl-themes.epcl-purchase:before,
+.epcl-themes.epcl-purchase:after {
+    display: none;
+}
+
+.epcl-purchase {
+
+    position: fixed;
+    z-index: 110;
+    bottom: 20px;
+    left: 20px;
+    text-align: center;
+    background: var(--purchase-color);
+    color: #fff;
+    padding: 15px 25px;
+    box-shadow: 0px 3px 5px -1px rgb(7 10 25 / 10%);
+    font: 18px 'Urbanist';
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.epcl-purchase:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.epcl-purchase:before,
+.epcl-purchase:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+.epcl-purchase:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--purchase-color) 20%, transparent 30%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+.epcl-purchase:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--purchase-color) 15%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%), radial-gradient(circle, var(--purchase-color) 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.epcl-purchase:before {
+    display: block;
+    animation: topBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+}
+
+.epcl-purchase:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 3s 4 forwards, delay-animation linear 6s 4 forwards;
+}
+
+@keyframes delay-animation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    50.01% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes topBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
